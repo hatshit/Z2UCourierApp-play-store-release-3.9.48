@@ -144,7 +144,7 @@ public class Courier_AutoLoginFeature {
                 }
 
                 NotificationManager notificationManager = (NotificationManager)currentActivityContext.getSystemService(Context.NOTIFICATION_SERVICE);
-             //   notificationManager.cancelAll();
+                //notificationManager.cancelAll();
                 notificationManager = null;
 
                 //******* Redirect to chat booking screen if chat notification comes at kill state **********

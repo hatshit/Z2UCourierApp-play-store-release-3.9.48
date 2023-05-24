@@ -119,6 +119,8 @@ public class ActiveBookingView implements ActiveBooking_EndlessListview.EndLessL
             tomorrowBookingBtnActiveList, etaTitleTextBG;
     private ImageView selectPickUpEtaImg;
     private ActiveBooking_EndlessListview activeBookingListView;
+
+    AssignToOtherCourier_Functionality assignToOtherCourier_functionality;
     int PERMISSION_ID = 99;
     LinearLayout dhlTabsForActiveOrTriedToDeliver;
     TextView activeDHLBookings, triedToDeliverDHLBookings;
@@ -1487,7 +1489,7 @@ public class ActiveBookingView implements ActiveBooking_EndlessListview.EndLessL
                         || activeBookingModel.getStatus().equals("Accepted") || activeBookingModel.getStatus().equals("On Route to Pickup")
                         || activeBookingModel.getStatus().equals("Delivery Attempted")) {
                     if (!firstCharOfReferenceNo.equalsIgnoreCase("T") && !activeBookingModel.getPackage().equals("XL")) {
-                        if (activeBookingModel.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER) {
+                        if (activeBookingModel.getStatus().equals("Accepted")) {
                             if (activeBookingModel.getRunType().equals("SMARTSORT")) {
                                 //slideRightForAttemptDelivery(110, frontTagActiveBooking);
                                 attemptdeliveryBtnInActiveBooking.setClickable(false);
@@ -1667,7 +1669,12 @@ public class ActiveBookingView implements ActiveBooking_EndlessListview.EndLessL
             reassignBtnInActiveBooking.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new AssignToOtherCourier_Functionality(activeBookingContext, ActiveBookingView.this, null, true, activeBookingModel.getBookingId());
+                    if (LoginZoomToU.IS_TEAM_LEADER) {
+                        new AssignToOtherCourier_Functionality(activeBookingContext, ActiveBookingView.this, null, true, activeBookingModel.getBookingId());
+                    }else {
+                        assignToOtherCourier_functionality=new AssignToOtherCourier_Functionality(activeBookingContext,activeBookingModel.getBookingId());
+                        assignToOtherCourier_functionality.dialogToShowDriversListToAllocateBooking();
+                    }
                 }
             });
 

@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.newnotfication.view.NewBidRequest_NotificationView;
 import com.newnotfication.view.NewBooking_Notification;
 import com.newnotfication.view.Notification_BookingStatusRequest;
+import com.suggestprice_team.courier_team.community.CommunityBookingActivity;
 import com.z2u.chatview.LoadChatBookingArray;
 import com.z2u.chatview.Model_DeliveriesToChat;
 import com.zoom2u.dialogactivity.AchievementNotifyView;
@@ -32,6 +33,7 @@ import com.zoom2u.dialogactivity.DefaultWindowForChat;
 import com.zoom2u.dialogactivity.DefaultWindowForToast;
 import com.zoom2u.dialogactivity.DepotAlert_For_DHLDrivers;
 import com.zoom2u.dialogactivity.DialogActivity;
+import com.zoom2u.dialogactivity.DialogActivityForBooking;
 import com.zoom2u.dialogactivity.DialogOutstandingBidNotification;
 import com.zoom2u.dialogactivity.Notification_Courier_Level;
 import com.zoom2u.offer_run_batch.SingleRunActivity;
@@ -1012,8 +1014,14 @@ public class PushReceiver extends BroadcastReceiver {
 						}
 					} else {
 						if (isNewBookingNotication) {
+							Boolean isCommunityNotification=communityNotification(message);
 							Intent i = new Intent("android.intent.action.MAIN");
-							i.setClass(context, NewBooking_Notification.class);
+							if(isCommunityNotification) {
+								i.putExtra("NotificationMessageStr",message);
+								i.setClass(context, DialogActivityForBooking.class);
+							}else {
+								i.setClass(context, NewBooking_Notification.class);
+							}
 							i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 							context.startActivity(i);
 							i = null;
@@ -1036,8 +1044,21 @@ public class PushReceiver extends BroadcastReceiver {
 		}
     }
 
+	private Boolean communityNotification(String message) {
+		try {
+			String myMessage="You have a new booking offer from your community member";
+			String messageRange =message.substring(0, 55);
+            if (myMessage.equals(messageRange))
+				return true;
 
-    /**********  Switch to respective view when tap on status bar notification *********/
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
+	/**********  Switch to respective view when tap on status bar notification *********/
     @SuppressLint("NewApi")
 	@SuppressWarnings("rawtypes")
 	void switchToClass(Class cls, Context context, String message){

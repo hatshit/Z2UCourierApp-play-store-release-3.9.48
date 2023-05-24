@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:background="#d4d4d4" >
 
+
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -116,6 +117,7 @@
             android:layout_above="@+id/signOutBtn"
             android:divider="@null" />
 
+
         <Button
             android:layout_width="132dp"
             android:layout_height="39dp"
@@ -194,7 +196,6 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="10dp"
                 android:gravity="center"
-
                 android:src="@drawable/iconchat"
                 android:visibility="visible" />
 
@@ -212,7 +213,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="8dp"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                />
 
             <ImageView
                 android:id="@+id/refreshBtn"
