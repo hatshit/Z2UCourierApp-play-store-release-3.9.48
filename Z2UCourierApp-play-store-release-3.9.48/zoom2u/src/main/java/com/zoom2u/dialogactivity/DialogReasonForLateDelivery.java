@@ -96,16 +96,9 @@ public class DialogReasonForLateDelivery extends Activity{
 	public void onBackPressed(){
 		//super.onBackPressed();
 		//finish();
-		setResult(RESULT_OK);
 		LoginZoomToU.imm.hideSoftInputFromWindow(edtTxtReasonForLateDelivery.getWindowToken(), 0);
 	}
-
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		setResult(RESULT_OK);
-	}
-
+	
 	// ************** In-it reason for late delivery **********
 	private void showReasonForLateDelivery() {
 		

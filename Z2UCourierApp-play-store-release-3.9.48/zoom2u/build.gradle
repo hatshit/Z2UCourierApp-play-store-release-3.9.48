@@ -86,7 +86,7 @@ dependencies {
     implementation project(path: ':wheel')
     implementation project(path: ':confetti')
     implementation 'com.android.volley:volley:1.1.1'
-    implementation 'me.pushy:sdk:1.0.90'
+    implementation 'me.pushy:sdk:1.0.86'
     implementation 'com.airbnb.android:lottie:5.2.0'
 //    implementation 'com.hypertrack:hyperlog:0.0.10'
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
@@ -94,6 +94,10 @@ dependencies {
     implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.borjabravo:readmoretextview:2.1.0'
+
+    // swipe layou
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+
 
 
 }

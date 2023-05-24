@@ -412,8 +412,6 @@ public class BarcodeController implements View.OnTouchListener{
     };
 
     // Mimic continuous auto-focusing
-
-    // temprary coment 1.38 time / 28/04/22
     Camera.AutoFocusCallback autoFocusCB = new Camera.AutoFocusCallback() {
         public void onAutoFocus(boolean success, Camera camera) {
             autoFocusHandler.postDelayed(doAutoFocus, 1500);
@@ -984,17 +982,6 @@ public class BarcodeController implements View.OnTouchListener{
             @Override
             public void onPreExecute() {
                 try {
-                    if (progressForDeliveryHistory == null)
-                        progressForDeliveryHistory = new ProgressDialog(currentBarcodeContext);
-                    Custom_ProgressDialogBar.inItProgressBar(progressForDeliveryHistory);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void doInBackground() {
-                try {
                     WebserviceHandler webserviceHandler = new WebserviceHandler();
                     webPostBarcode[0] = webserviceHandler.getDeliveryInfoByBarcode(scanResult,runID);
                     webserviceHandler = null;
@@ -1002,7 +989,17 @@ public class BarcodeController implements View.OnTouchListener{
                     e.printStackTrace();
                     webPostBarcode[0] = "";
                 }
+            }
 
+            @Override
+            public void doInBackground() {
+                try {
+                    if (progressForDeliveryHistory == null)
+                        progressForDeliveryHistory = new ProgressDialog(currentBarcodeContext);
+                    Custom_ProgressDialogBar.inItProgressBar(progressForDeliveryHistory);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override

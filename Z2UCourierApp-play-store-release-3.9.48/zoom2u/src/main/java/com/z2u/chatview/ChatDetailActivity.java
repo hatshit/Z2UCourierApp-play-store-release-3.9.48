@@ -303,7 +303,6 @@ public class ChatDetailActivity extends Activity {
 
             NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.cancel(notificationID);
-            clearChatNotification();
             notificationManager = null;
 
             if (my_recycler_view_chatDetail == null)
@@ -509,13 +508,7 @@ public class ChatDetailActivity extends Activity {
     private void backFromChatDetailView() {
         BOOKING_CHAT_NODE = "";
         isChatBookingScreenOpne = false;
-        try {
-             clearChatNotification();
-            if (modelChatDeliveryItem.getCustomer().equals("Zoom2u-Admin"))
-                mFirebaseRef.child(COURIER_ADMIN_UNREADS+LoginZoomToU.courierID+"/status/admin/unread").setValue(0);
-        } catch (Exception e) {
-        }
-        // LoginZoomToU.imm.hideSoftInputFromWindow(messageInputChatDetail.getWindowToken(), 0);
+       // LoginZoomToU.imm.hideSoftInputFromWindow(messageInputChatDetail.getWindowToken(), 0);
         finish();
         //overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
@@ -1360,10 +1353,5 @@ public class ChatDetailActivity extends Activity {
     }
 
 
-    public void clearChatNotification(){
-        NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.cancel(3);
-        notificationManager = null;
-    }
 
 }

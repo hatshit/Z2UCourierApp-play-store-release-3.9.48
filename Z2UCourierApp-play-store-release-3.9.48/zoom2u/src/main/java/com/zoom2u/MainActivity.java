@@ -71,10 +71,15 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 
-		Intent versionUpdateService = new Intent(getApplicationContext(), BG_Service_VersionUpdate.class);
-		startService(versionUpdateService);
-		versionUpdateService = null;
-
+		try
+		{
+			Intent versionUpdateService = new Intent(getApplicationContext(), BG_Service_VersionUpdate.class);
+			startService(versionUpdateService);
+			versionUpdateService = null;
+		}catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 		LoginZoomToU.staticFieldInit(MainActivity.this);
 		courier_autoLogin = new Courier_AutoLoginFeature(MainActivity.this);
 		courier_autoLogin.getPushyTokenId();

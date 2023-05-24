@@ -1,6 +1,7 @@
 package com.zoom2u.slidemenu;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -173,7 +174,7 @@ public class BarcodeScanner extends Activity {
             LocalBroadcastManager.getInstance(this).registerReceiver(mMessageReceiver,
                     new IntentFilter("selfieUpload"));
         }catch (Exception ex){
-
+            ex.printStackTrace();
         }
     }
 
@@ -326,6 +327,7 @@ public class BarcodeScanner extends Activity {
         }
     };
 
+    @SuppressLint("SuspiciousIndentation")
     @Override
     protected void onDestroy() {
         try {

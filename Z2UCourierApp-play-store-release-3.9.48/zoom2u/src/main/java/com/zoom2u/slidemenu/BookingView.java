@@ -312,6 +312,8 @@ public class BookingView extends Fragment implements OnClickListener {
                         BookingView.bookingListArray = savedInstanceState.getParcelableArrayList("BookingArryList");
                     if (LoginZoomToU.NOVA_BOLD == null)
                         LoginZoomToU.staticFieldInit(getActivity());
+
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -449,10 +451,12 @@ public class BookingView extends Fragment implements OnClickListener {
             showNewBookingCount();
 
             inItBookingButtons(newBookingBtn);
+
             if (activeBookingBtn == null)
                 activeBookingBtn = rootView.findViewById(R.id.activeBookingBtn);
             showActiveBookingCount();
             inItBookingButtons(activeBookingBtn);
+
             if (completeBtn == null)
                 completeBtn = rootView.findViewById(R.id.completeBtn);
             inItBookingButtons(completeBtn);

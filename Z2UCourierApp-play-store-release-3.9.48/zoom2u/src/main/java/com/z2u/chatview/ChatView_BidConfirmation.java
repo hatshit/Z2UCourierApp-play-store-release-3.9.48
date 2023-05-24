@@ -152,7 +152,6 @@ public class ChatView_BidConfirmation extends Activity{
         try {
             NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.cancel(bidID);
-            notificationManager.cancel(3);
             notificationManager = null;
         } catch (Exception e) {
             e.printStackTrace();

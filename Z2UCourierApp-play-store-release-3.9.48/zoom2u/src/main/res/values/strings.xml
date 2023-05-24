@@ -111,6 +111,17 @@
     <string name="text_ob4">Day 1 we recommended accepting a small number of bookings. This way you can get used to the platform.\n\nif you get stuck along the way our team is here to help you.\n\nJust click the call button or whatsapp to ask a questions.\n\nWe are here to help.</string>
     <string name="text_ob5">Increase your earning potential by providing your customers with a great experience.\n\nif you provide a great experience your customers will love you, and they could turn into repeat customer.\n\nif you’re late or rude, your customers may not return.\nIt may help to let the customer know if you will be late.Communicate is always good.</string>
     <string name="text_ob6">Finally here are some\nsimple tools that will make\nyour day go easier.</string>
+    <string name="no_community_booking_offer">No community bookings offers available.</string>
+    <string name="invitation">Invitations</string>
+    <string name="members">Members</string>
+    <string name="ematy_message_forMembers">You have no community members. Click the Add button above to invite your first community member.</string>
+    <string name="driver_resource_center">Driver Resource Centre</string>
+    <string name="send">Send</string>
+    <string name="notifyForSearch">We have found the following email address.\nIf this is the contact that you are looking to connect with, please click the “add member” button below and an invitation will be sent to them to join your community.</string>
+    <string name="no_team_members">You have no Team members.</string>
+    <string name="you_have_no_community_members">You have no community members.</string>
+    <string name="seeOffer">see offer</string>
+    <string name="no">No</string>
 
 
 </resources>

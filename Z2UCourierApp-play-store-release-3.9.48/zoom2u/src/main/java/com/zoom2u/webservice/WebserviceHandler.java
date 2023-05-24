@@ -62,12 +62,14 @@ public class WebserviceHandler {
 	//************ Must change the Firebase DB and config file
 	// google-service.json to live before release
 
-	static String serverURL = "https://api.zoom2u.com";          				// Pointing to Live DB
+	//static String serverURL = "https://api.zoom2u.com";          				// Pointing to Live DB
 	public static String TERMS_CONDITIONS="https://courier.zoom2u.com/courier-terms-conditions.html"; //live
 
-	// public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
+	 public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
 	//public static String serverURL = "https://api-test.zoom2u.com";						// Pointing to Test DB
 	//public static String serverURL = "https://zoom2uapi-staging.azurewebsites.net";		// Staging slot of api-staging (Staging API)
+
+
 // 	public static String TERMS_CONDITIONS="https://courier-staging.zoom2u.com/courier-terms-conditions.html";//staging
 //	public static String serverURL = "https://zoom2uapi-staginge23f.azurewebsites.net"; // Staging slot of production api
 //	public static String serverURL = "http://112278f82eca4131a753fe2d4e7e8b74.cloudapp.net";
@@ -334,7 +336,7 @@ public class WebserviceHandler {
 		HttpURLConnection conn = null;
 		try {
 			LoginZoomToU.isLoginSuccess = 0;
-			String data = URLEncoder.encode("grant_type", "UTF-8") + "=" + URLEncoder.encode("password", "UTF-8");
+				String data = URLEncoder.encode("grant_type", "UTF-8") + "=" + URLEncoder.encode("password", "UTF-8");
         	data += "&" + URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(userEmail, "UTF-8");
         	data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(userPass, "UTF-8");
 
@@ -2942,6 +2944,189 @@ public String uploadChat_VoiceMessage(File file) {
 			Log.d("invoiceResponse","Requesting: "+url.toString());
 			///api/mobile/courier/GetCourierAdjustments?courierId=e6ac2296-0d49-48c5-a61f-e212021354fe&approvedDateUtc=2023-02-28&pageNumber=1
 			serverReponse = httpGetRequestWithResponseCode(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	//Community Section
+	//==============================================================================================
+	public String getCommunitymemberlist() {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/MemberList");
+			serverReponse = httpGetRequestWithResponseCode(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunityReceivedInvitations() {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/ReceivedInvitationList");
+			serverReponse = httpGetRequestWithResponseCode(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitySentInvitations() {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/SentInvitationList");
+			serverReponse = httpGetRequestWithResponseCode(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitySearchCouriers(String email) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/SearchCouriers?input="+email);
+			serverReponse = httpGetRequestWithResponseCode(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunityaddmember(String courierid) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/AddMember?courierId="+courierid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			Log.e("AddMembers","AddMembers Responce : "+serverReponse);
+
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+
+	public String getCommunityupdatemember(String id,String nickname) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/UpdateMember?id="+id+"&nickName="+nickname);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunityacceptmember(int id) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/AcceptInvitation?id="+id);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunityrejectmember(String courierid) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/DeleteMember?courierId="+courierid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitysentinvitationdeletemember(String courierid) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/DeleteMember?courierId="+courierid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitydeletemembers(String courierid) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/DeleteMember?courierId="+courierid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunityofferbookinglist() {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/OfferBookingList");
+			serverReponse = httpGetRequestWithResponseCode(url);
+
+			Log.e("CommunityOfferBooking", "GetList response  ==   "+serverReponse);
+
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitybookingofferAcceptBooking(int offerid,int bookingid) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/AcceptBooking?OfferId="+offerid+"&BookingId="+bookingid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+
+			Log.e("CommunityOfferBooking", "Accepted response  ==   "+serverReponse);
+
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String getCommunitybookingofferRejectBooking(int offerid,int bookingid ) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/RejectBooking?OfferId="+offerid+"&BookingId="+bookingid);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			Log.e("CommunityOfferBooking", "Rejected response  ==   "+serverReponse);
+
+			url = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return serverReponse;
+	}
+
+	public String SendBookingOfferToCommunityMember(int bookingIDToAssign, String courierId) {
+		serverReponse = "";
+		try {
+			URL url = new URL(serverURL + "/breeze/Community/SendBookingOfferToCommunityMember?bookingId="+bookingIDToAssign+"&memberId="+courierId);
+			serverReponse = httpPostRequestWithResponseStatus(url);
+			Log.e("AssignBooking", "AssigningBooking response  ==   "+serverReponse);
+
 			url = null;
 		} catch (Exception e) {
 			e.printStackTrace();

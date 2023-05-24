@@ -62,6 +62,7 @@ import com.google.gson.reflect.TypeToken;
 import com.newnotfication.view.NewBooking_Notification;
 import com.newnotfication.view.bookings_view_offer.CounterOffers;
 import com.newnotfication.view.bookings_view_offer.ShowOfferForBookings;
+import com.suggestprice_team.courier_team.community.CommunityBookingActivity;
 import com.z2u.booking.vc.ActiveBookingView;
 import com.z2u.booking.vc.CompletedView;
 import com.z2u.chatview.ChatDetailActivity;
@@ -94,6 +95,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class BookingDetail_New extends Activity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
+
     int PERMISSION_ID=22;
     FusedLocationProviderClient mFusedLocationClient;
     public static WorkaroundMapFragment mapFragmentBookingDetail;
@@ -101,7 +103,6 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
 
     /** This integer will uniquely define the dialog to be used for displaying time picker.*/
     static final int TIME_DIALOG_BD = 0;
-
     private ScrollView scrollViewNewBD;
     private TextView countChatBookingDetail, secondHeaderTxtBD, vehicelValueTxtBD, distanceValueTxtBD, pickUpTimeValueTxtBD, deliveryTimeValueTxtBD,
             pickUpContactNameTxtBD, pickUpSuburbTxtBD, dropOffContactNameTxtBD, dropOffSuburbTxtBD, priceValueTxtBD;
@@ -112,6 +113,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
     private TextView documentTxtBD, dimentionDetailsTxtBD, viewDimensionTxtBD;
 
     private boolean isRejectBooking_NBD;
+     boolean isshow;
 
     private ProgressDialog progressDialogForNBD;
 
@@ -145,6 +147,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
     private int bidActivePeriodInterval = 15;
 
     private LinearLayout ll_booking_due_day;
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -205,12 +208,18 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         }
+
+
+        isshow = getIntent().getExtras().getBoolean("my_boolean_key");
+        Log.d("hsdsuild", "onCreate: "+isshow);
+
         PushReceiver.IsOtherScreenOpen =true;
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         inItNewBookingDetailViewContents(savedInstanceState);        //***** Initialize new booking detail view contents
     }
 
     //******** Initialize new booking detail view contents ***************
+    @SuppressLint("SuspiciousIndentation")
     private void inItNewBookingDetailViewContents(Bundle savedInstanceState) {
         try {
             if (savedInstanceState == null) {
@@ -222,7 +231,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
                     ConfirmPickUpForUserName.isDropOffSuccessfull = savedInstanceState.getInt("SlideMenuItemCount");
                     newBookingDetailModel = savedInstanceState.getParcelable("NewBookingDetailModel");
                     BookingView.bookingViewSelection = savedInstanceState.getInt("bookingViewSelection");
-            //        BookingView.bookingListArray = savedInstanceState.getParcelableArrayList("NewBookingArray");
+            //      BookingView.bookingListArray = savedInstanceState.getParcelableArrayList("NewBookingArray");
                     Functional_Utility.removeLocationTimer();
                     Intent serviceIntent = new Intent(this, ServiceForSendLatLong.class);
                     startService(serviceIntent);
@@ -237,8 +246,15 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
             e.printStackTrace();
         }
 
-
         try {
+            suggestPriceTxt = (TextView) findViewById(R.id.suggestPriceTxt);
+            suggestPriceTxt.setOnClickListener(this);
+            if (isshow) {
+                suggestPriceTxt.setVisibility(View.GONE);
+            }else {
+                suggestPriceTxt.setVisibility(View.VISIBLE);
+            }
+
             headerLayoutAllTitleBar=findViewById(R.id.headerLayoutAllTitleBar);
             backBtnHeader=findViewById(R.id.backBtnHeader);
             backBtnHeader.setOnClickListener(this);
@@ -263,10 +279,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
             countChatBookingDetail.setVisibility(View.GONE);
             SlideMenuZoom2u.countChatBookingView = countChatBookingDetail;
 
-            suggestPriceTxt = (TextView) findViewById(R.id.suggestPriceTxt);
 
-            suggestPriceTxt.setOnClickListener(this);
-            suggestPriceTxt.setVisibility(View.VISIBLE);
 
             priceTxtForGSTInfo = (TextView) findViewById(R.id.priceTxtForGSTInfo);
 
@@ -876,46 +889,83 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
 
 
     private void acceptNewBooking() {
-        if (WebserviceHandler.isRoutific)
-            callServiceForAcceptBooking();
-        else {
-            bookingETADialogBD.setVisibility(View.VISIBLE);
-
-            String etaForCurrentTime = null;
-            Calendar c = Calendar.getInstance();
-            SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss.SSS");
-            etaForCurrentTime = LoginZoomToU.checkInternetwithfunctionality.returnDateFromDeviceToPick("" + newBookingDetailModel.getPickupDateTime());
-            etaForCurrentTime = etaForCurrentTime + "T" + sdf1.format(c.getTime());
-            SimpleDateFormat sdf;
-            sdf = new SimpleDateFormat("dd-MM-yyyy'T'HH:mm:ss.SSS");
-
-            Date convertedDate = new Date();
-            try {
-                convertedDate = sdf.parse(etaForCurrentTime);
-                sdf = null;
-            } catch (Exception e) {
+        if (isshow){
+            try{
+                String listPosition = String.valueOf(getIntent().getBundleExtra("NewBookingBundle").getInt("listPosition"));
+                int offerId =getIntent().getExtras().getInt("offerId");
+                int bookingId =getIntent().getExtras().getInt("bookingId");
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", "Accept");
+                returnIntent.putExtra("listPosition", listPosition);
+                returnIntent.putExtra("offerId",offerId);
+                returnIntent.putExtra("bookingId",bookingId);
+                setResult(Activity.RESULT_OK, returnIntent);
+                finish();
+            }catch(Exception e) {
                 e.printStackTrace();
             }
 
-            if (uploadtimeToServer != null)
-                uploadtimeToServer = null;
-            // Date uploaded to server
-            uploadtimeToServer = LoginZoomToU.checkInternetwithfunctionality.getPickerDateTimeFromDevice(convertedDate);
-            convertedDate = null;
-            etaForCurrentTime = LoginZoomToU.checkInternetwithfunctionality.getPickOrDropDateTimeFromServer(etaForCurrentTime);
-            etaMsgTextBD.setText(etaForCurrentTime);
-            etaForCurrentTime = null;
+        }else {
+          if (WebserviceHandler.isRoutific)
+                callServiceForAcceptBooking();
+            else {
+                bookingETADialogBD.setVisibility(View.VISIBLE);
+
+                String etaForCurrentTime = null;
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss.SSS");
+                etaForCurrentTime = LoginZoomToU.checkInternetwithfunctionality.returnDateFromDeviceToPick("" + newBookingDetailModel.getPickupDateTime());
+                etaForCurrentTime = etaForCurrentTime + "T" + sdf1.format(c.getTime());
+                SimpleDateFormat sdf;
+                sdf = new SimpleDateFormat("dd-MM-yyyy'T'HH:mm:ss.SSS");
+
+                Date convertedDate = new Date();
+                try {
+                    convertedDate = sdf.parse(etaForCurrentTime);
+                    sdf = null;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                if (uploadtimeToServer != null)
+                    uploadtimeToServer = null;
+                // Date uploaded to server
+                uploadtimeToServer = LoginZoomToU.checkInternetwithfunctionality.getPickerDateTimeFromDevice(convertedDate);
+                convertedDate = null;
+                etaForCurrentTime = LoginZoomToU.checkInternetwithfunctionality.getPickOrDropDateTimeFromServer(etaForCurrentTime);
+                etaMsgTextBD.setText(etaForCurrentTime);
+                etaForCurrentTime = null;
+            }
         }
     }
 
     private void rejectNewBooking () {
-        isRejectBooking_NBD = true;
-        if (LoginZoomToU.checkInternetwithfunctionality.isConnectingToInternet())
-            //new AcceptBookingForPickupInBDAsyncTask().execute();
-            AcceptBookingForPickupInBDAsyncTask();
-        else
-            DialogActivity.alertDialogView(BookingDetail_New.this, "No Network!", "No network connection, Please try again later.");
-    }
+        if(isshow) {
+            try {
+                String listPosition = String.valueOf(getIntent().getBundleExtra("NewBookingBundle").getInt("listPosition"));
+                int offerId =getIntent().getExtras().getInt("offerId");
+                int bookingId =getIntent().getExtras().getInt("bookingId");
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", "Reject");
+                returnIntent.putExtra("listPosition", listPosition);
+                returnIntent.putExtra("offerId",offerId);
+                returnIntent.putExtra("bookingId",bookingId);
+                setResult(Activity.RESULT_OK, returnIntent);
+                finish();
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }else {
+            isRejectBooking_NBD = true;
+            if (LoginZoomToU.checkInternetwithfunctionality.isConnectingToInternet())
+                //new AcceptBookingForPickupInBDAsyncTask().execute();
+                AcceptBookingForPickupInBDAsyncTask();
+            else
+                DialogActivity.alertDialogView(BookingDetail_New.this, "No Network!", "No network connection, Please try again later.");
+
+        }
+      }
 
     //********** Dialog for GST info ***************
     private void dialogViewForGSTInfo(){
@@ -1284,4 +1334,6 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
             dialogViewForNewNotification("Error!", "Something went wrong, Please try again.");
         }
     }
+
+
 }
