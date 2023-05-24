@@ -62,10 +62,9 @@ public class WebserviceHandler {
 	//************ Must change the Firebase DB and config file
 	// google-service.json to live before release
 
-	//static String serverURL = "https://api.zoom2u.com";          				// Pointing to Live DB
+	static String serverURL = "https://api.zoom2u.com";          				// Pointing to Live DB
 	public static String TERMS_CONDITIONS="https://courier.zoom2u.com/courier-terms-conditions.html"; //live
-
-	 public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
+	 //public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
 	//public static String serverURL = "https://api-test.zoom2u.com";						// Pointing to Test DB
 	//public static String serverURL = "https://zoom2uapi-staging.azurewebsites.net";		// Staging slot of api-staging (Staging API)
 
