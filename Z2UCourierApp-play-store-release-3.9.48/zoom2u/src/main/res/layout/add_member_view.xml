@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/headerDLayoutAddTeam"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color1">
+
+        <ImageView
+            android:id="@+id/backFromAddTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleAddTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Add Member"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/chatIconAddTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatAddTeam"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewInviteTeam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerDLayoutAddTeam">
+
+        <RelativeLayout
+            android:id="@+id/headerLayoutAddTeam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/firstNameAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLayoutMyTeamList"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center|end"
+                android:text="First Name"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtFirstNameAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/firstNameAddMember"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="First Name"
+                android:singleLine="true"
+                android:textColor="@color/gun_metal"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lastNameAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtFirstNameAddMember"
+                android:layout_alignRight="@+id/firstNameAddMember"
+                android:layout_marginTop="15dp"
+                android:text="Last Name"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtLastNameAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/lastNameAddMember"
+                android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                android:layout_alignRight="@+id/edtFirstNameAddMember"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="Last Name"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/gun_metal"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emailAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtLastNameAddMember"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Email"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtEmailAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/emailAddMember"
+                android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                android:layout_alignRight="@+id/edtFirstNameAddMember"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="Email"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/gun_metal"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phoneNoAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEmailAddMember"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:maxLines="1"
+                android:text="Mobile Number"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtPhoneNoAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/phoneNoAddMember"
+                android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                android:layout_alignRight="@+id/edtFirstNameAddMember"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="Mobile Number"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/gun_metal"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addressAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPhoneNoAddMember"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Address"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edtAddressAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/addressAddMember"
+                android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                android:layout_alignRight="@+id/edtFirstNameAddMember"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:gravity="center|left|bottom"
+                android:hint="Address"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="3"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/add_member_hint_color"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/radioBtnGroupAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtAddressAddMember"
+                android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                android:layout_marginTop="40dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vehicleTypeAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAddressAddMember"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:text="Vehicle type"
+                    android:textStyle="bold"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="14dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgInviteTeamMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/devider1"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/vehicleTypeAddMember"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbForBike"
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:button="@drawable/bike_selector"
+                        android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/rbForCar"
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_marginLeft="20dp"
+                        android:button="@drawable/car_selector"
+                        android:checked="true"
+                        android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/rbForVan"
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_marginLeft="20dp"
+                        android:button="@drawable/van_selector"
+                        android:onClick="onRadioButtonClicked" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/bikeTxtAddMember"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgInviteTeamMember"
+                    android:layout_alignLeft="@+id/rgInviteTeamMember"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Bike"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/carTxtAddMember"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgInviteTeamMember"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/bikeTxtAddMember"
+                    android:gravity="center"
+                    android:text="Car"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vanTxtAddMember"
+                    android:layout_width="51dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rgInviteTeamMember"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/carTxtAddMember"
+                    android:gravity="center"
+                    android:text="Van"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioBtnGroupAddMember"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/acceptBtnAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="@drawable/roundedskybluebg"
+                android:gravity="center"
+                android:text="Suggest a price"
+                android:textColor="@drawable/textselector"
+                android:textSize="15dp"
+                android:textStyle="bold"  />
+            <Button
+                android:id="@+id/cancelBtnAddMember"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/new_boder"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/gold_dark"
+                android:textSize="15dp"
+                android:textStyle="bold"  />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

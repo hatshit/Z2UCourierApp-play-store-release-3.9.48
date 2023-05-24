@@ -1,0 +1,240 @@
+<com.zoom2u.MainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4d4d4" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gunmetal_new" >
+
+        <RelativeLayout
+            android:id="@+id/logoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="29dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:background="@color/menu_bg_dark"
+            android:orientation="horizontal">
+
+            <com.zoom2u.roundedimage.RoundedImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:id="@+id/courierProfileImg_Menu"
+                android:background="@drawable/round_circle_bg"/>
+
+            <TextView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:id="@+id/courierFirstLastName"
+                android:textColor="@color/image_first_last_name_color"
+                android:gravity="center"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/courierNameTxt_Menu"
+                android:layout_toRightOf="@+id/courierProfileImg_Menu"
+                android:text="Johnson Doe"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="11dp"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/courierCompanyNameTxt_Menu"
+                android:layout_alignLeft="@+id/courierNameTxt_Menu"
+                android:layout_below="@+id/courierNameTxt_Menu"
+                android:text="Zoom2u fastest delivery"
+                android:layout_marginTop="3dp"
+                android:maxLines="2"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="32dp"
+            android:background="@drawable/background_arrow"
+            android:layout_marginLeft="35dp"
+            android:rotation="180"
+            android:layout_marginTop="-2dp"
+            android:id="@+id/arrowBtn"
+            android:layout_below="@+id/logoLayout"/>
+
+
+        <LinearLayout
+            android:id="@+id/build_me"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:layout_below="@+id/arrowBtn"
+            android:gravity="center"
+            android:background="@drawable/round_white"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_routes_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Build a run"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/gun_metal"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/build_me"
+            android:background="@color/msg_txt_color"/>
+
+        <ListView
+            android:id="@+id/menu_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:background="@color/gunmetal_new"
+            android:layout_marginBottom="30dp"
+            android:layout_above="@+id/signOutBtn"
+            android:divider="@null" />
+
+        <Button
+            android:layout_width="132dp"
+            android:layout_height="39dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/signOutBtn"
+            android:background="@drawable/roundedskybluebg"
+            android:layout_marginLeft="32dp"
+            android:text="Sign Out"
+            android:textSize="14dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@drawable/textselector"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <!-- This acts as Actionbar -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/slideMenuTopBarLayout"
+            android:orientation="horizontal"
+            android:background="@color/base_color1"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/menuBtnLayout"
+                >
+
+                <ImageView
+                    android:id="@+id/button_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="toggleMenu"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/nav_menu_white" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/activity_main_content_title"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/statusTxtForChat"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:text="Bookings List"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/chatBtnBookingView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+
+                android:src="@drawable/iconchat"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="!"
+                android:id="@+id/countChatBookingView"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/circleredbgbutton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/refreshBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/chatBtnBookingView"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/refresh_list"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <!-- This is where fragment will show up -->
+
+        <FrameLayout
+            android:id="@+id/activity_main_content_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d4d4d4" >
+        </FrameLayout>
+    </LinearLayout>
+
+</com.zoom2u.MainLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="420dp"
+    android:layout_gravity="center"
+    android:elevation="5dp"
+    android:background="@drawable/roundedwhiteback"
+    >
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="420dp"
+    android:layout_gravity="center"
+    android:layout_margin="2dp"
+    android:background="@drawable/rounded_dynamo_level" >
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="420dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+
+    <TextView
+        android:id="@+id/dhlBookingCountHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Run booking count"
+        android:textColor="@color/gunmetal_new1"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/dhlBookingCountHeader"
+            android:layout_marginTop="20dp"
+            android:background="@color/lightgraycolor" />
+
+    <TextView
+        android:id="@+id/dhlBookingAlrtTotalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Total"
+        android:textColor="#5BCF4B"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/dhlBookingAlrtTotalCountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dhlBookingAlrtTotalTxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="#FF476A"
+        android:textSize="15dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dhlBookingAlrtTotalTxt"
+        android:layout_marginTop="10dp"
+        android:id="@+id/dhlCountList"
+        android:divider="@null"
+        android:layout_above="@+id/dhlAlertOkBtn"
+        android:layout_marginBottom="15dp"
+        >
+    </ListView>
+
+
+        <Button
+            android:id="@+id/dhlAlertOkBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_recruite_level"
+            android:text="Ok"
+            android:textColor="@drawable/textselector"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

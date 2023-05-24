@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#374350"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        >
+        <TextView
+            android:id="@+id/txtHeroLeaderBoardHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Leader board"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/sky"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatBtnLeaderBoard"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/iconchat"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:text="!"
+            android:id="@+id/countChatLeaderBoard"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:src="@drawable/nav_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/backBtnLeaderBoard" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leaderBoardHeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#374350"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/courierNameTxtLeaderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:padding="8dp"
+            android:text="Courier name"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/pointTxtLeaderBoardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="25dp"
+            android:padding="8dp"
+            android:text="Points"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listOfLeaderBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/leaderBoardHeaderLayout"
+        android:background="@color/white"
+        android:divider="@null"
+         />
+   
+
+</LinearLayout>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutAllTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/gunmetal_new">
+
+        <ImageView
+            android:id="@+id/backFromBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/nav_back" />
+
+        <ImageView
+            android:id="@+id/backBtnHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/nav_back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Run Batch Details"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewNewBD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/horizontalLayoutBD"
+        android:layout_below="@+id/newBDTitleBarLayout"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <fragment
+                android:id="@+id/mapViewBookingDetail"
+                class="com.zoom2u.utility.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/secondHeaderBDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/mapViewBookingDetail"
+                android:background="@color/gold_light"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/secondHeaderTxtBD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerBookingDLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="8dp"
+                    android:text="ⓘ This delivery is due tomorrow"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/horizontalLayoutBD"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_below="@+id/secondHeaderBDLayout"
+                android:background="#e0e0e0"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="Vehicle"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/verticleTxt2BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verticleTxt1BD"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Car"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="Distance"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/verticleTxt2BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verticleTxt1BD"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:text="11.25 km"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="Pickup"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/verticleTxt2BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verticleTxt1BD"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:text="10:30 AM"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".25"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="Deliver By"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/verticleTxt2BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verticleTxt1BD"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:text="04:00 PM"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/horizontalPickDropDetailBD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalLayoutBD"
+                android:background="#e0e0e0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/addressHeaderTxtBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/iconrun_loc"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="Pickup"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/addressHeaderTxtBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/iconrun_loc"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="Drop Area"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/horizontalPickDropDetailBD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontalLayoutBD"
+                android:background="#e0e0e0"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addressHeaderTxtBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Label"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Label"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addressHeaderTxtBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Label"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/verticleTxt1BD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Label"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/priceValueTxtBD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="$26.00"
+                android:textColor="@color/app_greencolor"
+                android:textSize="36dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/horizontalLayoutBD"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/accept_random_run"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/rounded_elite_level"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="@drawable/textselector"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/accept_run"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight=".5"
+            android:background="@drawable/rounded_worrier_level"
+            android:gravity="center"
+            android:text="Accept Run"
+            android:textAllCaps="false"
+            android:textColor="@drawable/textselector"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

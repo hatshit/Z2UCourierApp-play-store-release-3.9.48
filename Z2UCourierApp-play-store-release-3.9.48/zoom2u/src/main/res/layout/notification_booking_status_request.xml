@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="315dp"
+        android:layout_height="460dp"
+        android:id="@+id/bookingStatusRequestView"
+        android:background="@drawable/roundedwhiteback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/headertxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Booking Status Request"
+            android:textSize="18dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/customerNameTitleStr_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="25dp"
+            android:text="CUSTOMER"
+            android:textSize="9dp"
+            android:fontFamily="@font/gotham_rnd_book"
+            android:textColor="@color/graycolorText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headertxt_BSR" />
+
+        <TextView
+            android:id="@+id/customerNameValueStr_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Mark Cardew"
+            android:textSize="17dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            app:layout_constraintStart_toStartOf="@+id/customerNameTitleStr_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/customerNameTitleStr_BSR" />
+
+        <TextView
+            android:id="@+id/pickupSuburbTitleTxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="PICKUP"
+            android:textSize="9dp"
+            android:fontFamily="@font/gotham_rnd_book"
+            android:textColor="@color/graycolorText"
+            app:layout_constraintStart_toStartOf="@+id/customerNameTitleStr_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/customerNameValueStr_BSR" />
+
+        <TextView
+            android:id="@+id/pickupSuburbValueTxt_BSR"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Mark Cardew"
+            android:textSize="17dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            app:layout_constraintStart_toStartOf="@+id/customerNameTitleStr_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/pickupSuburbTitleTxt_BSR" />
+
+        <TextView
+            android:id="@+id/dropOffTimeTitleTxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="DELIVERY BY"
+            android:textSize="9dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="@+id/customerNameTitleStr_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/pickupSuburbValueTxt_BSR" />
+
+        <TextView
+            android:id="@+id/dropOffTimeValueTxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="2:50 pm"
+            android:textSize="17dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            app:layout_constraintStart_toStartOf="@+id/customerNameTitleStr_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/dropOffTimeTitleTxt_BSR" />
+
+        <TextView
+            android:id="@+id/dropOffSuburbTitleTxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DROPOFF"
+            android:textSize="9dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/graycolorText"
+            app:layout_constraintStart_toEndOf="@+id/pickupSuburbValueTxt_BSR"
+            app:layout_constraintTop_toTopOf="@+id/pickupSuburbTitleTxt_BSR" />
+
+        <TextView
+            android:id="@+id/dropOffSuburbValueTxt_BSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Surry Hills"
+            android:textSize="17dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            app:layout_constraintStart_toStartOf="@+id/dropOffSuburbTitleTxt_BSR"
+            app:layout_constraintTop_toBottomOf="@+id/dropOffSuburbTitleTxt_BSR" />
+
+        <Button
+            android:id="@+id/lateBtn_BSR"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="I'll be Late"
+            android:textSize="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            android:background="@drawable/rounded_legend_level"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/onTimeBtn_BSR"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="I'll be On Time"
+            android:textSize="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_appskyblue"
+            app:layout_constraintBottom_toTopOf="@+id/lateBtn_BSR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="315dp"
+        android:layout_height="460dp"
+        android:id="@+id/updateETAView"
+        android:visibility="gone"
+        android:background="@drawable/roundedwhiteback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/headertxt_BSR_For_ETA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Whats your ETA?"
+            android:textSize="18dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/selectTimeTitle_BSR_For_ETA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/gotham_rnd_book"
+            android:text="SELECT TIME"
+            android:textColor="@color/graycolorText"
+            android:textSize="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headertxt_BSR_For_ETA" />
+
+        <TextView
+            android:id="@+id/selectTimeValue_BSR_For_ETA"
+            android:layout_width="180dp"
+            android:layout_height="65dp"
+            android:elevation="12dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gotham_rnd_bold"
+            android:textColor="@color/msg_txt_color"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:text="3:20 pm"
+            android:background="@drawable/rounded_whiteback_bsr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectTimeTitle_BSR_For_ETA" />
+
+        <TextView
+            android:id="@+id/notesTitleTxt_BSR_For_ETA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/gotham_rnd_book"
+            android:text="NOTES"
+            android:textColor="@color/graycolorText"
+            android:textSize="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectTimeValue_BSR_For_ETA" />
+
+        <EditText
+            android:id="@+id/edtNotesValueTxt_BSR_For_ETA"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:hint="Add your notes here"
+            android:textColorHint="@color/gun_metal"
+            android:textColor="@color/gun_metal"
+            android:textSize="12dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_white_border_20"
+            android:gravity="center|left|top"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/notesTitleTxt_BSR_For_ETA"
+            app:layout_constraintTop_toBottomOf="@+id/notesTitleTxt_BSR_For_ETA" />
+
+        <Button
+            android:id="@+id/backBtn_BSR_For_ETA"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/msg_txt_color"
+            android:background="@drawable/rounded_white_border_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/updateETABtn_BSR_For_ETA"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="Update your Customer"
+            android:textSize="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_appskyblue"
+            app:layout_constraintBottom_toTopOf="@+id/backBtn_BSR_For_ETA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

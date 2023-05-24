@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <!--  ImageView
+        android:id="@+id/rejectImageBList"
+        android:layout_width="110dp"
+        android:layout_height="125dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/reject_btn" />
+
+     <ImageView
+        android:id="@+id/addImageBList"
+        android:layout_width="110dp"
+        android:layout_height="125dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/accept_btn" />
+    
+    <RelativeLayout
+        android:id="@+id/rrLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+         >
+
+        <RelativeLayout
+            android:id="@+id/frontBackNewBooking"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+           android:layout_width="match_parent"
+           android:background="#FFFFFF">
+        
+        <TextView
+            android:id="@+id/chargesBList"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/userNameBList"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:text="$0"
+            android:textColor="#7BCE20"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bookingCreatedTime"
+            android:layout_width="180dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/userNameBList"
+            android:layout_marginTop="5dp"
+            android:gravity="center|left"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:text="Booking time here"
+            android:textColor="#696969"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/userNameBList"
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/vichleImg"
+            android:gravity="center|left"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:text="Steve Jobs"
+            android:textColor="#162C45"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/vichleImg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/bookingCreatedTime"
+            android:layout_alignTop="@+id/userNameBList"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/roundedblackbg"
+             />
+
+        <TextView
+            android:id="@+id/locationMarkBList"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@+id/imgLocationMarkBList"
+            android:layout_alignRight="@+id/chargesBList"
+            android:gravity="left|center"
+            android:text="0.0 km away"
+            android:textColor="#696969"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/imgLocationMarkBList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/bookingCreatedTime"
+            android:layout_toLeftOf="@+id/locationMarkBList"
+            android:src="@drawable/location_marker" />
+
+        <TextView
+            android:id="@+id/timeToArriveInBookingList"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignRight="@+id/locationMarkBList"
+            android:layout_alignTop="@+id/suburbTextnewBooking"
+            android:gravity="right"
+            android:text="3 hours"
+            android:textColor="#CE1620"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgArrowEndBList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textPickupBList"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/distanceBList"
+        android:src="@drawable/arrow_end" />
+
+    <TextView
+        android:id="@+id/textDropoffBList"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_alignRight="@+id/chargesBList"
+        android:layout_toRightOf="@+id/imgArrowEndBList"
+        android:layout_alignBottom="@+id/textPickupBList"
+        android:gravity="center|right"
+        android:text="Dropofff"
+        android:textColor="#696969"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/imgStartErrowBList"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignTop="@+id/textPickupBList"
+        android:layout_toLeftOf="@+id/distanceBList"
+        android:src="@drawable/arrow_start" />
+
+    <TextView
+        android:id="@+id/suburbTextnewBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bookingCreatedTime"
+        android:gravity="center|left"
+        android:paddingLeft="5dp"
+        android:paddingRight="0dp"
+        android:text="Package here"
+        android:textColor="#696969"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/delivryNotesBookingList"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/vichleImg"
+        android:layout_below="@+id/suburbTextnewBooking"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:text="No Delivery Notes"
+        android:textColor="#696969"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/textPickupBList"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_below="@+id/delivryNotesBookingList"
+        android:gravity="center|left"
+        android:text="Pickup"
+        android:layout_marginTop="3dp"
+        android:layout_alignLeft="@+id/vichleImg"
+        android:textColor="#696969"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/distanceBList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textPickupBList"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="0.0 km"
+        android:textColor="#162C45"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+         
+         </RelativeLayout>
+    </RelativeLayout-->
+
+</RelativeLayout>

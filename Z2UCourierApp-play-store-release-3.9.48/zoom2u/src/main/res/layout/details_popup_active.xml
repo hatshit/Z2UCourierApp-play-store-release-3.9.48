@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    android:id="@+id/mainDefaultDialogLayout"
+    >
+
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="110dp"
+        android:id="@+id/customerInfoHiddenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/white_background"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/priceTxtABD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="$150"
+                android:textStyle="bold"
+                style="@style/style_12_regular"
+                android:textSize="12dp" />
+
+            <View
+                android:id="@+id/dividerContactNameCouDetailABD"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgray2"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/vehicleTxtABD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Van"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/gun_metal"
+                android:textSize="12dp" />
+
+           <!-- <View
+                android:id="@+id/dividerContactNameCouDetailABD"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgray2"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Box(6)"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/gun_metal"
+                android:textSize="12dp" />-->
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dividerContactNameCouDetailABD"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/createdTimeTxtCustomerDetailABD"
+            android:background="@color/lightgray2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/Awb_no"
+            style="@style/style_15_name"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/bookingId"
+            style="@style/style_15_name"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:text="nonoenodnendneidnendio"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base_color1"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/createdTimeTxtCustomerDetailABD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="10dp"
+            android:text="csdibcisbcsbocbs"
+            android:textStyle="bold"
+            android:textColor="@color/gun_metal"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/lightgray2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/customerNameTxtCoureirDetailABD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:text="Test customer"
+            android:textStyle="bold"
+            android:textColor="@color/base_color1"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="7dp"
+            >
+
+            <TextView
+                android:id="@+id/customerCompanyAndMobNoTxtCouDetalABD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/gun_metal"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/iconCallCustomerBtnInDeailABD"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/new_call" />
+        </RelativeLayout>
+
+
+
+
+        <View
+            android:id="@+id/dividerDNotesCouDetailABD"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/customerCompanyAndMobNoTxtCouDetalABD"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightgray2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/deliveryNotesTxtcourierDetailABD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="3dp"
+            android:text="Delivery notes is a big parcel that is approx. 2m by 30cm, and weighing 2kg. Probably best to bring gloves or a trolley"
+            android:textColor="@color/gun_metal"
+            android:textSize="11dp" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

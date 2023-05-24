@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainChatItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@color/graycolorlinemapview"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:id="@+id/chatItemLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/admin_chat">
+
+        <TextView
+            android:id="@+id/messageTxtInChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:paddingRight="10dp"
+            android:text="Text"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/timeStampTxtInChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageTxtInChat"
+            android:layout_alignLeft="@+id/messageTxtInChat"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:padding="3dp"
+            android:text=""
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/readRecieptImg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/messageTxtInChat"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/timeStampTxtInChat"
+            android:padding="3dp"
+            android:src="@drawable/receipt_unread" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/imageLayoutForChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/admin_chat"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/chatImageView"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/transparent_black_bg"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/timeStampTxtInImgChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatImageView"
+            android:layout_alignLeft="@+id/chatImageView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|right"
+            android:lineSpacingExtra="3dp"
+            android:padding="3dp"
+            android:text=""
+            android:layout_marginTop="3dp"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/readRecieptImgChat"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignRight="@+id/chatImageView"
+            android:padding="3dp"
+            android:layout_alignBottom="@+id/timeStampTxtInImgChat"
+            android:src="@drawable/receipt_unread" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/voiceMessageChatLayout"
+        android:background="@drawable/admin_chat" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="7dp"
+            android:clickable="false"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/voicePlayLayout_Chat"
+            android:background="@drawable/rounded_whiteback">
+
+            <ImageView
+                android:id="@+id/playVoiceMessageChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/play_audio"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:layout_centerVertical="true"
+                android:layout_margin="12dp"
+                android:focusable="true"
+                 />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/timeStampTxtInVoiceChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voicePlayLayout_Chat"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/readRecieptVoiceChat"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_toRightOf="@+id/timeStampTxtInVoiceChat"
+            android:layout_alignTop="@+id/timeStampTxtInVoiceChat"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/receipt_unread" />
+
+    </RelativeLayout>
+</RelativeLayout>

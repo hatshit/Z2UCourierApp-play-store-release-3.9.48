@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/requestDetailMainLayout"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:id="@+id/headerBookingDetail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF" >
+
+            <ImageView
+                android:id="@+id/backFromBookingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/nav_back" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Quotes"
+            android:textColor="#00A7E2"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:src="@drawable/iconchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/chatIconQuotesDetail" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="!"
+            android:id="@+id/countChatQuotesDetail"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerBookingDetail"
+        android:layout_above="@+id/btnAcceptOffers"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+          >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+                <TextView
+                    android:id="@+id/pickuoDropoffDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:background="#00A7E2"
+                    android:text="Pickup ➜  Dropoff"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/parcelReadyTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:textSize="14dp"
+                    android:layout_below="@id/pickuoDropoffDetails"
+                    android:text="Parcel ready"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/graycolorlinemapview"
+                    />
+
+                <TextView
+                    android:id="@+id/parcelDropOffTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:textSize="14dp"
+                    android:paddingBottom="5dp"
+                    android:layout_below="@id/parcelReadyTxt"
+                    android:text="Dropoff time"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/graycolorlinemapview"
+                    />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/parcelDropOffTxt"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    >
+                <LinearLayout
+                    android:id="@+id/linearForImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    >
+                </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:id="@+id/topDefaultView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/scrHorizontal"
+                    android:background="@color/lightgray" />
+                <TextView
+                    android:id="@+id/txtMyRequestDetailPickAdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="3"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="0dp"
+                    android:text="Pickup address"
+                    android:textStyle="normal"
+                    android:layout_below="@id/topDefaultView1"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16dp" />
+                <View
+                    android:id="@+id/topDefaultView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDetailPickAdd"
+                    android:background="@color/lightgray" />
+                <TextView
+                    android:id="@+id/txtMyRequestDetailPickAddDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="3"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="0dp"
+                    android:text="Pickup address here"
+                    android:layout_below="@id/topDefaultView2"
+                    android:textStyle="normal"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="14dp" />
+
+                <View
+                    android:id="@+id/topDefaultView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDetailPickAddDetails"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/txtMyRequestDetailDropAdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="0dp"
+                    android:text="Dropoff address"
+                    android:textStyle="normal"
+                    android:layout_below="@id/topDefaultView3"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16dp" />
+
+                <View
+                    android:id="@+id/topDefaultView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDetailDropAdd"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/txtMyRequestDetailDropoffAddDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="3"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="0dp"
+                    android:text="Dropoff address here"
+                    android:layout_below="@id/topDefaultView4"
+                    android:textStyle="normal"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="14dp" />
+                <View
+                    android:id="@+id/topDefaultView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDetailDropoffAddDetails"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/txtHeaderPkgTypeRequestdetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="3"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="0dp"
+                    android:text="Package type"
+                    android:textStyle="normal"
+                    android:layout_below="@id/topDefaultView5"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16dp" />
+
+                <View
+                    android:id="@+id/topDefaultView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtHeaderPkgTypeRequestdetail"
+                    android:background="@color/lightgray" />
+
+
+                <TextView
+                    android:id="@+id/txtValueRequestDetailPkgType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="3"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="0dp"
+                    android:text="Package type here"
+                    android:layout_below="@id/topDefaultView6"
+                    android:textStyle="normal"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="14dp" />
+                <View
+                    android:id="@+id/topDefaultView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtValueRequestDetailPkgType"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/txtMyRequestDeliveryNotesDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="3"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="0dp"
+                    android:text="Delivery Notes"
+                    android:textStyle="normal"
+                    android:layout_below="@id/topDefaultView7"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="16dp" />
+
+                <View
+                    android:id="@+id/topDefaultView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDeliveryNotesDetail"
+                    android:background="@color/lightgray" />
+
+
+                <TextView
+                    android:id="@+id/txtMyRequestDeliveryNotesDetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="3"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="0dp"
+                    android:text="Delivery Notes here"
+                    android:layout_below="@id/topDefaultView8"
+                    android:textStyle="normal"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="14dp" />
+
+                <View
+                    android:id="@+id/topDefaultView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txtMyRequestDeliveryNotesDetails"
+                    android:background="@color/lightgray" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/btnAcceptOffers"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00A7E2"
+        android:textColor="#fff"
+        android:text="Place Bid"
+        android:textSize="18dp"
+        android:gravity="center"
+        />
+
+    <!--<com.zoom2u.slidemenu.offerrequesthandlr.TouchImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/subLayoutRequestdetail"
+        android:background="#29000000"
+        android:visibility="gone"/>
+
+</RelativeLayout>

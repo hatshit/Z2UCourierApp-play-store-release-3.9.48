@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/headerBarCodeScanner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_bottomborder"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageView
+            android:id="@+id/backFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/nav_back" />
+
+        <ImageView
+            android:id="@+id/flashIconBarcodeScanner"
+            android:layout_width="35dp"
+            android:layout_height="22dp"
+            android:layout_toRightOf="@+id/backFrom"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/flash_icon_off" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="0dp"
+            android:paddingRight="15dp"
+            android:text="Scan AWB number"
+            android:textColor="#00A7E2"
+            android:textSize="17dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnManualScan"
+            android:background="@drawable/roundedskybluebg"
+            android:text="Manual \nscan"
+            android:paddingLeft="7dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="7dp"
+            android:textColor="@drawable/textselector"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/msgTitleHeaderTxt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:text="Scan barcode to mark item as picked up\nYou can move the targeting box around if needed."
+        android:textColor="@color/gun_metal"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:gravity="center"
+        android:text="Scan QR code at depot"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/location_box1"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <ImageView
+            android:id="@+id/cornerBorder"
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:background="@drawable/cornerborder_transparentbg"
+            android:visibility="visible" />
+
+    </FrameLayout>
+        <ScrollView
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/add_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cameraPreview"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gotham_rnd_medium"
+                android:gravity="center"
+                android:text="Add Notes"
+                android:textColor="@color/gun_metal"
+                android:textSize="16dp" />
+
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/add_note"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/location_box"
+                android:gravity="top"
+                android:hint="Add notes here"
+                android:padding="5dp"
+                android:textColor="@color/gun_metal"
+                android:textSize="13dp" />
+
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/chip_background"
+                android:fontFamily="@font/gotham_rnd_medium"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</LinearLayout>

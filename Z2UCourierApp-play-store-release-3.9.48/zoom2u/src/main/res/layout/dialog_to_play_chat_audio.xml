@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_black_bg">
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="75dp"
+        android:id="@+id/playerLayout_Dialog"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedskybluebg">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/voicePlayLayout_ChatDialog"
+        android:background="@drawable/rounded_whiteback">
+
+        <ImageView
+            android:id="@+id/playVoiceMessageChat_Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_audio"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:focusable="true"
+            />
+
+        <Chronometer
+            android:id="@+id/chrono_VoiceMessageChatStartTime_Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/dashTxt_VoiceChat_Dialog"
+            android:textColor="@color/gun_metal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:id="@+id/dashTxt_VoiceChat_Dialog"
+            android:layout_toLeftOf="@+id/chrono_VoiceMessageChat_Dialog"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:textColor="@color/gun_metal"
+            />
+
+        <Chronometer
+            android:id="@+id/chrono_VoiceMessageChat_Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/gun_metal"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/close_audioDialogInChat"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@+id/playerLayout_Dialog"
+        android:layout_alignRight="@+id/playerLayout_Dialog"
+        android:layout_marginRight="-18dp"
+        android:layout_marginTop="-18dp"
+        android:src="@drawable/icon_cross_herolevel" />
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/sky"
+     >
+
+     <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="2dp"
+    android:id="@+id/buttonLayoutTimePickerDialog"
+    android:background="@color/white"
+    >
+     
+    <Button android:id="@+id/cancelTimeBtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="7dp"
+        android:background="@color/white"
+        android:textColor="@color/sky"
+        android:textSize="15dp"
+        android:text="Cancel"/>
+
+    <Button
+        android:id="@+id/setTimeBtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:textSize="15dp"
+        android:textColor="@color/sky"
+        android:text="Done" />
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/wheelTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLayoutTimePickerDialog"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+         >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/defaultWheelPicker1"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center|right"
+            android:layout_toLeftOf="@+id/hourWheelPicker"
+            android:layout_height="140dp" />
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/hourWheelPicker"
+            android:layout_width="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center|right"
+            android:layout_toLeftOf="@+id/minuteWheelPicker"
+            android:layout_height="140dp" />
+         <kankan.wheel.widget.WheelView
+            android:id="@+id/minuteWheelPicker"
+            android:layout_width="60dp"
+             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_height="140dp" />
+          <kankan.wheel.widget.WheelView
+            android:id="@+id/ampmWheelPicker"
+            android:layout_width="60dp"
+             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center|left"
+            android:layout_toRightOf="@+id/minuteWheelPicker"
+            android:layout_height="140dp" />
+           <kankan.wheel.widget.WheelView
+            android:id="@+id/defaultWheelPicker2"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center|right"
+            android:layout_toRightOf="@+id/ampmWheelPicker"
+            android:layout_height="140dp" />
+    </RelativeLayout>
+</RelativeLayout>

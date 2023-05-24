@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activeBookingDetailWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="7dp">
+
+            <TextView
+                android:id="@+id/headerTxtATL"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_bottomborder"
+                android:gravity="center"
+                android:text="Authority to leave"
+                android:textColor="@color/gun_metal"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/leaveAtTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerTxtATL"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:text="Leave At"
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/leaveAtMsgTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leaveAtTitleTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:text="Leave at here"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/doorCodeTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leaveAtMsgTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Door Code"
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/doorCodeMsgTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doorCodeTitleTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:text="Door code here"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/receiverNameTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doorCodeMsgTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Receiver name"
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/receiverNameMsgTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiverNameTitleTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:text="Receiver name here"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/instructionTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiverNameMsgTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Instructions"
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/instructionMsgTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/instructionTitleTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:maxLines="3"
+                android:text="Instructions here"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxATL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/instructionMsgTxt"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="3dp"
+                android:button="@drawable/customcheckbox_barcode"
+                android:text="Are you certain this a safe location to leave the parcel?"
+                android:textColor="@color/sky"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtForCoureirForATL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBoxATL"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center|left"
+                android:text="@string/atlMsgTxt"
+                android:textColor="@color/darkorrange"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtForCoureirForATL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtForCoureirForATL"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center|left"
+                android:text="@string/atlMsgTxt1"
+                android:textColor="@color/darkorrange"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtForCoureirForATL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtForCoureirForATL1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center|left"
+                android:text="@string/atlMsgTxt2"
+                android:textColor="@color/darkorrange"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/atlDropOffBtn"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_below="@+id/txtForCoureirForATL2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/rounded_dynamo_level"
+                android:text="ATL the parcel"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/triedToDeliverBtnATL"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_below="@+id/atlDropOffBtn"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/roundedskybluebg"
+                android:text="Tried to deliver"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/atlCancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_below="@+id/triedToDeliverBtnATL"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/rounded_elite_level"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

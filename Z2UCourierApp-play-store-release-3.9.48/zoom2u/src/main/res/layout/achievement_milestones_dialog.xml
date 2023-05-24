@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha=".7"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/roundedwhiteback"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:id="@+id/titleTxtAchievementView"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="message"
+                android:id="@+id/msgTxtAchievementView"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundedskybluebg"
+                android:text="Ok great!"
+                android:gravity="center"
+                android:id="@+id/okBtnAchievementView"
+                android:textColor="@drawable/textselector"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <com.zoom2u.roundedimage.RoundedImageView
+            android:id="@+id/imgAchievementNotifyView"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/customer_profile_photo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarAcheivementNotify"
+                android:layout_alignBottom="@+id/imgAchievementNotifyView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="46dp" />
+
+        </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>

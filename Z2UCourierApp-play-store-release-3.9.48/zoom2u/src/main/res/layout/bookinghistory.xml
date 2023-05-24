@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color_gray"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/backFromBookingHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleBookingHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="Booking History"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            style="@style/style_15_name" />
+
+        <ImageView
+            android:id="@+id/bookingHistoryChatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatBookingHistory"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4d4d4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pickUpDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="SCHEDULED PICKED UP HERE"
+                    style="@style/style_15_name"
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pickUpActualDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="ACTUAL PICKED UP HERE"
+                    style="@style/style_15_name"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d3d3d3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/style_12_bold_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Status : "
+                    android:textSize="13dp" />
+
+
+                <ImageView
+                    android:id="@+id/statusToPickUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/status"
+                    android:layout_weight=".6"
+                    android:src="@drawable/complete" />
+
+                <TextView
+                    android:id="@+id/userNamePick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/statusToPickUser"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight=".4"
+                    android:text="Elliot Cole"
+                    android:textColor="#4B5054"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight=".35"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/diliverItemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_weight=".4"
+                        android:maxLines="3"
+                        android:paddingRight="5dp"
+                        android:text="A pair of pants"
+                        style="@style/style_15_name"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#d3d3d3" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight=".65"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/diliverItemPrize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="$0"
+                        android:textSize="13dp"
+                        style="@style/style_12_bold_new" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dropedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Dropped Off on June 3, 2014"
+                    style="@style/style_15_name"
+                    android:textSize="13dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight=".2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pickUpLocationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pickup suburb :"
+                        style="@style/style_15_name"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/pickUpLocationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Pickup suburb here"
+                        android:textColor="@color/add_member_label"
+                        android:textStyle="bold"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight=".2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dropedLocationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery suburb :"
+                        style="@style/style_15_name"
+                        android:textSize="13dp"  />
+
+                    <TextView
+                        android:id="@+id/dropedLocationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Dropoff suburb here"
+                        android:textStyle="bold"
+                        android:textColor="@color/add_member_label"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

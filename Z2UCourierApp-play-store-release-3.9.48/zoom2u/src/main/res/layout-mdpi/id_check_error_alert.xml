@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gun_metal"
+        android:alpha="0.4" />
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/roundedwhiteback">
+
+        <TextView
+            android:id="@+id/errorMsgTxt_IDCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/redical_cornerborder"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="ID Number does not match the ID \nprovided by the customer."
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14dp"
+            android:lineSpacingExtra="3dp"/>
+
+        <TextView
+            android:id="@+id/errorMsgHint_IDCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/errorMsgTxt_IDCheck"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="5dp"
+            android:layout_alignLeft="@+id/errorMsgTxt_IDCheck"
+            android:layout_alignRight="@+id/errorMsgTxt_IDCheck"
+            android:textSize="14dp"
+            android:textColor="@color/gun_metal"/>
+
+        <Button
+            android:id="@+id/okBtn__IDCheckError"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/roundedskybluebg"
+            android:layout_below="@+id/errorMsgHint_IDCheck"
+            android:layout_alignLeft="@+id/errorMsgTxt_IDCheck"
+            android:layout_alignStart="@+id/errorMsgTxt_IDCheck"
+            android:layout_alignRight="@+id/errorMsgTxt_IDCheck"
+            android:layout_alignEnd="@+id/errorMsgTxt_IDCheck"
+            android:textColor="@drawable/textselector"
+            android:textSize="17dp"
+            android:text="Ok. Thanks" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

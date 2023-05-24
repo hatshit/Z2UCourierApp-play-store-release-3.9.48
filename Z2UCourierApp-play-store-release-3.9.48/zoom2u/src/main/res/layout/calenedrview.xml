@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/mainLinearMySchedule"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageView
+            android:id="@+id/backFromMySchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/nav_back" />
+
+        <TextView
+            android:id="@+id/titleMySchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:layout_weight=".15"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:text="My Schedule"
+            android:textColor="#00A7E2"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/calenderViewChatIcon"
+            android:src="@drawable/iconchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+             />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="!"
+            android:id="@+id/countChatCalenderView"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+    
+    <TextView android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:id="@+id/calenderDefaultTxt"
+         android:layout_below="@+id/mainLinearMySchedule"
+        android:background="#d4d4d4"/>
+    <LinearLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/calenderDefaultTxt"
+        android:background="@drawable/mysahedulebackground"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/buttonlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/buttonlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1A2421"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/prevMonth"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/calendar_left_arrow_selector" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/currentMonth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text="MAY 2014"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/nextMonth"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/cal_right_arrow_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/calendarheader"
+                    android:layout_width="300dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/calendar_days" />
+            
+
+            <GridView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:horizontalSpacing="2dp"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp" >
+            </GridView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveUnavailableBtn"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/buttonlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedblackbg"
+        android:text="Save Unavailable Dates"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+    
+</RelativeLayout>

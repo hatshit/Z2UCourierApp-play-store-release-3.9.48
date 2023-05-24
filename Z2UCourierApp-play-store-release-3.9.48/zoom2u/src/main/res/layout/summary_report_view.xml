@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semiwhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerSummaryReportLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color_gray">
+
+        <ImageView
+            android:id="@+id/backFromSummaryReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleSummaryReport"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingLeft="0dp"
+            android:text="Summary Report"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/summaryReportChatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat"/>
+
+        <TextView
+            android:id="@+id/countChatSummaryReport"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/semiwhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/categeoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:elevation="5dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/categeoryTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".33"
+                        android:background="@drawable/top_left_round_lightgray"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Category"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/catByTodayTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".33"
+                        android:background="@color/route_sectionheader"
+                        android:gravity="center"
+                        android:text="Today"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/catByLastWeekdaysTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".34"
+                        android:background="@drawable/top_right_round_lightgray"
+                        android:gravity="center"
+                        android:text="Last 7 Days"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/deliveriesViewSR"
+                    layout="@layout/summary_report_categeory"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <include
+                    android:id="@+id/moneyViewSR"
+                    layout="@layout/summary_report_categeory"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <include
+                    android:id="@+id/thumbsUpViewSR"
+                    layout="@layout/summary_report_categeory"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <include
+                    android:id="@+id/pointsViewSR"
+                    layout="@layout/summary_report_categeory"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totalTxtSR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Total"
+                android:textColor="@color/gun_metal"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/totalViewSR"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:elevation="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/white_background"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/thumbsup_sr"/>
+
+                    <TextView
+                        android:id="@+id/thumbsUpTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:drawablePadding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/summary_label"
+                        android:textSize="19dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/a"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/a"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/thumbsdown_sr"/>
+
+                    <TextView
+                        android:id="@+id/thumbsDownTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/summary_label"
+                        android:textSize="19dp" />
+                </LinearLayout>
+
+
+                <com.zoom2u.roundedimage.RoundedImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/ratingTxtSR"
+                    android:background="@drawable/circlebgyellowbtn"
+                    android:src="@drawable/icon_favorite" />
+
+                <TextView
+                    android:id="@+id/ratingTxtSR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:maxWidth="80dp"
+                    android:singleLine="true"
+                    android:textColor="@color/summary_label"
+                    android:textSize="19dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/recentTxtSR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Recent"
+                android:textColor="@color/gun_metal"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:id="@+id/categeoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/recentDateTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".38"
+                        android:background="@drawable/top_left_round_lightgray"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Date"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/recentRatingTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".38"
+                        android:background="@color/route_sectionheader"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Rating"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/recentBookingTxtSummaryReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".24"
+                        android:background="@drawable/top_right_round_lightgray"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Booking"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="15dp">
+
+                    <com.zoom2u.slidemenu.accountdetail_section.NonScrollListView
+                        android:id="@+id/recentItemListSR"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:divider="@null" />
+
+                    <TextView
+                        android:id="@+id/recentBookingNotAvailTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Recent bookings not available"
+                        android:textColor="@color/summary_label"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

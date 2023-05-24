@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cameraContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/headerBarCodeScanner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color1"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageView
+            android:id="@+id/backFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <ImageView
+            android:id="@+id/flashIconBarcodeScanner"
+            android:layout_width="35dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/backFrom"
+            android:src="@drawable/flash_icon_off" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingRight="15dp"
+            android:text="Scan AWB number"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnManualScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/new_base_round_gray"
+            android:elevation="3dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="3dp"
+            style="@style/style_12_name"
+            android:paddingRight="7dp"
+            android:paddingBottom="3dp"
+            android:text="Manual \nscan"
+            android:textColor="@drawable/textselector"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/msgTitleHeaderTxt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        style="@style/style_12_bold"
+        android:lineSpacingExtra="2dp"
+        android:text="Scan barcode to mark item as picked up\nYou can move the targeting box around if needed."
+        android:textColor="@color/white"
+        android:background="@color/base_color1"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/cameraPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+            android:id="@+id/cornerBorder"
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:visibility="visible"
+            android:background="@drawable/cornerborder_transparentbg"
+            >
+            </ImageView>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomViewBarCodeScanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="7dp"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/toggleForReturnInBarCodeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:button="@drawable/customcheckbox_barcode"
+                android:paddingLeft="12dp"
+                android:text="Scan for Return To Pickup"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="390dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_worrier_level" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:id="@+id/chargeHeaderTxtOffer"
+        android:text="Charges and Fees"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center|left"
+        android:paddingLeft="17dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chargeHeaderTxtOffer"
+        android:background="@drawable/bottom_round_white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:id="@+id/customerPriceLayout"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".26"
+                android:text="Customer Price"
+                android:gravity="center|left"
+                android:textSize="12dp"
+                android:id="@+id/customerPriceTxt"
+                android:paddingLeft="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="$X"
+                android:id="@+id/priceTxt"
+                android:textSize="12dp"
+                android:textColor="@color/summary_label"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".34"
+                android:text="inc GST"
+                android:id="@+id/incGSTTxt"
+                android:textSize="12dp"
+                android:gravity="center|right"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/dividerFirstChargeFee"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/customerPriceLayout"
+            android:background="@color/light_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_below="@+id/dividerFirstChargeFee"
+            android:id="@+id/gstFeeLayout"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".26"
+                android:text="GST"
+                android:gravity="center|left"
+                android:textSize="12dp"
+                android:id="@+id/gstTxt"
+                android:paddingLeft="45dp"
+                android:textColor="@color/summary_label"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="$X"
+                android:id="@+id/gstValueTxt"
+                android:textSize="12dp"
+                android:textColor="@color/summary_label"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".34"
+                android:textSize="12dp"
+                android:gravity="center|right"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="2dp"
+            android:id="@+id/redGstLine"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/customerPriceLayout"
+            android:background="@color/colorPrimaryDark"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/dividerSecondChargeFee"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/gstFeeLayout"
+            android:background="@color/light_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:id="@+id/zoom2uFeeLayout"
+            android:layout_below="@+id/dividerSecondChargeFee"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".26"
+                android:text="Zoom2u Fee"
+                android:gravity="center|left"
+                android:textSize="12dp"
+                android:id="@+id/zoom2uFeeTxt"
+                android:paddingLeft="45dp"
+                android:textColor="@color/summary_label"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="$X"
+                android:id="@+id/zoom2uFeeValueTxt"
+                android:textSize="12dp"
+                android:textColor="@color/summary_label"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".34"
+                android:textSize="12dp"
+                android:gravity="center|right"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="2dp"
+            android:id="@+id/redLineZoom2uFee"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/dividerSecondChargeFee"
+            android:background="@color/colorPrimaryDark"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/dividerThirdChargeFee"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/zoom2uFeeLayout"
+            android:background="@color/light_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_below="@+id/dividerThirdChargeFee"
+            android:id="@+id/bookingFeeLayout"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".26"
+                android:text="Booking Fee"
+                android:gravity="center|left"
+                android:textSize="12dp"
+                android:id="@+id/bookingFeeTxt"
+                android:paddingLeft="45dp"
+                android:textColor="@color/summary_label"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="$X"
+                android:id="@+id/bookingFeeValueTxt"
+                android:textSize="12dp"
+                android:textColor="@color/summary_label"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".34"
+                android:textSize="12dp"
+                android:gravity="center|right"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="2dp"
+            android:id="@+id/redLineBookingFee"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/dividerThirdChargeFee"
+            android:background="@color/colorPrimaryDark"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/dividerFourthChargeFee"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/bookingFeeLayout"
+            android:background="@color/light_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/dividerFourthChargeFee"
+            android:id="@+id/carrierChargeLayout"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".26"
+                android:text="Carrier charge"
+                android:gravity="center|left"
+                android:textSize="12dp"
+                android:id="@+id/carrierChargeTxt"
+                android:paddingLeft="30dp"
+                android:textColor="@color/gun_metal_dark"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:text="$X"
+                android:id="@+id/carrierChargeValueTxt"
+                android:textSize="24dp"
+                android:textColor="@color/loginbtn_blue"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".34"
+                android:textSize="12dp"
+                android:gravity="center|right"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/summary_label"
+                />
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_below="@+id/carrierChargeLayout">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="39dp"
+        android:text="Close"
+        android:id="@+id/rejectBtn_GST_InfoDialog"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/roundedskybluebg"/>
+
+</LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

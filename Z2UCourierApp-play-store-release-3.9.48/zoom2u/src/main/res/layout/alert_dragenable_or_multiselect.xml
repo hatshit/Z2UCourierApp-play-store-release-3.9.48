@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="@drawable/roundedskybluebg"
+     >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingBottom="10dp"
+    android:background="@drawable/roundedwhiteback"
+    android:layout_margin="3dp"
+     >
+
+    <TextView
+        android:id="@+id/longPressActiveJobMessageText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:lineSpacingExtra="3dp"
+        android:layout_below="@+id/logoutWindowDialog"
+        android:text="Select the action to perform"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#374350"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/logoutWindowDialog"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="bottom|center"
+        android:text="Information !"
+        android:textSize="21dp"
+        android:visibility="gone"
+        android:textColor="#00A7E2"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/selectBookingToPickMultipleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/selectToReorderBookingsBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Pick multiple bookings"
+        android:textColor="@drawable/textselector"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/selectToReorderBookingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/longPressActiveJobMessageText"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Reorder bookings"
+        android:textColor="@drawable/textselector"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/selectBookingCancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/selectBookingToPickMultipleBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Cancel"
+        android:textColor="@drawable/textselector"
+        android:textSize="13dp" />
+    
+</RelativeLayout>
+</RelativeLayout>

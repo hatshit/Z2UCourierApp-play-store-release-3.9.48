@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutAllTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color_gray" >
+
+        <ImageView
+            android:id="@+id/backFromBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/new_ic_back_white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="11dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Police Check"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat"
+            android:id="@+id/bookingDetailChatIcon" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="!"
+            android:id="@+id/countChatBookingDetail"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/bg_tb_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <TextView
+            android:text="Please use our carrier portal to manage your compliance documentation, including drivers license info, vehicle registration, and police check.  \n\nSome customers will require this information in order to work with them."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:textSize="14dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:layout_below="@+id/abnTXT"
+            android:textColor="@color/gun_metal"
+            android:id="@+id/selectPdFBtnPoliceCheck" />
+
+
+        <TextView
+            android:text="courier.zoom2u.com/#/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:textColor="@color/base_color1"
+            android:layout_below="@+id/selectPdFBtnPoliceCheck"
+            android:id="@+id/link" />
+
+
+        <!--<TextView
+        android:text="Select document"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textSize="14dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@color/semiwhite"
+        android:gravity="center"
+        android:layout_below="@+id/abnTXT"
+        android:textColor="@color/sky"
+        android:id="@+id/selectPdFBtnPoliceCheck" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/selectPdFBtnPoliceCheck"
+        android:src="@drawable/graphicphoto"
+        android:id="@+id/defaultPdfImgPoloceCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/defaultPdfImgPoloceCheck"
+        android:textColor="@color/gun_metal"
+        android:id="@+id/fileNameTxt" />
+
+    <Button
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundedskybluebg"
+        android:text="Upload"
+        android:id="@+id/uploadBtnPoliceCheck"
+        android:textSize="16dp"
+        android:textColor="@drawable/textselector"
+        android:gravity="center"
+        android:layout_below="@+id/fileNameTxt"
+        android:layout_centerHorizontal="true"/>
+-->
+    </RelativeLayout>
+
+</LinearLayout>

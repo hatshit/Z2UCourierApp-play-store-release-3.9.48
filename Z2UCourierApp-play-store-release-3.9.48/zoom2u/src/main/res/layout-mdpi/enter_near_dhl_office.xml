@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundedwhiteback">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_dynamo_level"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/headerLayout_EnterDHLOficDialog">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            <View
+                android:id="@+id/dividerView"
+                android:layout_width="4dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:layout_centerVertical="true"
+                android:background="@color/sky"
+                android:layout_toRightOf="@+id/titleTxt_EnterDHLDialog"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/titleTxt_EnterDHLDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="13dp"
+                android:layout_centerVertical="true"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/white"
+                android:text="You've been\nallocated route" />
+
+            <TextView
+                android:id="@+id/routeCountTxt_EnterDHLDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/titleTxt_EnterDHLDialog"
+                android:layout_toRightOf="@+id/dividerView"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:maxLength="4"
+                android:layout_centerVertical="true"
+                android:text="NA" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/notificationMsgTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignStart="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_below="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/gun_metal"
+            android:textSize="16dp"
+            android:layout_alignRight="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignEnd="@+id/headerLayout_EnterDHLOficDialog"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/staticMsgTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/notificationMsgTxt"
+            android:layout_alignStart="@+id/notificationMsgTxt"
+            android:layout_below="@+id/notificationMsgTxt"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/gun_metal"
+            android:textSize="13dp"
+            android:layout_alignRight="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignEnd="@+id/headerLayout_EnterDHLOficDialog"
+            android:text="Speak with your manager, or call the office if you have any concerns!"
+            />
+
+        <Button
+            android:id="@+id/okBtnEnterDHLDepot"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/roundedskybluebg"
+            android:layout_below="@+id/staticMsgTxt"
+            android:layout_alignLeft="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignStart="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignRight="@+id/headerLayout_EnterDHLOficDialog"
+            android:layout_alignEnd="@+id/headerLayout_EnterDHLOficDialog"
+            android:textColor="@drawable/textselector"
+            android:textSize="16dp"
+            android:text="Ok. Thanks" />
+    </RelativeLayout>
+</RelativeLayout>

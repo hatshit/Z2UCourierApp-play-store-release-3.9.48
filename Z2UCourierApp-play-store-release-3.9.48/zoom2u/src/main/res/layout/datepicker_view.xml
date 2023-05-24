@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/sky"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:id="@+id/buttonLayout"
+        android:background="@color/white"
+        >
+
+        <Button android:id="@+id/cancelDateBtn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="7dp"
+            android:background="@color/white"
+            android:textColor="@color/sky"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Cancel"/>
+
+        <Button
+            android:id="@+id/setDateBtn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/cancelDateBtn"
+            android:layout_alignBottom="@+id/cancelDateBtn"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:text="Done"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/sky" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/wheel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_centerHorizontal="true"
+        >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/dateWheelPicker"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

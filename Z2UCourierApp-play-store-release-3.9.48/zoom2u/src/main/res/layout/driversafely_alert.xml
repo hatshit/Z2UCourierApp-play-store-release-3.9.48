@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="310dp"
+    android:paddingBottom="12dp"
+    android:layout_gravity="center"
+    android:elevation="3dp"
+    android:background="@drawable/roundedwhiteback"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTxtDriverSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxATL"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Driver Safely"
+        android:textColor="@color/gun_metal"
+        android:textSize="17dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDriverSafe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxtDriverSafe"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/driversafety_selectunsel"
+        android:textColor="@color/gun_metal"
+        android:text="@string/driversafe_txt1"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxDriverSafe2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxDriverSafe1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/driversafety_selectunsel"
+        android:textColor="@color/gun_metal"
+        android:text="@string/driversafe_txt2"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxDriverSafe3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxDriverSafe2"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="60dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/driversafety_selectunsel"
+        android:textColor="@color/gun_metal"
+        android:text="@string/driversafe_txt3"/>
+
+    <ImageView
+        android:id="@+id/info_icon_driversafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/titleTxtDriverSafe"
+        android:layout_alignRight="@+id/titleTxtDriverSafe"
+        android:layout_alignTop="@+id/checkBoxDriverSafe2"
+        android:src="@drawable/info_icon" />
+
+    <ImageView
+        android:id="@+id/info_icon_driversafe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/info_icon_driversafe"
+        android:layout_alignStart="@+id/info_icon_driversafe"
+        android:layout_alignTop="@+id/checkBoxDriverSafe3"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/info_icon" />
+
+    <Button
+        android:id="@+id/agreeBtnDriverSafe"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_toLeftOf="@+id/centerViewDriverSafe"
+        android:layout_below="@+id/checkBoxDriverSafe3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded_worrier_level"
+        android:text="Agree"
+        android:textColor="@drawable/textselector"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/checkBoxDriverSafe3"
+        android:id="@+id/centerViewDriverSafe"/>
+
+    <Button
+        android:id="@+id/cancelBtnDriverSafe"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_toRightOf="@+id/centerViewDriverSafe"
+        android:layout_below="@+id/checkBoxDriverSafe3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/agreeBtnDriverSafe"
+        android:background="@drawable/rounded_elite_level"
+        android:text="Decline"
+        android:textColor="@drawable/textselector"
+        android:textSize="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/SellCourierBusinessSettingTitleBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color_gray" >
+
+        <ImageView
+            android:id="@+id/backBtnHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Sell Your Courier Business"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat"
+            android:id="@+id/bookingDetailChatIcon" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="!"
+            android:id="@+id/countChatBookingDetail"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:id="@+id/dividerTitleSellCourierBusiness"
+    android:background="@color/lightgraycolor"
+    android:layout_below="@+id/SellCourierBusinessSettingTitleBarLayout"/>
+
+    <TextView
+        android:id="@+id/titleTxtSellCourierBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerTitleSellCourierBusiness"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:textSize="14dp"
+        android:visibility="gone"
+        android:textColor="@color/gun_metal"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:text="Sell Your Courier Business" />
+
+    <TextView
+        android:id="@+id/msgTxtSellCourierBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerTitleSellCourierBusiness"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:textSize="14dp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/gun_metal"
+        android:fontFamily="@font/gotham_rnd_book"
+        android:text="Over time as you deliver for your customers you start to build goodwill in your business. This includes the reviews you generate, your team members and also your preferred customers. If you would like to sell your courier business to another person we can assist you with this. "/>
+
+    <Button
+        android:id="@+id/registerBusinessForSale"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/msgTxtSellCourierBusiness"
+        android:background="@drawable/rounded_worrier_level"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textSize="14dp"
+        android:textColor="@drawable/textselector"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:text="Register your businesses for sale" />
+
+    <Button
+        android:id="@+id/transferBusinessToNewOwner"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/registerBusinessForSale"
+        android:background="@drawable/roundedskybluebg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="14dp"
+        android:textColor="@drawable/textselector"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:text="Transfer your business to a new owner" />
+
+</RelativeLayout>

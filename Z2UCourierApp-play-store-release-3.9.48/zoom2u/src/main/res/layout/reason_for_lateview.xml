@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayoutReasonForLateDelivery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29000000"
+    android:gravity="center|top">
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/roundedwhiteback_white"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/reasonLateDeliveryCancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/menulogLateDeliverySubmitBtn"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_elite_level"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/menulogLateDeliverySubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/reasonLateDeliveryMsgText"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/roundedskybluebg"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/textReasonForLate"
+                android:layout_alignLeft="@+id/textReasonForLate"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bottom_border_new"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:paddingRight="43dp"
+                android:textColor="@color/base_color1"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/reasonLateDeliveryMsgText"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_new"
+                android:gravity="center|left|top"
+                android:hint="Please enter any extra info here"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="10dp"
+                style="@style/style_12_bold"
+                android:paddingTop="15dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#7e7e7e"
+                android:textSize="15dp" />
+
+            <ListView
+                android:id="@+id/dropDownListReasonLateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_alignRight="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_below="@+id/dropDownBtnReasonLateDelivery"
+                android:background="#374350"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dropdownImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_alignRight="@+id/dropDownBtnReasonLateDelivery"
+                android:layout_alignBottom="@+id/dropDownBtnReasonLateDelivery"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_arrow_down" />
+
+            <TextView
+                android:id="@+id/reasonLateDelievryTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="bottom|center"
+                android:text="Late delivery"
+                android:textColor="@color/gunmetal_new1"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/reasonLateDelievryTitleTxt"
+                android:background="@color/lightgraycolor"/>
+
+            <TextView
+                android:id="@+id/textReasonForLate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                style="@style/style_12_bold"
+                android:text="Reason for late delivery"
+                android:textColor="#374350"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

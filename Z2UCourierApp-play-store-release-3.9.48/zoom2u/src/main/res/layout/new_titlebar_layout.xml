@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerLayoutAllTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:id="@+id/backFromBookingDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/bluecolortxt_closebtn"
+        android:textSize="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp"
+        android:text="Close" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="11dp"
+        android:id="@+id/backBtnHeader"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:src="@drawable/nav_back"/>
+
+    <TextView
+        android:id="@+id/titleBookingDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="0dp"
+        android:text="New Booking"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp" />
+
+
+
+    <ImageView
+        android:src="@drawable/whatsapp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/bookingDetailChatIcon"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/whatsApp" />
+
+
+    <ImageView
+        android:src="@drawable/iconchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bookingDetailChatIcon" />
+
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:text="!"
+        android:id="@+id/countChatBookingDetail"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/circleredbgbutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

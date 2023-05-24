@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="310dp"
+    android:paddingBottom="12dp"
+    android:layout_gravity="center"
+    android:elevation="3dp"
+    android:background="@drawable/roundedwhiteback"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dropAlcoholDelivery3_titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxATL"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/alcohol_drop_delivery_alert3_TitleTxt"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp" />
+
+    <CheckBox
+        android:id="@+id/dropAlcoholDelivery3_Msg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dropAlcoholDelivery3_titleTxt"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/assign_courier_select_unselect"
+        android:textColor="@color/gun_metal"
+        android:text="@string/alcohol_drop_delivery_alert3_MsgTxt1"/>
+
+    <CheckBox
+        android:id="@+id/dropAlcoholDelivery3_Msg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dropAlcoholDelivery3_Msg1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/assign_courier_select_unselect"
+        android:textColor="@color/gun_metal"
+        android:text="@string/alcohol_drop_delivery_alert3_MsgTxt2"/>
+
+    <CheckBox
+        android:id="@+id/dropAlcoholDelivery3_Msg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dropAlcoholDelivery3_Msg2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:button="@android:color/transparent"
+        android:textSize="16dp"
+        android:drawablePadding="15dp"
+        android:drawableLeft="@drawable/assign_courier_select_unselect"
+        android:textColor="@color/gun_metal"
+        android:text="@string/alcohol_drop_delivery_alert3_MsgTxt3"/>
+
+    <Button
+        android:id="@+id/cancelBtnAlcoholDeliveryAlert3"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_below="@+id/dropAlcoholDelivery3_Msg3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/rounded_elite_level"
+        android:text="@string/alcohol_drop_delivery_alert3_BtnTxt"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp" />
+
+</RelativeLayout>

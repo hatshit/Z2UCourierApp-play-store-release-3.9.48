@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#374350"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+            <ImageView
+                android:id="@+id/backRetrivePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/nav_back" />
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/logoImgForgetPass"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="for Drivers"
+            android:id="@+id/logotxtForgetPass"
+            android:textSize="14dp"
+            android:textColor="#777b82"
+            style="@style/style_15_name"
+            android:layout_below="@+id/logoImgForgetPass"
+            android:layout_alignRight="@+id/logoImgForgetPass"
+            android:layout_alignEnd="@+id/logoImgForgetPass" />
+
+    </RelativeLayout>
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/retriveEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/entrybox"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#FFFFFF"
+            >
+        </EditText>
+
+        <Button
+            android:id="@+id/retriveBtn"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+               android:layout_marginTop="30dp"
+               android:background="@drawable/roundedskybluebg"
+            android:text="Retrieve"
+               android:textStyle="bold"
+            android:textColor="@drawable/textselector"
+               android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

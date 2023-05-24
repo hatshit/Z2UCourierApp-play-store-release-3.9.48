@@ -1,0 +1,220 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/next_ll"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:id="@+id/firstNameAddMember"
+                    style="@style/style_12_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerLayoutMyTeamList"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center|end"
+                    android:text="First Name"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/edtFirstNameAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/firstNameAddMember"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_transparent_bottom_graydark"
+                    android:hint="First Name"
+                    android:singleLine="true"
+                    android:textColor="@color/gun_metal"
+                    android:textColorHint="@color/add_member_hint_color"
+                    android:textSize="13dp"
+                    style="@style/style_15_name" />
+
+                <TextView
+                    android:id="@+id/lastNameAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtFirstNameAddMember"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Last Name"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="12dp"
+                    style="@style/style_12_name" />
+
+                <EditText
+                    android:id="@+id/edtLastNameAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/lastNameAddMember"
+                    android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                    android:layout_alignRight="@+id/edtFirstNameAddMember"
+                    android:background="@drawable/bg_transparent_bottom_graydark"
+                    android:hint="Last Name"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gun_metal"
+                    android:textColorHint="@color/add_member_hint_color"
+                    android:textSize="13dp"
+                    style="@style/style_15_name" />
+
+
+                <TextView
+                    android:id="@+id/emailAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtLastNameAddMember"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Email Address*"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="12dp"
+                    style="@style/style_12_name" />
+
+                <EditText
+                    android:id="@+id/edtEmailAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/emailAddMember"
+                    android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                    android:layout_alignRight="@+id/edtFirstNameAddMember"
+                    android:background="@drawable/bg_transparent_bottom_graydark"
+                    android:hint="Email Address"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gun_metal"
+                    android:textColorHint="@color/add_member_hint_color"
+                    android:textSize="13dp"
+                    style="@style/style_15_name"/>
+
+                <TextView
+                    android:id="@+id/companyAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtEmailAddMember"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Company Name"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="12dp"
+                    style="@style/style_12_name" />
+
+                <EditText
+                    android:id="@+id/edtCompanyAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/companyAddMember"
+                    android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                    android:layout_alignRight="@+id/edtFirstNameAddMember"
+                    android:background="@drawable/bg_transparent_bottom_graydark"
+                    android:hint="Company Name"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gun_metal"
+                    android:textColorHint="@color/add_member_hint_color"
+                    android:textSize="13dp"
+                    style="@style/style_15_name" />
+
+                <TextView
+                    android:id="@+id/phoneNoAddMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtCompanyAddMember"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Contact Number"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="12dp"
+                    style="@style/style_12_name" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNoAddMember"
+                    style="@style/style_15_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/phoneNoAddMember"
+                    android:layout_alignLeft="@+id/edtFirstNameAddMember"
+                    android:layout_alignRight="@+id/edtFirstNameAddMember"
+                    android:background="@drawable/bg_transparent_bottom_graydark"
+                    android:hint="Contact Number"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gun_metal"
+                    android:textColorHint="@color/add_member_hint_color"
+                    android:textSize="13dp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/edtPhoneNoAddMember" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/next_ll"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/inviteCustomerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/customerContactValue"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/chip_background"
+                android:text="Invite"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

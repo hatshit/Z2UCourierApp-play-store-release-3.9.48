@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29000000"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/courierLevelNotifyMainLayout"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+         >
+
+        <RelativeLayout
+            android:id="@+id/courierLevelNotifySubLayout"
+            android:layout_width="260dp"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_recruite_level" >
+
+            <RelativeLayout
+                android:id="@+id/courierLevelImgLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/courierLevelNotifyStarImg2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/courierLevelNotifyStarImg3"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@+id/courierLevelNotifyStarImg3"
+                    android:src="@drawable/icon_starselect" />
+
+                <ImageView
+                    android:id="@+id/courierLevelNotifyStarImg1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/courierLevelNotifyStarImg2"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@+id/courierLevelNotifyStarImg2"
+                    android:src="@drawable/icon_starselect" />
+
+                <ImageView
+                    android:id="@+id/courierLevelNotifyStarImg3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/icon_star" />
+
+                <ImageView
+                    android:id="@+id/courierLevelNotifyStarImg4"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/courierLevelNotifyStarImg3"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/courierLevelNotifyStarImg3"
+                    android:src="@drawable/icon_star" />
+
+                <ImageView
+                    android:id="@+id/courierLevelNotifyStarImg5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/courierLevelNotifyStarImg4"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/courierLevelNotifyStarImg4"
+                    android:src="@drawable/icon_star" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/courierLevelNotifyTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierLevelImgLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingTop="35dp"
+                android:paddingBottom="35dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/courierLevelNotifyOtherTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierLevelNotifyTitleTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="15dp"
+                android:lineSpacingExtra="2dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/courierLevelNotifyCancelDialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_cross_herolevel" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/gun_metal"
+        android:text="Our friendly reminder"
+        android:textSize="17dp"
+        android:id="@+id/titleNotifyView"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/notifyTxtImgView"
+        android:layout_below="@+id/titleNotifyView"
+        android:layout_above="@+id/yesNoBtnLayoutCustomNotify">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="22dp"
+        android:maxLines="5"
+        android:textColor="@color/sky"
+        android:id="@+id/customNotifyTxt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/customNotificationImg"
+        android:background="@color/white"
+        />
+</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/yesNoBtnLayoutCustomNotify"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/noBtnCustomNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:text="No"
+            android:background="@drawable/rounded_elite_level"/>
+        <Button
+            android:id="@+id/yesBtnCustomNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            android:text="Yes"
+            android:background="@drawable/roundedskybluebg"/>
+
+
+
+        </LinearLayout>
+</RelativeLayout>

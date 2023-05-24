@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="1dp"
+    android:padding="5dp"
+    android:background="@drawable/new_white_back"
+    android:elevation="5dp">
+
+    <com.zoom2u.roundedimage.RoundedImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/teamMemberImg"
+        android:background="@drawable/round_circle_bg"/>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="AD"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/courierFirstLastNameTeamList"
+        android:textColor="@color/image_first_last_name_color"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/teamMemberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/teamMemberImg"
+        android:text="Name"
+        android:maxLines="2"
+        style="@style/style_15_name"
+        android:layout_toLeftOf="@+id/activeJobCount"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/txtPersonNameChat"
+        />
+
+    <TextView
+        android:id="@+id/teamMemberPhoneNo"
+        style="@style/style_12_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teamMemberName"
+        android:layout_alignLeft="@+id/teamMemberName"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:text="Mobile no" />
+
+    <TextView
+        android:id="@+id/teamMemberEmail"
+        style="@style/style_12_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teamMemberPhoneNo"
+        android:layout_alignLeft="@+id/teamMemberName"
+        android:layout_marginTop="3dp"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="2"
+        android:text="Email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/teamMemberName"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/loginbtn_blue"
+        android:text="15"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/activeJobCount"/>
+
+    <TextView
+        android:id="@+id/activeJobTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activeJobCount"
+        android:layout_alignRight="@+id/activeJobCount"
+        android:layout_marginTop="5dp"
+        android:text="Active Jobs"
+        android:textStyle="bold"
+        android:textColor="@color/gray_dark"
+        android:textSize="10dp" />
+
+</RelativeLayout>
+
+    <!--</RelativeLayout>-->

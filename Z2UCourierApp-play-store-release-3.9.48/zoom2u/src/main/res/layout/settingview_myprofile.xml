@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/profileSettingTitleBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/base_color_gray">
+
+        <ImageView
+            android:id="@+id/backBtnHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleMyProfileInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:textStyle="bold"
+            android:text="Team Settings"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/bookingDetailChatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatBookingDetail"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileSettingTitleBarLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/checkForNotifyMembers"
+        android:lineSpacingExtra="3dp"
+        android:textStyle="bold"
+        android:text="Allow team member to receive job notifications"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp" />
+
+    <CheckBox
+        android:id="@+id/checkForNotifyMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:button="@drawable/customcheckbox"
+        android:layout_marginBottom="5dp"
+        android:layout_alignBottom="@+id/checkedTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="45dp"
+        android:id="@+id/dividerSettingView"
+        android:background="@color/summary_report_bg"
+        android:layout_below="@+id/checkedTextView"
+        android:layout_alignLeft="@+id/checkedTextView"
+        android:layout_alignRight="@+id/checkForNotifyMembers"/>
+
+    <TextView
+        android:id="@+id/addMarginTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerSettingView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_toLeftOf="@+id/marginValueTxtToSettingVew"
+        android:lineSpacingExtra="3dp"
+        android:text="Set your margin for bookings"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/dollerTxtSettingView"
+        android:hint="Margin"
+        android:gravity="center"
+        android:maxLength="3"
+        android:inputType="number"
+        android:background="@drawable/border_whitegb"
+        android:layout_below="@+id/dividerSettingView"
+        android:id="@+id/marginValueTxtToSettingVew"
+        android:textSize="16dp"
+        android:textColor="@color/gun_metal"
+        />
+
+    <TextView
+        android:id="@+id/dollerTxtSettingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:layout_alignRight="@+id/checkForNotifyMembers"
+        android:layout_alignTop="@+id/addMarginTxt"
+        android:textColor="@color/gun_metal"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/updateBtnSettings"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/marginValueTxtToSettingVew"
+        android:background="@drawable/roundedskybluebg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textSize="14dp"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:textColor="@drawable/textselector"
+        android:text="Update" />
+
+</RelativeLayout>

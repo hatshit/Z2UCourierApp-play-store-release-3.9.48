@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:weightSum="1"
+    android:layout_marginRight="25dp"
+    android:layout_marginLeft="25dp"
+    android:background="@drawable/bg_bottomborder">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33"
+            android:textColor="@color/summary_label"
+            android:textSize="12dp"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:id="@+id/categeoryItemTxtSummaryReport"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33"
+            android:textColor="@color/summary_label"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:id="@+id/categeoryItemTodayTxtSummaryReport"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".34"
+            android:textColor="@color/summary_label"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:id="@+id/categeoryItemLastWeekTxtSummaryReport"/>
+
+    </LinearLayout>

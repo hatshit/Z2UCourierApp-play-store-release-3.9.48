@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "831086398878",
+    "firebase_url": "https://zoom2u.firebaseio.com",
+    "project_id": "firebase-zoom2u",
+    "storage_bucket": "firebase-zoom2u.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831086398878:android:6958697d507b7d2e",
+        "android_client_info": {
+          "package_name": "com.zoom2u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831086398878-3qg5ohdn40ha1rslcqhg16esafsbq2nd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u",
+            "certificate_hash": "126D7923F64352146BFEAADA1A25F1D1300743AC"
+          }
+        },
+        {
+          "client_id": "831086398878-gsf007fql7sq3ld440v4il1upttr1338.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRUroN9_LbeY8bwCTGUJDvVan1sMx-lcI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831086398878-nvp0mmcb3bnpekptdtf06e0cr4r4trba.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "zoom2u.customerApp"
+              }
+            },
+            {
+              "client_id": "831086398878-gsf007fql7sq3ld440v4il1upttr1338.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

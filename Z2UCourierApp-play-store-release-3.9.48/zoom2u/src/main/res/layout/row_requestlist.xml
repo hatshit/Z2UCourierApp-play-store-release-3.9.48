@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/txtMyRequestPickDopOffSuburb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="3"
+        android:paddingBottom="2dp"
+        android:paddingRight="0dp"
+        android:text="Address"
+        android:textStyle="normal"
+        android:textColor="@color/gun_metal"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/txtMyRequestPickUpdateTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:maxLines="3"
+        android:paddingBottom="4dp"
+        android:paddingRight="0dp"
+        android:text="Address"
+        android:textStyle="normal"
+        android:textColor="@color/graycolorText"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/txtMyRequestDropOffdateTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="3"
+        android:paddingBottom="4dp"
+        android:paddingRight="0dp"
+        android:text="Address"
+        android:textStyle="normal"
+        android:textColor="@color/graycolorText"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/txtMyRequestDeliveryNotes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="3"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="0dp"
+        android:text="Delivery notes"
+        android:textStyle="normal"
+        android:textColor="@color/graycolorText"
+        android:textSize="14dp" />
+</LinearLayout>

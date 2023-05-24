@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayoutReasonForLateDelivery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="300dp"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/roundedwhiteback_white">
+
+            <EditText
+                android:id="@+id/attempDeliveryMsgText"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/spinnerForTriedToDeliver"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_new"
+                android:gravity="center|left|top"
+                android:hint="Please enter any extra info here"
+                android:lineSpacingExtra="2dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#7e7e7e"
+                android:textSize="15dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/attemptDelievryTitleTxt"
+                android:text="Tried to deliver!"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="bottom|center"
+                android:textColor="@color/gunmetal_new1"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/attemptDelievryTitleTxt"
+                android:background="@color/lightgraycolor"/>
+
+            <Button
+                android:id="@+id/attemptDeliveryCancelBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/attemptDeliverySaveBtn"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/new_boder"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textColor="@color/gold_dark"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/attemptDeliverySaveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/attempDeliveryMsgText"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/roundedskybluebg"
+                android:gravity="center"
+                android:text="Update"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textReasonForLate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Reason for tried to deliver"
+                android:textColor="#374350"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/spinnerForTriedToDeliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textReasonForLate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bottom_border_new"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:spinnerMode="dropdown"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/spinnerForTriedToDeliver"
+                android:layout_alignEnd="@+id/spinnerForTriedToDeliver"
+                android:layout_alignRight="@+id/spinnerForTriedToDeliver"
+                android:layout_alignTop="@+id/spinnerForTriedToDeliver"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/ic_arrow_down"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/attemptDeliveryBelowTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/attemptDeliveryCancelBtn"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                android:layout_marginBottom="10dp"
+                android:text="Customer will be notified by SMS"
+                android:textColor="@color/gun_metal"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/white_background"
+        android:elevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/rrLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/frontBackNewBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/gotham_rnd_book"
+                android:paddingLeft="6dp"
+                android:paddingTop="3dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/chargesBList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_alignBottom="@+id/userNameBList"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#5BCF4B"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/orderNumberNBL"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/delivryNotesBookingList"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center|left"
+                    android:paddingRight="0dp"
+                    android:singleLine="true"
+                    android:text="AWB number"
+                    android:textColor="#4B5054"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_booking_status"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/userNameBList"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center|left"
+                    android:paddingRight="0dp"
+                    android:singleLine="true"
+                    android:text="status"
+                    android:textColor="#4B5054"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/bookingCreatedTime"
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/gotham_rnd_book"
+                    android:layout_below="@+id/tv_booking_status"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|left"
+                    android:paddingRight="0dp"
+                    android:text=""
+                    android:textColor="#4B5054"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/userNameBList"
+                    android:layout_width="230dp"
+                    android:layout_height="22dp"
+                    android:layout_below="@+id/newCustomerTxtInNBL"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center|left"
+                    android:paddingRight="0dp"
+                    android:text="Steve Jobs"
+                    android:fontFamily="@font/gotham_rnd_medium"
+                    android:textColor="#374350"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/suburbTextnewBooking"
+                    android:layout_width="230dp"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/gotham_rnd_book"
+                    android:layout_below="@+id/bookingCreatedTime"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/timeToArriveInBookingList"
+                    android:gravity="center|left"
+                    android:maxLines="1"
+                    android:paddingRight="0dp"
+                    android:text="Custom"
+                    android:textColor="#4B5054"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/delivryNotesBookingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/gotham_rnd_book"
+                    android:layout_below="@+id/suburbTextnewBooking"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="80dp"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="No Delivery Notes"
+                    android:textColor="#4B5054"
+                    android:textSize="13dp" />
+
+
+
+                <TextView
+                    android:id="@+id/textDropoffBList"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/gotham_rnd_book"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orderNumberNBL"
+                    android:layout_alignLeft="@+id/delivryNotesBookingList"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center|left"
+                    android:text="Dropoff Address "
+                    android:textColor="#374350"
+                    android:textSize="13dp" />
+
+
+                <TextView
+                    android:id="@+id/menuLogTimerTxtForNBList"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/gotham_rnd_light"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeToArriveInBookingList"
+                    android:layout_alignRight="@+id/timeToArriveInBookingList"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/rounded_recruite_level"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="2dp"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/timeToArriveInBookingList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/gotham_rnd_medium"
+                    android:layout_alignBaseline="@+id/suburbTextnewBooking"
+                    android:layout_alignRight="@+id/locationMarkBList"
+                    android:layout_alignBottom="@+id/suburbTextnewBooking"
+                    android:gravity="right"
+                    android:text=""
+                    android:textColor="#FF476A"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgLocationMarkBList"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_above="@+id/suburbTextnewBooking"
+                    android:layout_toLeftOf="@+id/locationMarkBList"
+                    android:src="@drawable/location_marker" />
+
+                <TextView
+                    android:id="@+id/locationMarkBList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:fontFamily="@font/gotham_rnd_book"
+                    android:layout_alignRight="@+id/chargesBList"
+                    android:layout_alignBottom="@+id/imgLocationMarkBList"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:textColor="#4B5054"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

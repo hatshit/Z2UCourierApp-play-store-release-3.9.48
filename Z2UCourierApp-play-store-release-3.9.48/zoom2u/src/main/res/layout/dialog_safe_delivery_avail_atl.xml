@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutAllTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color_gray">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/safe_delivery_title_txt"
+        android:textColor="@color/white"
+        style="@style/style_15_name"
+        android:id="@+id/safeDelDialogTitleTxt"
+        android:textSize="16dp" />
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayoutAllTitleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/safeDelDialogMsgTxt"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                style="@style/style_12_bold"
+                android:paddingRight="20dp"
+                android:text="@string/safe_delivery_msg_txt"
+                android:textColor="@color/gun_metal"
+                android:lineSpacingExtra="2dp"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/safeDelDialogLocationTitleTxt"
+                android:text="Location"
+                style="@style/style_15_name"
+                android:textColor="@color/msg_txt_color"
+                android:textStyle="bold"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Side door"
+                android:id="@+id/safeDelDialogLocationValueTxt"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                style="@style/style_12_bold"
+                android:textColor="@color/msg_txt_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Door code"
+                style="@style/style_15_name"
+                android:id="@+id/safeDelDialogDoorCodeTitleTxt"
+                android:textColor="@color/msg_txt_color"
+                android:textStyle="bold"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="- NA -"
+                style="@style/style_12_bold"
+                android:id="@+id/safeDelDialogDoorCodeValueTxt"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/msg_txt_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                style="@style/style_15_name"
+                android:text="Recipient name"
+                android:id="@+id/safeDelDialogRecipientNameTitleTxt"
+                android:textColor="@color/msg_txt_color"
+                android:textStyle="bold"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Sam smith"
+                style="@style/style_12_bold"
+                android:id="@+id/safeDelDialogRecipientValueTxt"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/msg_txt_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                style="@style/style_15_name"
+                android:text="Instructions"
+                android:id="@+id/safeDelDialogInstructionTitleTxt"
+                android:textColor="@color/msg_txt_color"
+                android:textStyle="bold"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                style="@style/style_12_bold"
+                android:id="@+id/safeDelDialogInstructionValueTxt"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Parcel can be left behind the PotPlant"
+                android:textColor="@color/msg_txt_color"
+                android:textSize="14dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_worrier_level"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/safeDelDialogSafeLocationBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/safe_del_leave_parcel_btn_txt"
+                android:textColor="@drawable/textselector"
+                android:textSize="16dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_recruite_level"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/safeDelDialogDeliveryAttemptBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/safe_del_ttd_btn_txt"
+                android:textColor="@drawable/textselector"
+                android:textSize="16dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/new_boder"
+                android:gravity="center"
+                android:id="@+id/safeDelDialogCancelBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textColor="@color/gold_dark"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgBlurDefaultView"
+        android:visibility="gone"
+        android:background="@color/transparent_black_bg"/>
+
+</RelativeLayout>
+</RelativeLayout>

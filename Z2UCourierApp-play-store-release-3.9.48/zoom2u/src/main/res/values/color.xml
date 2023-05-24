@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_color">#00A6E2</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#369de1</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="gun_metal">#45515b</color>
+    <color name="line_color">#DCDCDC</color>
+    <color name="msg_txt_color">#4b5054</color>
+    <color name="transparent_black_bg">#29000000</color>
+    <color name="order_fillcolor">#5EAC40</color>
+    <color name="graycolorText">#919191</color>
+    <color name="graycolorlinemapview">#919191</color>
+    <color name="lightgraycolor">#d4d4d4</color>
+    <color name="lightgray2">#DADADA</color>
+    <color name="bluecolortxt_closebtn">#00A6E3</color>
+    <color name="headertxt_bd">#76D750</color>
+    <color name="app_header_green">#7BCE20</color>
+
+    <color name="route_sectionheader">#54697E</color>
+    <color name="status_sectionheader">#E9E9E9</color>
+
+	<color name="gold_dark">#FF476A</color>
+    <color name="gold_med">#0099CC</color>
+    <color name="gold">#5EAC40</color>
+    <color name="gold_light">#FFCB2A</color>
+
+    <color name="colorPrimary">@color/gold</color>
+    <color name="colorPrimaryDark">@color/gold_dark</color>
+    <color name="colorAccent">@color/gold_med</color>
+
+    <color name="menu_bg_dark">#313843</color>
+    <color name="white_light">#f9f9f9</color>
+    <color name="gray_dark">#616a78</color>
+    <color name="loginbtn_blue">#00a7e2</color>
+    <color name="gunmetal_new">#3a424f</color>
+    <color name="gunmetal_new1">#364250</color>
+    <color name="add_member_hint_color">#9ea5ab</color>
+    <color name="bottom_border_edtfield">#f9f9f9</color>
+    <color name="add_member_label">#a4abb0</color>
+    <color name="green_bg">#75d851</color>
+    <color name="app_greencolor">#7BCE20</color>
+    <color name="summary_label">#86919a</color>
+    <color name="summary_report_bg">#ebebeb</color>
+    <color name="gun_metal_dark">#374351</color>
+    <color name="light_white">#f0f0f0</color>
+    <color name="image_first_last_name_color">#cbcbcb</color>
+    <color name="profile_txt">#8e9193</color>
+
+    <color name="light_blue_bg">#e5f3fe</color>
+    <color name="red">#FF0000</color>
+
+    //indicator color
+    <color name="inactive">#C4C4C4</color>
+    <color name="active">#50C2C9</color>
+    <!--new design color-->
+
+    <color name="transparent_color">#9900A6E2</color>
+    <color name="base_color_gray">#374350</color>
+    <color name="selected_gray">#49596A</color>
+    <color name="selected_base">#87CEEB</color>
+    <color name="light_gary">#EDF1FC</color>
+    <color name="light_gary_1">#F8FAFF</color>
+    <color name="white_blue">#F0F8FF</color>
+    <color name="light_gary_heading">#F5FFFA</color>
+    <color name="transparent_black">#4D000000</color>
+</resources>

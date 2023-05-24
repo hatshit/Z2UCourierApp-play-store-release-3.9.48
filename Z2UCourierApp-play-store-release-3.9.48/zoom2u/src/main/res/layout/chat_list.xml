@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gar">
+
+  <RelativeLayout
+      android:id="@+id/heading"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:background="#00A6E2">
+
+      <TextView
+          android:id="@+id/chatHeaderTxt"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:gravity="center"
+          android:text="Chats"
+          android:textColor="@color/white"
+          android:textSize="16dp"
+          style="@style/style_15_name" />
+
+      <ImageView
+          android:id="@+id/chatCloseBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/chatHeaderTxt"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:padding="10dp"
+          android:gravity="center"
+          android:src="@drawable/new_ic_back_white" />
+
+  </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/link_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:paddingTop="10dp"
+        android:elevation="3dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cs_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Speak to us here via Whatsapp for the fastest response."
+            android:textColor="@color/gun_metal"
+            android:textSize="15dp"
+            style="@style/style_15_name" />
+
+
+        <Button
+            android:id="@+id/chat_now"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundedskybluebg"
+            android:gravity="center"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:text="Chat now"
+            android:textColor="@drawable/textselector"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshChatList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link_view"
+        android:background="@color/light_gary">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gary">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatViewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/light_gary"
+                    android:scrollbars="vertical"
+                 />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bidChatViewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chatViewList"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/light_gary"
+                    android:scrollbars="vertical"
+                    />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

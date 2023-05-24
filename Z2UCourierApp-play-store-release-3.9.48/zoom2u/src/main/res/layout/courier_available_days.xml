@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layout_marginTop="1dp"
+    android:id="@+id/courierAvailDaysLayout"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        >
+        <TextView
+            android:id="@+id/txtMyScheduleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="My schedule"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/sky"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatBtnMySchedule"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/iconchat"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:text="!"
+            android:id="@+id/countChatMySchedule"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:src="@drawable/nav_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/backBtnMySchedule" />
+    </RelativeLayout>
+
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     android:layout_below="@+id/headerLayoutSchedule"
+         >
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentTop="true"
+     android:background="#FFFFFF"
+     android:orientation="vertical" >
+
+     <LinearLayout
+         android:id="@+id/firstLayout_SheduleHour"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:background="#d4d4d4"
+         android:gravity="center"
+         android:orientation="horizontal"
+          >
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="left|center"
+             android:id="@+id/myScheduleAvailTxt"
+             android:paddingLeft="15dp"
+             android:paddingRight="0dp"
+             android:text="AVAILABLE DAYS"
+             android:textColor="#2e3235"
+             android:textSize="13dp"
+             android:textStyle="bold" />
+
+         <!-- <ImageView
+             android:id="@+id/availableTextImg"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight=".8"
+             android:src="@drawable/notepad_img" /> -->
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/secondLayout_SheduleHour"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#FFFFFF"
+         android:orientation="vertical" >
+
+ 
+</LinearLayout>
+         <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginTop="10dp"
+             android:orientation="horizontal"
+             android:paddingLeft="10dp"
+             android:paddingRight="0dp"
+             android:weightSum="1" >
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".7"
+                 android:padding="2dp"
+                 android:singleLine="true"
+                 android:text="Area"
+                 android:textColor="#2e3235"
+                 android:textSize="20dp" />
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".3"
+                 android:paddingBottom="2dp"
+                 android:paddingLeft="15dp"
+                 android:paddingRight="2dp"
+                 android:paddingTop="2dp"
+                 android:singleLine="true"
+                 android:text="2095 +5km"
+                 android:textColor="#FF3800"
+                 android:textSize="18dp"
+                 android:textStyle="bold" />
+         </LinearLayout>
+-->
+     <LinearLayout
+         android:id="@+id/thirdLayout_SheduleHour"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:layout_below="@+id/secondLayout_SheduleHour"
+         android:layout_marginTop="10dp"
+         android:background="#d4d4d4"
+         android:gravity="center"
+         android:orientation="horizontal"
+          >
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="left|center"
+             android:paddingLeft="15dp"
+             android:id="@+id/myScheduleUnAvailTxt"
+             android:paddingRight="0dp"
+             android:text="UNAVAILABLE ON SPECIFIC DAYS"
+             android:textColor="#2e3235"
+             android:textSize="13dp"
+             android:textStyle="bold" />
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/fourLayout_SheduleHour"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_below="@+id/thirdLayout_SheduleHour"
+         android:gravity="center"
+         android:layout_marginTop="15dp"
+         android:orientation="horizontal"
+         android:weightSum="1" >
+
+         <Button 
+             android:layout_height="40dp"
+             android:layout_width="230dp"
+             android:text="Record Unavailable Dates"
+             android:textSize="14dp"
+             android:id="@+id/textOpenCalender"
+             android:background="@drawable/roundedblackbg"
+             android:textColor="#FFFFFF"
+             android:textStyle="bold"
+             />
+         
+         
+        <!--  <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:paddingLeft="10dp"
+             android:paddingRight="0dp"
+             android:text="Open calender"
+             android:id="@+id/textOpenCalender"
+             android:textColor="#2e3235"
+             android:textSize="18dp"
+             android:textStyle="bold" />
+
+          <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             android:paddingLeft="5dp"
+             android:paddingRight="0dp"
+             android:text=" and delete dates."
+             android:textColor="#2e3235"
+             android:textSize="17dp" />  -->
+     </LinearLayout>
+
+      <TextView
+         android:id="@+id/textNotAvail"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/fourLayout_SheduleHour"
+         android:gravity="center"
+         android:padding="2dp"
+         android:text="You are not available those dates :"
+         android:textColor="#FF3800"
+         android:textSize="15dp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/textDatesNotAvail"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textNotAvail"
+         android:layout_marginTop="7dp"
+         android:gravity="center"
+         android:padding="2dp"
+         android:text=""
+         android:textColor="#FF3800"
+         android:textSize="13dp" />  
+ </LinearLayout>
+</ScrollView>
+</RelativeLayout>

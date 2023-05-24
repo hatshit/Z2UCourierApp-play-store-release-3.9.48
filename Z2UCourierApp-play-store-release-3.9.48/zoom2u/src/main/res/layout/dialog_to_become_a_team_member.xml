@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#d3d3d3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/roundedwhiteback"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/headerMyProfileInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/base_color1">
+
+        <ImageView
+            android:id="@+id/backFromMyProfileInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/courierTeamTermHeaderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:background="@color/base_color1"
+            android:text="Become a Team"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".09"
+                >
+
+                <TextView
+                    android:id="@+id/courierTeamTermMessageTxt"
+                    style="@style/style_15_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/become_courier_txt"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="40dp"
+                    android:text="-"
+                    style="@style/style_15_name"
+                    android:layout_below="@+id/courierTeamTermMessageTxt"
+                    android:textColor="#374350"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:layout_alignTop="@+id/courierTeamMessageTxt1"
+                    android:layout_toRightOf="@+id/courierTeamMessageTxt1"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/become_team_txt1"
+                    android:textColor="#374350"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="12dp"
+                    style="@style/style_12_bold"/>
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="40dp"
+                    android:text="-"
+                    android:layout_below="@+id/courierTeamMessageTxt2"
+                    android:textColor="#374350"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="16dp"
+                    style="@style/style_15_name"/>
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/courierTeamMessageTxt3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/courierTeamMessageTxt3"
+                    android:gravity="center|left|top"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/become_team_tex2"
+                    android:textColor="#374350"
+                    android:textSize="12dp"
+                    style="@style/style_12_bold"/>
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="40dp"
+                    android:text="-"
+                    android:layout_below="@+id/courierTeamMessageTxt4"
+                    android:textColor="#374350"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="16dp"
+                    style="@style/style_15_name"/>
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left|top"
+                    android:layout_alignTop="@+id/courierTeamMessageTxt5"
+                    android:layout_toRightOf="@+id/courierTeamMessageTxt5"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/become_team_txt3"
+                    android:textColor="#374350"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="12dp"
+                    style="@style/style_12_bold"/>
+
+                <TextView
+                    android:id="@+id/courierTeamMessageTxt7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:text="I agree to the carrier terms and conditions"
+                    android:textColor="@color/sky"
+                    android:textSize="14dp"
+                    style="@style/style_12_name"/>
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/courierTeamTermBtnDecline"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/new_boder"
+                android:gravity="center"
+                android:text="Decline"
+                android:textColor="@color/gold_dark"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/courierTeamTermBtnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/roundedskybluebg"
+                android:gravity="center"
+                android:text="Continue"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

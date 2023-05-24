@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent_black_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/roundedwhiteback_white"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/titleDialog"
+            android:layout_width="match_parent"
+            style="@style/style_15_name"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="bottom|center"
+            android:text="Permission required!"
+            android:textColor="@color/gunmetal_new1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightgraycolor"/>
+
+        <TextView
+            android:id="@+id/dialogMessageText"
+            style="@style/style_12_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleDialog"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="20"
+            android:padding="7dp"
+            android:text="GPS is not enabled. Do you want to go to settings menu?"
+            android:textColor="@color/gunmetal_new1"
+            android:textSize="13dp" />
+        <Button
+            android:id="@+id/dialogDoneBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/dialogMessageText"
+            android:background="@drawable/roundedskybluebg"
+            android:gravity="center"
+            android:text="Setting"
+            android:visibility="visible"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/dialogMessageText"
+            android:background="@drawable/new_boder"
+            android:gravity="center"
+            android:text="Cancel"
+            android:visibility="visible"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold_dark" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

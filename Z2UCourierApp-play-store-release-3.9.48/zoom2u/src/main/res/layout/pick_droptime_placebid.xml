@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/pickUpTxtToPlaceBid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Pickup"
+        android:textStyle="bold"
+        android:textColor="@color/graycolorText"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/dateTxtToPlaceBid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickUpTxtToPlaceBid"
+        android:layout_alignLeft="@+id/pickUpTxtToPlaceBid"
+        android:layout_marginTop="10dp"
+        android:text="Date"
+        android:textColor="@color/gun_metal"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="7dp"
+        android:layout_alignLeft="@+id/pickUpTxtToPlaceBid"
+        android:text="Date"
+        android:gravity="center|left"
+        android:drawablePadding="7dp"
+        android:paddingLeft="25dp"
+        android:background="@drawable/border_whitegb"
+        android:drawableLeft="@drawable/bid_calendar"
+        android:layout_below="@+id/dateTxtToPlaceBid"
+        android:id="@+id/dateValueTxtToPlaceBid"
+        android:textSize="12dp"
+        android:textColor="@color/gun_metal"
+        />
+
+    <TextView
+        android:id="@+id/timeTxtToPlaceBid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickUpTxtToPlaceBid"
+        android:layout_alignTop="@+id/dateTxtToPlaceBid"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/dateValueTxtToPlaceBid"
+        android:text="Time"
+        android:textColor="@color/gun_metal"
+        android:textSize="12dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="7dp"
+        android:layout_alignLeft="@+id/timeTxtToPlaceBid"
+        android:text="Time"
+        android:gravity="center|left"
+        android:drawablePadding="7dp"
+        android:paddingLeft="25dp"
+        android:background="@drawable/border_whitegb"
+        android:drawableLeft="@drawable/bid_clock"
+        android:layout_below="@+id/dateTxtToPlaceBid"
+        android:id="@+id/timeValueTxtToPlaceBid"
+        android:textSize="12dp"
+        android:textColor="@color/gun_metal"
+        />
+
+</RelativeLayout>

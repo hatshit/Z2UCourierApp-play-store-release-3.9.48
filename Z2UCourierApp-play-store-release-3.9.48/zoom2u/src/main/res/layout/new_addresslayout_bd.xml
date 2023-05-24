@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:layout_marginLeft="1dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/addressHeaderTxtBD"
+        style="@style/style_12_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:text="Pickup"
+        android:textAllCaps="true"
+        android:textSize="9dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addressHeaderTxtBD"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactNameTxtBD"
+            android:paddingLeft="12dp"
+            android:text=""
+            android:textSize="12dp"
+            android:singleLine="true"
+            style="@style/style_12_regular"
+            android:textColor="@color/gun_metal"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/suburbTxtBD"
+            android:paddingLeft="12dp"
+            android:text=""
+            android:textSize="14dp"
+            style="@style/style_15_name"
+            />
+        </LinearLayout>
+</RelativeLayout>

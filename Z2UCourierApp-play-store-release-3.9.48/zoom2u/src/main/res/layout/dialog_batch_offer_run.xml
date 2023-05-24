@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutAllTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color">
+
+        <ImageView
+            android:id="@+id/backFromBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="New Run Offer"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewNewBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/horizontalLayoutBD"
+        android:layout_below="@+id/newBDTitleBarLayout"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <fragment
+                android:id="@+id/mapViewBookingDetail"
+                class="com.zoom2u.utility.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/secondHeaderBDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/mapViewBookingDetail"
+                android:background="@color/gold_light"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/secondHeaderTxtBD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerBookingDLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/gotham_rnd_medium"
+                    android:text="ⓘ This run is for future date"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secondHeaderBDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/new_white_round_up"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/horizontalLayoutBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/secondHeaderBDLayout"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/new_white_round_up"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight=".25"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mapViewBookingDetail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:text="Vehicle"
+                            android:textColor="@color/gun_metal"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_vehicle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:text=""
+                            android:textColor="@color/gun_metal"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight=".25"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mapViewBookingDetail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:text="Pickup"
+                            android:textColor="@color/add_member_label"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_pickup_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:text=""
+                            android:textColor="@color/gun_metal"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight=".25"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mapViewBookingDetail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:text="Deliver by"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_deliver_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:text=""
+                            android:textColor="@color/gun_metal"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/horizontalLayoutBD"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/secondHeaderBDLayout"
+                    android:background="#e0e0e0"
+                    android:elevation="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight=".25"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mapViewBookingDetail"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:text="Total Value"
+                            android:textColor="@color/add_member_label"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:textColor="@color/green_bg"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight=".25"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/mapViewBookingDetail"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:text="No. of stops"
+                            android:textColor="@color/add_member_label"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_no_stops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/gotham_rnd_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:text=""
+                            android:textColor="@color/gun_metal"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verticleTxt1BD"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:padding="3dp"
+                            android:text="View Stop List"
+                            android:textColor="@color/navy"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pickup_pin" />
+
+
+                    <TextView
+                        android:id="@+id/first_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/gotham_rnd_bold"
+                        android:text="First pickup"
+                        android:textColor="@color/add_member_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_pickup_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pickup"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/gotham_rnd_medium"
+                    android:maxLines="2"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/drop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pickup_add"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/a_drop" />
+
+
+                    <TextView
+                        android:id="@+id/second_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mapViewBookingDetail"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/gotham_rnd_bold"
+                        android:text="Drop suburbs"
+                        android:textColor="@color/add_member_label"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:minHeight="150dp"
+                    android:scrollbars="vertical"
+                    android:nestedScrollingEnabled="true"
+                    tools:listitem="@layout/item_offer_drop_subrubs" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/txtWithSuggestPriceBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/horizontalLayoutBD"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/accept_run"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_worrier_level_new"
+                android:fontFamily="@font/gotham_rnd_medium"
+                android:minWidth="200dp"
+                android:text="Accept Run"
+                android:textAllCaps="false"
+                android:textColor="@drawable/textselector"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/reject_run"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_worrier_level_red"
+                android:fontFamily="@font/gotham_rnd_medium"
+                android:minWidth="200dp"
+                android:text="Reject Run"
+                android:textAllCaps="false"
+                android:textColor="@drawable/textselector"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/suggestPriceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:background="@drawable/roundedskybluebg_new"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="Suggest a price"
+            android:textColor="@drawable/textselector"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/priceSubmitView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/suggestPriceHeaderTxtBD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="4"
+            android:paddingLeft="20dp"
+            android:paddingTop="12dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="You can provide a counter offer below, which will be sent to the customer for approval if no other couriers accept the delivery at the proposed price."
+            android:textColor="@color/gun_metal"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/titlePriceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Price (ex-GST)"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/edtSuggestPriceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/titlePriceTxt"
+                android:background="@drawable/bg_tlrb_border"
+                android:gravity="center|left"
+                android:hint="Your offer"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:paddingLeft="45dp"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/dollerTxtSuggestPriceTxt"
+                android:layout_width="15dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@+id/titlePriceTxt"
+                android:gravity="center"
+                android:text="$"
+                android:textStyle="bold"
+                android:textColor="@color/gun_metal"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/SuggestPriceSubmitBtnLayoutBD"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="60dp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/cancelSuggestPriceBtnBD"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight=".5"
+                android:background="@drawable/new_boder"
+                android:text="Cancel"
+                android:textColor="@color/gold_dark"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/submitSuggestPriceBtnBD"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight=".5"
+                android:background="@drawable/rounded_worrier_level"
+                android:text="Submit"
+                android:textColor="@drawable/textselector"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

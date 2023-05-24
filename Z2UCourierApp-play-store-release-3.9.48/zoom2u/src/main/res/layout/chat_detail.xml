@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:background="@color/base_color_gray"
+        android:layout_height="63dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/txtChatPersonNameHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="17dp"
+            android:text="View Booking"
+            android:visibility="gone"
+            android:textColor="#00a6e3"
+            android:textSize="16dp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:text="Offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/customerStatusTxt"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:id="@+id/iconCallBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/iconcall" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/topDefaultView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rel"
+        android:background="@color/graycolorlinemapview" />
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/layoutChatDetail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_below="@id/topDefaultView">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/bookingRef"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginTop="7dp"-->
+            <!--android:text="Booking reference here"-->
+            <!--android:textColor="@color/graycolorText"-->
+            <!--android:textSize="14dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txtDueByTime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:text="Due by 5pm"-->
+            <!--android:layout_below="@+id/bookingRef"-->
+            <!--android:textColor="@color/graycolorText"-->
+            <!--android:textSize="12dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txtPickUpDropOffSuburb"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:text="Idafort ➜ Lake Adriannafurt"-->
+            <!--android:textColor="@color/graycolorText"-->
+            <!--android:textSize="12dp" />-->
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iconCallOnChat"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_toLeftOf="@+id/iconMapOnChat"-->
+            <!--android:layout_toStartOf="@+id/iconMapOnChat"-->
+            <!--android:src="@drawable/iconcall" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iconMapOnChat"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:src="@drawable/iconmaponchat" />-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--<View-->
+        <!--android:id="@+id/topDefaultView1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:layout_below="@id/layoutChatDetail"-->
+        <!--android:background="@color/graycolorlinemapview" />-->
+
+    <ListView
+        android:id="@+id/my_recycler_view_chatDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/listFooter"
+        android:layout_below="@id/topDefaultView"
+        android:background="@color/graycolorlinemapview"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@null"
+        android:focusableInTouchMode="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/listFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/graycolorlinemapview"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        >
+
+        <EditText
+            android:id="@+id/messageInputChatDetail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toLeftOf="@+id/sendButtonChatDetail"
+            android:background="@drawable/send_message"
+            android:hint="Type text message..."
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/sendButtonChatDetail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/chat_send_ic" />
+
+        <ImageView
+            android:id="@+id/attachIcon_ChatView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/messageInputChatDetail"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icons_attach"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chatViewFullImage"
+        android:visibility="gone"
+        android:background="@color/transparent_black_bg"
+        />
+
+</RelativeLayout>

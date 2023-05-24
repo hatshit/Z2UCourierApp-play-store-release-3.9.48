@@ -1,0 +1,239 @@
+{
+  "project_info": {
+    "project_number": "803976548324",
+    "firebase_url": "https://customer-app-f86ec.firebaseio.com",
+    "project_id": "customer-app-f86ec",
+    "storage_bucket": "customer-app-f86ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803976548324:android:6958697d507b7d2e",
+        "android_client_info": {
+          "package_name": "com.zoom2u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803976548324-ot1kbcg6rtavui7j9i9sqjkcqqd2ls44.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u",
+            "certificate_hash": "69c9517d761272a7bffd00bdc9636c24870756ec"
+          }
+        },
+        {
+          "client_id": "803976548324-nq00i0avj05isucggp252klqnjkdm7c3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u",
+            "certificate_hash": "f2090a3adfda7ab3c6529d4b550b1e4207d23e41"
+          }
+        },
+        {
+          "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhws6d9J6OvQkWuwHHXp0jqkoNgFaempc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803976548324-tm66r66o9746o908tn7u72347poti34r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.freightmatch"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803976548324:android:766dff62f81d9084",
+        "android_client_info": {
+          "package_name": "com.zoom2u_customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803976548324-lmccapno09psqi0cfikvqcd1ujstp4v5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u_customer",
+            "certificate_hash": "69c9517d761272a7bffd00bdc9636c24870756ec"
+          }
+        },
+        {
+          "client_id": "803976548324-u5c6es60d0iefdjgrfpmiu1jrc494af6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u_customer",
+            "certificate_hash": "43be77050712f204368c31738fceb43ac2e2f587"
+          }
+        },
+        {
+          "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhws6d9J6OvQkWuwHHXp0jqkoNgFaempc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803976548324-tm66r66o9746o908tn7u72347poti34r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.freightmatch"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803976548324:android:bd09c9520b965d57",
+        "android_client_info": {
+          "package_name": "com.zoom2u_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803976548324-d0q9andvjpd2u54pnimo1v8ksvst52c5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u_test",
+            "certificate_hash": "f2090a3adfda7ab3c6529d4b550b1e4207d23e41"
+          }
+        },
+        {
+          "client_id": "803976548324-5inrd6um1jc1117fol70p8b9tflmg0a5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoom2u_test",
+            "certificate_hash": "69c9517d761272a7bffd00bdc9636c24870756ec"
+          }
+        },
+        {
+          "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhws6d9J6OvQkWuwHHXp0jqkoNgFaempc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803976548324-tm66r66o9746o908tn7u72347poti34r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.freightmatch"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803976548324:android:8ff79184e3acd159",
+        "android_client_info": {
+          "package_name": "zoom2u.freightmatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803976548324-l5cttfs07lafimt0ham8gof195og9mfm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "zoom2u.freightmatch",
+            "certificate_hash": "69c9517d761272a7bffd00bdc9636c24870756ec"
+          }
+        },
+        {
+          "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhws6d9J6OvQkWuwHHXp0jqkoNgFaempc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803976548324-t7h9ac5kiv5lc55vc57o23urgvks6bls.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "803976548324-tm66r66o9746o908tn7u72347poti34r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.freightmatch"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

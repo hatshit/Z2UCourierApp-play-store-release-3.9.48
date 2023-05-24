@@ -1,0 +1,405 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutAllTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#374350"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/backFromBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Place Bid"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayoutAllTitleBar">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/next_ll"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/bidDetailTxtToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Bid Details"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bidItemTxtToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bidDetailTxtToPlaceBid"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/txtDeliveryDisToPlaceBid"
+                    android:paddingRight="10dp"
+                    android:text="Small Box"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/pickAddressToPlaceBid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/bidItemTxtToPlaceBid"
+                    android:layout_alignStart="@+id/bidItemTxtToPlaceBid"
+                    android:layout_below="@+id/bidItemTxtToPlaceBid"
+                    >
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_pickup_icon"/>
+
+                    <TextView
+                        android:id="@+id/pickAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Small Box"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/verticleDashToPlaceBid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/bidItemTxtToPlaceBid"
+                    android:layout_alignStart="@+id/bidItemTxtToPlaceBid"
+                    android:layout_below="@+id/pickAddressToPlaceBid"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="|"
+                    android:textColor="@color/counter_text_color" />
+
+
+                <LinearLayout
+                    android:id="@+id/dropAddressToPlaceBid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignLeft="@+id/bidItemTxtToPlaceBid"
+                    android:layout_alignStart="@+id/bidItemTxtToPlaceBid"
+                    android:layout_below="@+id/verticleDashToPlaceBid"
+                    >
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_drop_off_icon"/>
+
+                    <TextView
+                        android:id="@+id/dropAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="Small Box"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txtDeliveryDisToPlaceBid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/placeBidItemImgList"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Delivery Distance"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/distanceTxtToPlaceBid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDeliveryDisToPlaceBid"
+                    android:layout_alignEnd="@+id/txtDeliveryDisToPlaceBid"
+                    android:layout_alignRight="@+id/txtDeliveryDisToPlaceBid"
+                    android:layout_marginTop="4dp"
+                    android:text="4.3km"
+                    android:textStyle="bold"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/pickTimePlaceBidList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/pickAddressToPlaceBid"
+                    android:layout_alignEnd="@+id/distanceTxtToPlaceBid"
+                    android:layout_alignRight="@+id/distanceTxtToPlaceBid"
+                    android:layout_alignBottom="@+id/pickAddressToPlaceBid"
+                    android:text="07-Jun-2017 10:53 AM"
+                    android:textColor="@color/gun_metal"
+                    android:textStyle="bold"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/dropTimePlaceBidList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dropAddressToPlaceBid"
+                    android:layout_alignEnd="@+id/distanceTxtToPlaceBid"
+                    android:layout_alignRight="@+id/distanceTxtToPlaceBid"
+                    android:layout_alignBottom="@+id/dropAddressToPlaceBid"
+                    android:text="07-Jun-2017 10:53 AM"
+                    android:textColor="@color/gun_metal"
+                    android:textStyle="bold"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/editPriceViewToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/dropAddressToPlaceBid"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/rounded_dynamo_level"
+                    android:elevation="2dp">
+
+
+                    <TextView
+                        android:id="@+id/bidTxtToPlaceBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Your Bid (in AUD)"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/suggestPriceTxtToPlaceBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bidTxtToPlaceBid"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Suggested price $0"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtPricrTxt"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/roundedwhiteback"
+                        android:cursorVisible="true"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:gravity="center|left"
+                        android:inputType="numberSigned"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="7dp"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dollerTxtPlaceBid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/edtPricrTxt"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:text="$"
+                        android:textColor="@color/gray"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTimeViewToPlaceBid"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/editPriceViewToPlaceBid"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/pickTimeVieToPlaceBid"
+                        layout="@layout/pick_droptime_placebid" />
+
+                    <include
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/dropTimeVieToPlaceBid"
+                        layout="@layout/pick_droptime_placebid" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bidActivePeriodTxtToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTimeViewToPlaceBid"
+                    android:layout_alignLeft="@+id/bidItemTxtToPlaceBid"
+                    android:layout_marginTop="20dp"
+                    android:text="Your price will be valid for"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/bidActivePeriodSpinnerToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bidActivePeriodTxtToPlaceBid"
+                    android:layout_alignLeft="@+id/bidActivePeriodTxtToPlaceBid"
+                    android:layout_alignRight="@+id/bidActivePeriodTxtToPlaceBid"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/notesTitleTxtToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bidActivePeriodSpinnerToPlaceBid"
+                    android:layout_alignLeft="@+id/bidItemTxtToPlaceBid"
+                    android:layout_marginTop="15dp"
+                    android:text="Notes"
+                    android:textColor="@color/graycolorText"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtNotesTxtToPlaceBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/notesTitleTxtToPlaceBid"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/border_whitegb"
+                    android:gravity="center|left|top"
+                    android:hint="Enter notes here"
+                    android:padding="20dp"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/next_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/placeBidBtnToPlaceBid"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/roundedskybluebg"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Place this bid"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

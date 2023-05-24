@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutRequestAvailItem"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/deliverTimeList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/arrow_end" />
+
+    <TextView
+        android:id="@+id/pickSuburbRequestList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:textColor="@color/sky"
+        android:gravity="center|left"
+        android:maxLines="2"
+        android:text="Pickup suburb"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/dropSuburbRequestList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/sky"
+        android:paddingTop="3dp"
+        android:maxLines="2"
+        android:gravity="center|right"
+        android:text="Dropoff suburb"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/requestNoteList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center|left"
+        android:text="Notes"
+        android:maxLines="3"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/pickSuburbRequestList"
+        android:textColor="#374350"
+        android:textSize="14dp" />
+
+</RelativeLayout>

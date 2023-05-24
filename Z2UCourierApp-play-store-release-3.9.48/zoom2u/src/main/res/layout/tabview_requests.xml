@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/deliveryHistorySlideMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gary">
+
+    <LinearLayout
+        android:id="@+id/tabsForBidList"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/todayFutureBtnLayoutForActiveJobs"
+        android:background="@color/base_color1"
+        android:visibility="visible"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:id="@+id/new_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/newBidTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="New"
+                android:minWidth="90dp"
+                android:minHeight="25dp"
+                android:background="@drawable/selected_background"
+                android:textColor="@drawable/textselector"
+                style="@style/style_15_name"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/active_ll"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/new_ll">
+
+            <TextView
+                android:id="@+id/activeBidTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="Active"
+                android:minWidth="90dp"
+                android:minHeight="25dp"
+                android:textColor="@color/white"
+                style="@style/style_15_name"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tabsForBidList"
+        android:background="@color/light_gary"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/requestListlayout"
+            android:background="@color/light_gary">
+
+        <ListView
+            android:id="@+id/listCourierRun"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="@color/light_gary"
+            android:layout_marginTop="10dp"
+            />
+
+            <TextView
+                android:id="@+id/noQoutesAvailTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="No bid request available"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

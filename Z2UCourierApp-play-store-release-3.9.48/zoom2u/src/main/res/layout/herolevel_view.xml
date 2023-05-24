@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/titleTxtHeroLevel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#7BCE20"
+        android:gravity="center"
+        android:text="Hero level"
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/cancelBtnHeroLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/icon_signout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleTxtHeroLevel"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:id="@+id/scrollViewMainLayout"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_dynamo_level" >
+
+                <TextView
+                    android:id="@+id/headerTxtHeroLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="So far you have earn"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <!-- <TextView
+                    android:id="@+id/pointTxtHeroLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerTxtHeroLevel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="0 Points"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" /> -->
+            </RelativeLayout>
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:id="@+id/scrollViewSecondMainLayout"
+            android:orientation="vertical" >
+                
+		    
+         </LinearLayout>
+            <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/recruiteLevelLayout_HeroLevel"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_recruite_level" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                       	android:layout_toRightOf="@+id/imageView1"
+                       	android:layout_marginLeft="15dp"
+                       	android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text="RECRUIT" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#374350"
+                        android:text="0 - 250 points" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FF000000"
+                        android:text="Rewards" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:textColor="#374350"
+                        android:lineSpacingExtra="1dp"
+                        android:layout_marginTop="2dp"
+                        android:text="-  Lorem ipsum dolor sit amet\n-  Laritas est etiam processus dynamicus\n-  Clari, fiant sollemnes infutrum" />
+                    
+                </RelativeLayout>
+            </RelativeLayout>
+            
+             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/recruiteLevelLayout_HeroLevel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/dynamoLevelLayout_HeroLevel"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_dynamo_level" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                     <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text="DYNAMO" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#374350"
+                        android:text="250 - XXX points" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FF000000"
+                        android:text="Rewards" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:textColor="#374350"
+                        android:lineSpacingExtra="1dp"
+                        android:layout_marginTop="2dp"
+                        android:text="-  Lorem ipsum dolor sit amet\n-  Laritas est etiam processus dynamicus\n-  Clari, fiant sollemnes infutrum" />
+                    
+                </RelativeLayout>
+            </RelativeLayout>
+            
+              <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/dynamoLevelLayout_HeroLevel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/worrierLevelLayout_HeroLevel"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_worrier_level" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text="WORRIER" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#374350"
+                        android:text="XXX - XXX points" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FF000000"
+                        android:text="Rewards" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:textColor="#374350"
+                        android:lineSpacingExtra="1dp"
+                        android:layout_marginTop="2dp"
+                        android:text="-  Lorem ipsum dolor sit amet\n-  Laritas est etiam processus dynamicus\n-  Clari, fiant sollemnes infutrum" />
+                    
+                </RelativeLayout>
+            </RelativeLayout>
+            
+               <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/worrierLevelLayout_HeroLevel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/eliteLevelLayout_HeroLevel"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_elite_level" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/textView3"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text="ELITE" />
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#374350"
+                        android:text="XXX - XXX points" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FF000000"
+                        android:text="Rewards" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:textColor="#374350"
+                        android:lineSpacingExtra="1dp"
+                        android:layout_marginTop="2dp"
+                        android:text="-  Lorem ipsum dolor sit amet\n-  Laritas est etiam processus dynamicus\n-  Clari, fiant sollemnes infutrum" />
+                    
+                </RelativeLayout>
+            </RelativeLayout>
+            
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@+id/eliteLevelLayout_HeroLevel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/legendLevelLayout_HeroLevel"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bottom_border" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_legend_level" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_starselect" />
+                    
+                       <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/textView3"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text="LEGEND" />
+                    
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#374350"
+                        android:text="XXX - XXX points" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView4"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#FF000000"
+                        android:text="Rewards" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:textColor="#374350"
+                        android:lineSpacingExtra="1dp"
+                        android:layout_marginTop="2dp"
+                        android:text="-  Lorem ipsum dolor sit amet\n-  Laritas est etiam processus dynamicus\n-  Clari, fiant sollemnes infutrum" />
+                    
+                </RelativeLayout>
+            </RelativeLayout> -->
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

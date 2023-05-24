@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_weight=".25"
+    android:layout_margin="5dp"
+    android:background="@drawable/new_gary_backgroun">
+
+    <TextView
+        android:id="@+id/verticleTxt1BD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/style_15_bold"
+        android:layout_below="@+id/mapViewBookingDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:text="vechile"
+        android:textColor="@color/add_member_label"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verticleTxt2BD"
+        style="@style/style_15_bold"
+        android:layout_below="@+id/verticleTxt1BD"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="13dp"
+        android:textColor="@color/msg_txt_color"
+        android:lineSpacingExtra="2dp"
+        />
+
+</RelativeLayout>

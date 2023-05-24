@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/firstLayout_SheduleHour"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d4d4d4"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp"
+            android:text="AVAILABLE HOURS AND AREAS"
+            android:textColor="#2e3235"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLayout_SheduleHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstLayout_SheduleHour"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="left|center"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp"
+            android:text="Select hours when you would be available"
+            android:textColor="#36454F"
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/sheduleMainLayout"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/addSheduleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/scheduleTimeFirstLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="0dp" >
+
+                            <EditText
+                                android:id="@+id/scheduleTimeFirstTextTo"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:background="#d4d4d4"
+                                android:textColor="#FF3800"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="to"
+                                android:textColor="#36454F"
+                                android:textSize="18dp" />
+
+                            <EditText
+                                android:id="@+id/scheduleTimeFirstTextFrom"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:background="#d4d4d4"
+                                android:textColor="#FF3800"
+                                android:gravity="center"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/addImgfor_Hour"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sheduleMainLayout"
+                android:layout_toRightOf="@+id/sheduleMainLayout"
+                android:src="@drawable/plus" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="left|center"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp"
+            android:text="Select areas where you are available"
+            android:textColor="#36454F"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp" >
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="#d4d4d4"
+                android:hint="Postcode"
+                android:padding="7dp"
+                android:textColor="#FF3800"
+                android:textColorHint="#FF3800"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:background="#d4d4d4"
+                android:padding="7dp"
+                android:text="+5km radious"
+                android:textColor="#FF3800"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp" >
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="2dp"
+                android:text="Apply for all working days"
+                android:textColor="#36454F"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:background="#d4d4d4"
+                android:padding="5dp"
+                android:textColor="#FF3800"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/cancel_btn" />
+
+</RelativeLayout>

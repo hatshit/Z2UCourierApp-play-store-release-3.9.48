@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zoom2u</string>
+
+    <string name="map_api_key">AIzaSyDsqlqVQsCmsNdqjp3guok-DfH52YsrRc8</string>
+    <string name="external_dir">SignatureZoomU</string>
+    <string name="dir_failedsignatureimg">Z2U_FailedSignatureImg</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_forgot">ForgotActivity</string>
+    <string name="title_activity_booking_detail">MainActivity</string>
+    <string name="title_activity_confirm_pick_up_for_user_name">ConfirmPickUpForUserName</string>
+    <string name="title_activity_confirm_pick_for_user_signature">ConfirmPickForUserSignature</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">From GCM: device successfully registered!</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">From GCM: you got message!</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering">Calling  attempt %1$d/%2$d</string>
+    <string name="server_registered">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error">Could not Notify after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
+    <string name="title_activity_locationtest">MainActivity</string>
+
+    <string name="bookingstatus">Picked up</string>
+
+    <string name="zoom2u_support_no">1300 318 675</string>
+
+    <!-- Non-ATL alert dialog text when going to TTD and Dropped off an non ATL booking -->
+    <string name="non_atl_dialog_txt">This booking has been marked as Signature Required for delivery by the sender, and cannot be left without a signature from the recipient.</string>
+
+    <!-- Safe delivery alert dialog text when going to TTD of an ATL booking -->
+    <string name="safe_delivery_title_txt">Safe Delivery Available!</string>
+    <string name="safe_delivery_msg_txt">This parcel can be left at the recipients location, but only if it is safe to do so.\n\nThe customer has requested it be left at:</string>
+    <string name="safe_del_leave_parcel_btn_txt">This location is safe, leave parcel</string>
+    <string name="safe_del_ttd_btn_txt">Delivery attempted, parcel not left</string>
+
+    <!-- What is safe alert dialog text when going to TTD of an ATL booking-->
+    <string name="atlMsgTxt">1) Please only leave a parcel where it will not be stolen:</string>
+    <string name="atlMsgTxt1">1) Most unit blocks mail rooms are unsafe location.\n2) Foyers are unsafe.\n3) Letter boxes are unsafe.\n4) Front doors which can be seen from the road are unsafe.</string>
+    <string name="atlMsgTxt2">2) Please treat the parcel as if it was a pile of your own cash :)</string>
+
+    <string name="require_id_ckeck_msg_txt">This delivery requires an ID check!</string>
+    <string name="require_id_ckeck_hint_txt">Please enter last 4 digits of the recipients Driving licence</string>
+
+    <string name="become_courier_txt">This will allow you to create and manage a team of drivers. \nOnce the team has been setup, you’ll be able to invite your drivers to use the Zoom2u app to carry out and complete delivery work together.\n\nNote:</string>
+    <string name="become_team_txt1">You will be entirely responsible to the work carried out by everyone in your team.</string>
+    <string name="become_team_tex2">You will be paid for any deliveries the team collectively completes, and will be responsible for compensating them for the work they do.</string>
+    <string name="become_team_txt3">Everyone will be notified of new delivery offers, and can take on any new work, but you will also have the capacity to assign work amongst your team as well.</string>
+
+    <string name="driversafe_txt1">I hold a valid drivers licence and not suspended from driving</string>
+    <string name="driversafe_txt2">I\'m fit to drive</string>
+    <string name="driversafe_txt3">I\'ve checked to make sure my vehicle is road worthy</string>
+
+    <string name="driversafe_information_headetxt1">I\'m not fit to drive</string>
+    <string name="driversafe__information__headertxt2">I\'ve checked to make sure my vehicle is road worthy</string>
+
+    <string name="driversafe_information_txt1">I\'ve not been driving for longer then 12 hours in the past 24hrs. I maintain a zero blood alcohol reading and am free of drugs while driving</string>
+    <string name="driversafe__information__txt2">My Pink Slip, Green Slip and Registration are current and my vehicle has been serviced in the last 12 months.</string>
+
+    <string name="alcohol_delivery_TitleTxt">Our commitment to Safety of our community is strong, thanks you for watching this video.</string>
+    <string name="alcohol_delivery_MsgTxt">I confirm I will deliver articles containing alcohol in line with RSA guidelines which includes confirming a valid ID for anyone who looks 25 or younger. I will also ensure I will refuse delivery to anyone who is intoxicated.</string>
+
+    <string name="alcohol_drop_delivery_MsgTxt1">Does the person you are delivering to look under 25 years?\n\nIf yes please ask for a valid ID. Only Driver License, Proof of age or Valid passport is acceptable.\n\nDate of Birth must be prior to:</string>
+    <string name="alcohol_drop_delivery_notetitletxt">Note: It is illegal to supply alcohol to a minor</string>
+    <string name="alcohol_drop_delivery_notemsgtxt">Note the maximum fine for supplying alcohol to a minor is $11000 or 12 months imprisonment or both. Don\'t risk it!</string>
+
+    <string name="alcohol_drop_delivery_alert2_TitleTxt">Is the person you are \ndelivering to Intoxicated?</string>
+    <string name="alcohol_drop_delivery_alert2_MsgTxt">Note: It is illegal to provide alcohol to an intoxicated person</string>
+    <string name="alcohol_drop_delivery_alert2_YesBtnTxt">Yes, this person is Intoxicated</string>
+    <string name="alcohol_drop_delivery_alert2_NoBtnTxt">No, this person is not Intoxicated</string>
+
+    <!-- ********* Drop delivery information dialog text ********** -->
+    <string name="alcohol_drop_delivery_info_TitleTxt">Signs of Intoxication</string>
+    <!-- ********* Drop delivery information dialog text ********** -->
+
+    <string name="alcohol_drop_delivery_alert3_TitleTxt">Please Return the delivery to the pickup location. You will be paid for the return visit</string>
+    <string name="alcohol_drop_delivery_alert3_MsgTxt1">Person is not home</string>
+    <string name="alcohol_drop_delivery_alert3_MsgTxt2">Person is under the age of 18</string>
+    <string name="alcohol_drop_delivery_alert3_MsgTxt3">Person is intoxicated</string>
+    <string name="alcohol_drop_delivery_alert3_BtnTxt">I\'m returning this delivery</string>
+
+    <string name="training_video_msg_txt">Once you have watched the complete training video, you will be eligible to start getting Alcohol deliveries. Watch the video, sign on the next page and you are ready to go!</string>
+
+    <string name="msg_txt_deliveryrun_detail">We will request final confirmation the afternoon before a run starts. Please make you are able to confirm, or cancel your spot in the run.</string>
+    <string name="msg_confirm_txt_deliveryrun_detail">You have been confirmed!\nPlease make sure you are at the pickup location on time</string>
+
+    <string name="delivery_run_msg_txt">You have accepted a spot on this run. Please let us know more than 24hrs before the run start if you are unable to attend.\n\nWe will request final confirmation the afternoon before the run to confirm your availability and spot.</string>
+    <string name="locationPermissionDialogMsg">"Z2U for carriers is a location based application. We use your location when the app is in background to offer you best suitable and nearby Bookings and also your customers can track their parcels on map too.\nThe Z2U for carriers app doesn't work reliably when Location permission is not granted as \"all-the-time\" Tap here to grant permission or go to Settings."</string>
+    <string name="preference_selfie_key">selfiedate</string>
+    <string name="preference_file_key">selfiefile</string>
+
+    <!--Run popup message-->
+    <string name="text1">Deliveries for this customer  <font color="black"><b><u>MUST</u></b></font>\nbe handed to a person and signed \nfor.\n\nParcels can only be left at the\nfront door when <font color="black"><b><u>it\'s safe to do so,</u></b></font>\nand if you have authority to leave\nit without a signature.
+    </string>
+    <string name="text2">If a parcel is left incorrectly, you\nmay be <font color="black"><b><u>HELD LIABLE</u></b></font> for the\nvalue of the item.\n\nThrowing a parcel over a fence or\nleaving a parcel where it can be\nstolen <font color="black"><b><u>WILL</u></b></font> result in your\ncustomer blocking you for future\ndeliveries.</string>
+    <string name="text3">Your customers can choose to\nblock a driver from future \ndeliveries.<font color="black"><b> \n\nThis may happen when parcels\nhave been delivered incorrectly.</b></font></string>
+    <string name="dhl_warning">Please make sure you have scanned the code at team member\'s desk and put in the notes to release this run for delivery.</string>
+    <string name="dhl_warning_on_back">All deliveries part of this run have not been picked up. Please see depot manager to release the run for delivery if you are missing parcels. Your app won’t work until you scan the release barcode</string>
+
+
+    <!--onboard text-->
+    <string name="text_ob1">We are excited to have you part of the platform.\n\nZoom2u has operated across Australia since 2014 and has processed over 2.5M deliveries.\n\nAlong the way we’ve learnt how best for a driver to get stared.\n\nHere are some quick tips to make the most of Zoom2u.</string>
+    <string name="text_ob2">Zoom2u is a platform which connects you to customers who want fast, reliable delivery.\n\nYou can choose which bookings you accept or reject. You can also accept multiple bookings at a time.\n\nThe key is to accept multiple bookings so you can build a route for the day to increase your earning capacity.</string>
+    <string name="text_ob3">When you hit the ’Online’ button, the system will send your location to our platform automatically. This allows the platform to automatically offer you bookings that are closet to you!\n\nThese bookings are offered to the closet driver, who has 20 seconds to accepts.After that, the system will offer the bookings to the next driver, and so on.\n\nSo speed to accepting the right booking that fits in with your day, is key.\n\nMaybe think about having your phone hands-free mounted in your car, so it’s easy to the ready and safe?\n\nAlso keep in mind where you are located is key to receiving bookings. Most booking may start closer to business hubs in the mornings, so waiting nearby will increase your chance of being offered a bookings first!</string>
+    <string name="text_ob4">Day 1 we recommended accepting a small number of bookings. This way you can get used to the platform.\n\nif you get stuck along the way our team is here to help you.\n\nJust click the call button or whatsapp to ask a questions.\n\nWe are here to help.</string>
+    <string name="text_ob5">Increase your earning potential by providing your customers with a great experience.\n\nif you provide a great experience your customers will love you, and they could turn into repeat customer.\n\nif you’re late or rude, your customers may not return.\nIt may help to let the customer know if you will be late.Communicate is always good.</string>
+    <string name="text_ob6">Finally here are some\nsimple tools that will make\nyour day go easier.</string>
+
+
+</resources>

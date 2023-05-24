@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zoom2u.roundedimage.RoundedImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/achievementImg"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/textAchievementDes"
+        android:textSize="12dp"
+        android:maxLines="2"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/achievementImg"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textAchievementDes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/progressBarProfileAchievement" />
+
+
+</RelativeLayout>

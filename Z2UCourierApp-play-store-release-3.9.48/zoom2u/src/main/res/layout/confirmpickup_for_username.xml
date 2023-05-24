@@ -1,0 +1,456 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/light_gary"
+    tools:context=".ConfirmPickUpForUserName">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color_gray"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backFromConfirmPicUpUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleConfirmPicUpUserName"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Confirm Pickup"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/confirmPicUpChatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatConfirmPicUp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/new_white_round_up"
+        android:paddingBottom="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/contactTxt"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingRight="25dp"
+            android:text="Contact :"
+            android:textColor="@color/base_color1" />
+
+        <TextView
+            android:id="@+id/confirmPickContactName"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/contactTxt"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/contactTxt"
+            android:gravity="center|left"
+            android:singleLine="true"
+
+            android:text="Contact name here" />
+
+        <TextView
+            android:id="@+id/confirmPickContactAddress"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmPickContactName"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/contactTxt"
+            android:gravity="center|left"
+            android:maxLines="2"
+            android:text="Contact number here" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/returnDHLBookingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/new_white_back"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/returnBookingHeaderTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:paddingRight="25dp"
+            android:text="Parcels are to be returned to warehouse supervisor:" />
+
+        <TextView
+            android:id="@+id/totalDeliveredTxtHeader"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/returnBookingHeaderTxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Delivered" />
+
+        <TextView
+            android:id="@+id/totalDeliveredCountTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalDeliveredTxtHeader"
+            android:layout_alignStart="@+id/totalDeliveredTxtHeader"
+            android:layout_alignLeft="@+id/totalDeliveredTxtHeader"
+            android:layout_alignEnd="@+id/totalDeliveredTxtHeader"
+            android:layout_alignRight="@+id/totalDeliveredTxtHeader"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/pickedUpDeliveryHeaderTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/totalDeliveredTxtHeader"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:text="Picked up" />
+
+        <TextView
+            android:id="@+id/pickedUpCountTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pickedUpDeliveryHeaderTxt"
+            android:layout_alignStart="@+id/pickedUpDeliveryHeaderTxt"
+            android:layout_alignLeft="@+id/pickedUpDeliveryHeaderTxt"
+            android:layout_alignEnd="@+id/pickedUpDeliveryHeaderTxt"
+            android:layout_alignRight="@+id/pickedUpDeliveryHeaderTxt"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/toReturnHeaderTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/totalDeliveredTxtHeader"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="To Return" />
+
+        <TextView
+            android:id="@+id/toReturnCountTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toReturnHeaderTxt"
+            android:layout_alignStart="@+id/toReturnHeaderTxt"
+            android:layout_alignLeft="@+id/toReturnHeaderTxt"
+            android:layout_alignEnd="@+id/toReturnHeaderTxt"
+            android:layout_alignRight="@+id/toReturnHeaderTxt"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gold_light" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/defaultTxtForLineConfirmDrp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#d4d4d4" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/defaultTxtForLineConfirmDrp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/light_gary_heading">
+
+        <TextView
+            android:id="@+id/confirmPickUserName"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/defaultTxtForLineConfirmDrp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center|left"
+            android:text="First Name :"
+            android:textColor="@color/base_color1"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/lastNameTxtSignature"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmPickUserName"
+            android:layout_alignLeft="@+id/confirmPickUserName"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="17dp"
+            android:text="Last Name :"
+            android:textColor="@color/base_color1" />
+
+        <TextView
+            android:id="@+id/confirmPickUserNameTxt"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lastNameTxtSignature"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center|left"
+            android:text="Position :"
+            android:textColor="@color/base_color1">
+
+            <requestFocus />
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtConfirmPickUserName"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/confirmPickUserName"
+            android:gravity="center|left"
+            android:hint="Enter first name"
+            android:paddingStart="5dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/confirmPickUserLastNameTxt"
+            style="@style/style_12_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtConfirmPickUserName"
+            android:layout_alignLeft="@+id/edtConfirmPickUserName"
+            android:layout_alignRight="@+id/lastNameTxtSignature"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/lastNameTxtSignature"
+            android:gravity="center|left"
+            android:hint="Enter Last Name"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:singleLine="true" />
+
+
+        <Spinner
+            android:id="@+id/spinnerForPkgPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmPickUserLastNameTxt"
+            android:layout_alignLeft="@+id/edtConfirmPickUserName"
+            android:layout_alignRight="@+id/edtConfirmPickUserName"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:spinnerMode="dropdown" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/signatureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_above="@+id/belowSignature"
+        android:layout_below="@+id/rl"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/new_round_trans"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <!-- <LinearLayout
+           android:id="@+id/sign_here"
+            android:layout_margin="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+    <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/new_signature" />
+
+
+            <TextView
+                style="@style/style_12_bold_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Please sign here"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/belowSignature"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@+id/doneConfirmPickBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/light_gary">
+
+
+        <!-- <ImageView
+             android:id="@+id/signHereBtn"
+             style="@style/style_12_bold_new"
+             android:layout_width="94dp"
+             android:layout_height="21dp"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="15dp"
+             android:visibility="gone"
+             android:src="@drawable/signhere" />-->
+
+
+        <LinearLayout
+            android:id="@+id/signHereBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/new_signature" />
+
+
+            <TextView
+                style="@style/style_12_bold_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Please sign inside box"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/clearSignature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cancel_btn"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/doneConfirmPickBtn"
+        style="@style/style_15_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/new_round_base1"
+        android:text="Done"
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="150dp"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gunmetal_new1" />
+
+</RelativeLayout>

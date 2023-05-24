@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#374350">
+
+    <RelativeLayout
+        android:id="@+id/logoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="29dp"
+        android:paddingTop="20.5dp"
+        android:paddingBottom="25dp"
+        android:background="@color/menu_bg_dark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:id="@+id/courierProfileImg_Menu"
+            android:src="@drawable/customer_profile_photo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/courierNameTxt_Menu"
+            android:layout_toRightOf="@+id/courierProfileImg_Menu"
+            android:text="Johnson Doe"
+            android:textColor="@color/white"
+            android:layout_marginTop="9.5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/courierCompanyNameTxt_Menu"
+            android:layout_alignLeft="@+id/courierNameTxt_Menu"
+            android:layout_below="@+id/courierNameTxt_Menu"
+            android:text="Zoom2u fastest delivery"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:background="@drawable/background_arrow"
+        android:layout_marginLeft="35dp"
+        android:rotation="180"
+        android:layout_marginTop="-2dp"
+        android:id="@+id/arrowBtn"
+        android:layout_below="@+id/logoLayout"/>
+
+    <ListView
+        android:id="@+id/menu_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrowBtn"
+        android:background="#374350"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/signOutBtn"
+        android:divider="@null" />
+
+    <Button
+        android:layout_width="132dp"
+        android:layout_height="39dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/signOutBtn"
+        android:background="@drawable/roundedskybluebg"
+        android:layout_marginLeft="32dp"
+        android:text="Sign Out"
+        android:textSize="14dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bidDetailMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#CC000000">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="3dp"
+        android:src="@drawable/ic_baseline_cancel_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/headerImgLayoutBidDetail"/>
+
+    <RelativeLayout
+        android:id="@+id/headerImgLayoutBidDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_below="@+id/bidDetailTitleBarLayout">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerQuote"
+            android:layout_width="match_parent"
+            android:layout_height="190dp" />
+
+
+        <ImageView
+            android:id="@+id/bidDetailRightArrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/bidDetailTitleBarLayout"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="66dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_forward_new" />
+
+        <ImageView
+            android:id="@+id/bidDetailLeftArrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/bidDetailRightArrow"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

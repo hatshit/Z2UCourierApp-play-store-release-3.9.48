@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedskybluebg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/dialogRequestDetailSuburb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:background="@color/darkorrange"
+            android:gravity="center"
+            android:text="Pickup ➜ Dropoff"/>
+
+        <TextView
+            android:id="@+id/dialogRequestDetailDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_below="@+id/dialogRequestDetailSuburb"
+            android:text="Distance"/>
+
+        <TextView
+            android:id="@+id/dialogRequestDetailtxtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_below="@+id/dialogRequestDetailDistance"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Suggested price for bid:"/>
+
+        <TextView
+            android:id="@+id/suggestPriceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_below="@id/dialogRequestDetailtxtTitle"
+            android:text="Max - Min"/>
+
+        <EditText
+            android:id="@+id/inputPrice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:hint="$"
+            android:textColor="#ffffff"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_requestwhiteblue"
+            android:layout_below="@id/suggestPriceTxt"
+            />
+        <TextView
+            android:id="@+id/selectEtaDate"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="ETA date to pickup"
+            android:textColor="#ffffff"
+            android:inputType="numberDecimal"
+            android:background="@drawable/rounded_requestwhiteblue"
+            android:layout_below="@id/inputPrice"
+            />
+        <TextView
+            android:id="@+id/selectEtaTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="ETA time to pickup"
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_requestwhiteblue"
+            android:layout_below="@id/selectEtaDate"
+            />
+        <Button
+            android:id="@+id/btnAcceptOffer"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/selectEtaTime"
+            android:text="Place bid"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:textSize="17dp"
+            android:background="@drawable/rounded_worrier_level"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/btnAcceptOffer"
+            android:text="Cancel"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="17dp"
+            android:background="@drawable/rounded_dynamo_level"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

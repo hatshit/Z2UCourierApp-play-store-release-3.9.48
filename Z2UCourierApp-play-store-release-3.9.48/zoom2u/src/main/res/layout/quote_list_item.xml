@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gary">
+
+    <RelativeLayout android:id="@+id/quotesListMainView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_white_back"
+        android:elevation="3dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/placeBidItemImgLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/placeBidItemImgList"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/bid_largeitems" />
+
+            <TextView
+                android:id="@+id/bid_imageTypeTxt"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/placeBidItemImgList"
+                android:text="Image type"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+
+            <ImageView
+                android:id="@+id/primaryImageView"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/bid_largeitems" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/placeBidItemImgLayout"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/light_gary" />
+
+
+        <TextView
+            android:id="@+id/placeBidItemTxtList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/placeBidItemImgLayout"
+            android:layout_alignStart="@+id/placeBidItemImgLayout"
+            android:layout_alignLeft="@+id/placeBidItemImgLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_toLeftOf="@+id/distanceTxtPlaceBidList"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/gun_metal"
+            android:textSize="13dp"
+            style="@style/style_15_bold" />
+
+
+        <TextView
+            android:id="@+id/txtDeliveryDisPlaceBidList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/placeBidItemImgLayout"
+            android:layout_alignEnd="@+id/placeBidItemImgLayout"
+            android:layout_alignRight="@+id/placeBidItemImgLayout"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="Delivery Distance"
+            android:textColor="@color/graycolorText"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/distanceTxtPlaceBidList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/placeBidItemTxtList"
+            android:layout_below="@+id/txtDeliveryDisPlaceBidList"
+            android:text="199km"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/gun_metal"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/placeBidItemTxtList"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+
+            <TextView
+                android:id="@+id/pickAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp"
+                style="@style/style_15_bold"/>
+
+            <TextView
+                android:id="@+id/pickTimePlaceBidList"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:paddingTop="5dp"
+                android:text=""
+                android:textColor="@color/add_member_label"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/dropAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp"
+                android:paddingBottom="12dp"
+                style="@style/style_15_bold" />
+
+            <TextView
+                android:id="@+id/dropTimePlaceBidList"
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/add_member_label"
+                android:textSize="11dp" />
+
+            <RelativeLayout
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/dropAddress"
+                android:layout_toEndOf="@+id/pickAddress"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dot_start"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dot_start" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/dot_car"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_above="@id/line"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/car_new" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot_end"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dot_end" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/numberOfBidTxtPlaceBidList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignStart="@+id/dropAddressPlaceBidList"
+            android:layout_alignLeft="@+id/dropAddressPlaceBidList"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/bid_count_icon"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/gun_metal"
+            android:textSize="12dp"
+            style="@style/style_15_bold" />
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/noteTxtPlaceBidList"
+            style="@style/style_12_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numberOfBidTxtPlaceBidList"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center|left"
+            app:trimExpandedText="....more"
+            app:trimCollapsedText="....less"
+            app:trimMode="trimModeLength"
+            app:trimLength="140"
+            app:colorClickableText="#2196F3"
+            android:text=""
+            android:textColor="@color/gun_metal"
+             />
+
+        <Button
+            android:id="@+id/placeBidBtnList"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/noteTxtPlaceBidList"
+            android:layout_alignEnd="@+id/distanceTxtPlaceBidList"
+            android:layout_alignRight="@+id/distanceTxtPlaceBidList"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/chatBtnPlaceBidList"
+            android:layout_toRightOf="@+id/chatBtnPlaceBidList"
+            android:background="@drawable/roundedskybluebg"
+            android:text="Place Bid"
+            android:textColor="@drawable/textselector"
+            android:textSize="15dp"
+            style="@style/style_15_name"/>
+
+        <Button
+            android:id="@+id/chatBtnPlaceBidList"
+            style="@style/style_15_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/noteTxtPlaceBidList"
+            android:layout_alignStart="@+id/dropAddressPlaceBidList"
+            android:layout_alignLeft="@+id/dropAddressPlaceBidList"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/green_bg_withborder"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Chat Customer"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/cancelBtnPlaceBidList"
+            style="@style/style_15_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/placeBidBtnList"
+            android:layout_alignLeft="@+id/chatBtnPlaceBidList"
+            android:layout_alignEnd="@+id/distanceTxtPlaceBidList"
+            android:layout_alignRight="@+id/distanceTxtPlaceBidList"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/new_boder"
+            android:text="Cancel Bid"
+            android:textColor="@color/gold_dark"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnNotifyUnreadCount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/placeBidBtnList"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_below="@+id/noteTxtPlaceBidList"/>
+
+
+        <TextView
+            android:id="@+id/bidActiveForTxtInList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/numberOfBidTxtPlaceBidList"
+            android:layout_alignEnd="@+id/dropTimePlaceBidList"
+            android:layout_alignRight="@+id/dropTimePlaceBidList"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Bid acive for - 60 mins"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12dp"
+            style="@style/style_15_name" />
+
+    </RelativeLayout>
+
+</FrameLayout>

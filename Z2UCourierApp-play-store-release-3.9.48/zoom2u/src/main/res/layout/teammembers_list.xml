@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/headerTeamMemberBookingsView"
+        android:background="@color/base_color1">
+
+        <ImageView
+            android:id="@+id/backBtnTeamMemberBookingsPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white"/>
+
+        <TextView
+            android:id="@+id/titleTxtTeamMemberBookingsPage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="New Booking"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat"
+            android:id="@+id/chatBtnTeamMemberBookingsPage"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="!"
+            android:id="@+id/countChatTxtTeamMemberBookingsPage"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/circleredbgbutton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshTeamMemberBookingsPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTeamMemberBookingsView"
+        android:background="@color/light_gary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/secondHeaderABDLayout"
+                android:id="@+id/listTeamMemberBookingsPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gary"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/bookingNotAvailTxtTeamMemberBookingsPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="No bookings available"
+                android:textColor="@color/gun_metal"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayoutBookingView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+
+    <LinearLayout
+        android:id="@+id/bookingTapButtons"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/demoViewTop"
+        android:background="@color/base_color1"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:id="@+id/newBookingBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:background="@color/base_color1" >
+
+            <TextView
+                android:id="@+id/newBookingBtn"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selected_background"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:minHeight="25dp"
+                android:text="New"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activeBookingBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:background="@color/base_color1" >
+
+            <TextView
+                android:id="@+id/activeBookingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/base_color1"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:minHeight="25dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Active"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                style="@style/style_15_name" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/completeBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".34"
+            android:gravity="center"
+            android:background="@color/base_color1" >
+
+            <TextView
+                android:id="@+id/completeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/base_color1"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:minHeight="25dp"
+                android:text="Completed"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                style="@style/style_15_name" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/todayFutureBtnLayoutForActiveJobs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/bookingTapButtons"
+        android:background="@color/base_color1"
+        android:visibility="visible"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:id="@+id/active_today_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:background="@color/base_color1" >
+
+        <TextView
+            android:id="@+id/todayBookingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="25dp"
+            android:minWidth="80dp"
+            android:gravity="center"
+            android:text="Today"
+            style="@style/style_15_name"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+           />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/active_dhl_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".33"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@color/base_color1" >
+
+        <TextView
+            android:minHeight="25dp"
+            android:minWidth="110dp"
+            android:background="@color/selected_base"
+            android:id="@+id/dhlBookingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="DHL"
+            style="@style/style_15_name"
+            android:textColor="@color/white"
+            android:textSize="15dp"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/active_complete_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:background="@color/base_color1" >
+
+        <TextView
+            android:id="@+id/tomorrowBookingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="25dp"
+            android:minWidth="80dp"
+            android:gravity="center"
+            android:text="Completed"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            style="@style/style_15_name"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dhlTabsForActiveOrTriedToDeliver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/todayFutureBtnLayoutForActiveJobs"
+        android:background="#d3d3d3"
+        android:visibility="visible"
+        android:weightSum="1" >
+
+    <LinearLayout
+        android:id="@+id/dhl_active_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:background="@color/base_color1" >
+
+
+        <TextView
+            android:id="@+id/activeDHLBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="25dp"
+            android:minWidth="80dp"
+            android:text="Active"
+            style="@style/style_15_name"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/dhl_tod_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:background="@color/base_color1" >
+
+        <TextView
+            android:id="@+id/triedToDeliverDHLBookings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="25dp"
+            android:minWidth="120dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@color/base_color1"
+            android:gravity="center"
+            android:text="Tried to deliver"
+            android:visibility="visible"
+            style="@style/style_15_name"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/demoViewActiveFragment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/dhlTabsForActiveOrTriedToDeliver"
+        android:background="#d4d4d4" />
+
+    <RelativeLayout
+        android:id="@+id/count_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/light_gary"
+        android:layout_below="@+id/demoViewActiveFragment"
+        android:visibility="gone"
+        >
+
+        <TextView
+            style="@style/style_15_name"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="New Bookings" />
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/new_total_bookings"
+            android:layout_toLeftOf="@+id/count"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/count"
+            style="@style/style_15_name"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/base_color1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bookingListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/count_rl"
+        android:background="@color/light_gary" >
+
+        <TextView
+            android:id="@+id/noBookingAvailableTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="New Booking not available"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/new_booking_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.z2u.booking.vc.endlesslistview.NewBooking_EndlessListView
+                android:id="@+id/newBookingListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gary"
+                android:divider="@null"
+                android:visibility="visible" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/active_booking_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+        <com.z2u.booking.vc.endlesslistview.ActiveBooking_EndlessListview
+            android:id="@+id/activeBookingListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gary"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/completed_booking_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+        <com.zoom2u.endlessadapter.EndlessListView
+            android:id="@+id/completedBookingListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gary"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/online_offline"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:elevation="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/onLineOffLineBtnForNewBooking_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/roundedskybluebg"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/online_offline_color"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/txtBookingRef"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/circleredbgbutton_green"
+                    android:textColor="#FFFFFF" />
+
+
+                <TextView
+                    android:id="@+id/onLineOffLineBtnForNewBooking"
+                    style="@style/style_15_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:text="Online"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:id="@+id/demoViewActiveFragment"
+                android:layout_width="120dp"
+                android:layout_height="3dp"
+                android:layout_below="@+id/dhlTabsForActiveOrTriedToDeliver"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@color/black" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/dhlBookingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/online_offline"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/dhlbooking_icon1" />
+
+        <ImageView
+            android:id="@+id/searchDHLBookingByAWB"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/online_offline"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/searchbtn" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#29000000"
+        android:visibility="gone"
+        android:id="@+id/subBookingView"/>
+
+</RelativeLayout>

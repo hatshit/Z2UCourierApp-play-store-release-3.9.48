@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_light_blue">
+
+    <TextView
+        android:id="@+id/recordTxt_RecordAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Record"
+        android:textSize="17dp"
+        android:textColor="@color/gun_metal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startStopBtn_RecordAudio"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/round_circle_red_bg"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Start"
+        android:textSize="14dp"
+        android:textColor="@drawable/textselector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordTxt_RecordAudio" />
+
+    <Chronometer
+        android:id="@+id/chronometerTimer_RecordAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startStopBtn_RecordAudio" />
+
+    <Button
+        android:id="@+id/cancelBtn_RecordAudio"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/recordTxt_RecordAudio"
+        app:layout_constraintTop_toBottomOf="@+id/chronometerTimer_RecordAudio" />
+
+    <Button
+        android:id="@+id/sendBtn_Chat_RecordAudio"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:text="Send"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/recordTxt_RecordAudio"
+        app:layout_constraintTop_toBottomOf="@+id/chronometerTimer_RecordAudio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

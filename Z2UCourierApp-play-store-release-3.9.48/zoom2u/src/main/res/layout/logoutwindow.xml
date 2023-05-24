@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:elevation="5dp"
+    android:background="@color/transparent_black_bg"
+    >
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:background="@drawable/roundedwhiteback"
+        android:layout_margin="2dp"
+        >
+
+        <TextView
+            android:id="@+id/logoutWindowMessageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_below="@+id/logoutWindowDialog"
+            android:text="Are you sure, do you want to logout?"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/gun_metal"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/logoutWindowDialog"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="bottom|center"
+            android:text="Information!"
+            android:textSize="21dp"
+            android:visibility="gone"
+            android:textColor="#00A7E2"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logoutWindowCancelBtn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/logoutWindowMessageText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/new_boder"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="@color/gold_dark" />
+
+        <Button
+            android:id="@+id/logoutWindowLogoutBtn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/logoutWindowCancelBtn"
+            android:layout_alignBottom="@+id/logoutWindowCancelBtn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundedskybluebg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="14dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</RelativeLayout>

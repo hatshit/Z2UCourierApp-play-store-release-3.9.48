@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="#374350"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/backSignUp"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/new_ic_back_white" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_weight=".15"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/z"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textCourierAppUpdatePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/z"
+                android:layout_marginLeft="40dp"
+                android:text="for Drivers"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                style="@style/style_15_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/z" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/a">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/old_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center|end"
+                android:text="Old Password"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/signUpName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/old_pass"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="Old Password"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textColor="@color/add_member_label"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/new_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="New Password"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/signUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/new_pass"
+                android:layout_alignLeft="@+id/signUpName"
+                android:layout_alignRight="@+id/signUpName"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="New Password"
+                android:paddingRight="15dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/add_member_label"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/confirm_new_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signUpPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Confirm New Password"
+                android:textColor="@color/add_member_label"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/signUpConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/confirm_new_pass"
+                android:layout_alignLeft="@+id/signUpName"
+                android:layout_alignRight="@+id/signUpName"
+                android:background="@drawable/bg_transparent_bottom_graydark"
+                android:hint="Confirm New Password"
+                android:inputType="textPassword"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/add_member_label"
+                android:textColorHint="@color/add_member_hint_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/signUpConfirmPassword"
+                />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#374350"
+        android:elevation="3dp"
+        android:id="@+id/c"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/updatePasswordBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Update Password"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/chip_background"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogLayout_Chat"
+    android:layout_width="350dp"
+    android:layout_gravity="center"
+    android:layout_height="120dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/light_blue_bg">
+
+    <ImageView
+        android:id="@+id/crossImgChatDialog"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="5dp"
+        android:src="@drawable/cross_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gallaryImgChatDialog"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/icon_gallary_chat"
+        app:layout_constraintEnd_toStartOf="@+id/audioImgChatDialog"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cameraImgChatDialog"
+        app:layout_constraintTop_toBottomOf="@+id/attachmentViewHeader" />
+
+    <ImageView
+        android:id="@+id/cameraImgChatDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gallaryImgChatDialog"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@+id/gallaryImgChatDialog"
+        android:src="@drawable/ic_icon_camera_chat"
+        app:layout_constraintEnd_toStartOf="@+id/gallaryImgChatDialog"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attachmentViewHeader" />
+
+    <ImageView
+        android:id="@+id/audioImgChatDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gallaryImgChatDialog"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_icon_voice_recorder_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gallaryImgChatDialog"
+        app:layout_constraintTop_toBottomOf="@+id/attachmentViewHeader" />
+
+    <TextView
+        android:id="@+id/attachmentViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/crossImgChatDialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Attachment"
+        android:textColor="@color/gun_metal"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activeBookingDetailWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerLayoutAllTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/base_color_gray">
+
+
+            <ImageView
+                android:id="@+id/backFromBookingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="11dp"
+                android:src="@drawable/new_ic_back_white" />
+
+            <TextView
+                style="@style/style_15_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:paddingLeft="0dp"
+                android:text="Bid Details"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/mapViewQuoteDetail"
+                        class="com.zoom2u.utility.WorkaroundMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/documentLayoutABD"
+                        android:layout_width="124dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/new_white_back">
+
+                        <LinearLayout
+                            android:id="@+id/ll"
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/shipmentItemBidDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text=""
+                            android:maxWidth="60dp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/gun_metal"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            />
+
+                            <View
+                                android:id="@+id/dividerContactNameCouDetailABD"
+                                android:layout_width="1dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/lightgray2"
+                                />
+
+                            <TextView
+                                android:id="@+id/vehicleTxtABD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:layout_marginStart="5dp"
+                                style="@style/style_15_name"
+                                android:textColor="@color/gun_metal"
+                                android:textSize="12dp"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/ll"
+                            android:background="@color/lightgray2" />
+
+
+                        <TextView
+                            android:id="@+id/txtShipmentDetailsBidDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="1dp"
+                            android:padding="7dp"
+                            android:scrollbars="vertical"
+                            android:maxHeight="190dp"
+                            android:visibility="gone"
+                            android:textColor="@color/gun_metal"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:id="@+id/viewHideBtnShipmentDetailsBidDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtShipmentDetailsBidDetail"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:paddingTop="7dp"
+                            android:paddingBottom="7dp"
+                            android:text="View Dimension"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/packagedItemBidDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/headerImgLayoutBidDetail"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Item is unpackaged"
+                        android:textColor="@color/gold_dark"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/activeDetailInformatnLayoutABD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="280dp"
+                    android:background="@drawable/new_white_round_up"
+                    android:elevation="3dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ScrollView
+                        android:id="@+id/activeDetailScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/pickUpHeaderLayoutABD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="37dp"
+                                    android:layout_weight=".5"
+                                    android:background="@drawable/new_gray_back"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/pickHeaderLayoutPickTxtABD"
+                                        style="@style/style_15_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Pickup"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/pickupEnd"
+                                        style="@style/style_12_bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="5dp"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="10dp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/dropOffHeaderLayoutABD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="37dp"
+                                    android:layout_weight=".5"
+                                    android:background="@drawable/new_gary_backgroun"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/dropHeaderLayoutDropTxtABD"
+                                        style="@style/style_15_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Drop off" />
+
+                                    <TextView
+                                        android:id="@+id/dropEnd"
+                                        style="@style/style_12_bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="2dp"
+                                        android:text=""
+                                        android:textSize="10dp" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/itemsOfABDLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/activeDetailInformatnLayoutABD"
+                                android:layout_marginLeft="15dp"
+                                android:paddingBottom="180dp"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/pickDropCustomerNameABD"
+                                    style="@style/style_15_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:maxWidth="200dp"
+                                    android:text=""
+                                    android:textColor="@color/gun_metal" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/time_ll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="35dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/pickHeaderLayoutPickTimeTxtABD"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/base_color1"
+                                        style="@style/style_15_name" />
+
+                                    <TextView
+                                        android:id="@+id/pickDropDate"
+                                        style="@style/style_12_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/shipment_ll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/pickDropCustomerNameABD"
+                                    android:layout_marginTop="17dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/style_12_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Shipments: " />
+
+                                <TextView
+                                    android:id="@+id/shipmentItemBidDetail1"
+                                    style="@style/style_12_regular"
+                                    android:textColor="@color/gun_metal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:scrollbars="vertical"
+                                    android:maxWidth="180dp"
+                                    />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/weight_ll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/shipment_ll"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Total weight:"
+                                        style="@style/style_12_regular"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/weight"
+                                        style="@style/style_12_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/pickDropCustomerNameABD"
+                                        android:textColor="@color/gun_metal"
+                                        />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_below="@+id/weight_ll"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtDeliveryDisPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Delivery Distance :"
+                                        style="@style/style_12_regular" />
+
+                                    <TextView
+                                        android:id="@+id/distanceTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/style_12_regular"
+                                        android:textColor="@color/gun_metal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/suggest"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/note"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/suggestedPriceTxtPlaceBidDetail"
+                                        style="@style/style_12_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Suggested price :"
+                                         />
+
+                                    <TextView
+                                        android:id="@+id/suggestedPriceValueTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/suggestedPriceTxtPlaceBidDetail"
+                                        style="@style/style_12_regular"
+                                        android:textColor="@color/gun_metal"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/total_bid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/suggest"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/totalBidCountTitleTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Total Bids :"
+                                        style="@style/style_12_regular" />
+
+                                    <TextView
+                                        android:id="@+id/totalBidValueTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/style_12_regular"
+                                        android:textColor="@color/gun_metal"/>
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/add_ll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/distance"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/totalBidCountTitleTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Address : "
+                                        style="@style/style_12_regular" />
+
+                                    <TextView
+                                        android:id="@+id/pickDropAddressABD"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/style_12_regular"
+                                        android:maxWidth="180dp"
+                                        android:textColor="@color/gun_metal"/>
+                                </LinearLayout>
+
+
+
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/note"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/add_ll"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/notesTitleTxtPlaceBidDetail"
+                                        style="@style/style_12_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Notes :" />
+
+                                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                                        android:id="@+id/notesValueTxtPlaceBidDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/style_12_regular"
+                                        app:trimExpandedText="...more"
+                                        app:trimCollapsedText="...less"
+                                        app:trimMode="trimModeLength"
+                                        app:trimLength="140"
+                                        app:colorClickableText="#2196F3"
+                                        android:textColor="@color/gun_metal"/>
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/bidActiveForTxtInDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/weight_ll"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="20dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/placeBtnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="5dp"
+                android:paddingBottom="5dp">
+
+                <Button
+                    android:id="@+id/placeBidBtnList"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toEndOf="@+id/chatBtnPlaceBidDetail"
+                    android:layout_toRightOf="@+id/chatBtnPlaceBidDetail"
+                    android:background="@drawable/roundedskybluebg"
+                    android:text="Place Bid"
+                    android:textColor="@drawable/textselector"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/chatBtnPlaceBidDetail"
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_worrier_level"
+                    android:text="Chat Customer"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnNotifyUnreadCountDetail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/noteTxtPlaceBidList"
+                    android:layout_toLeftOf="@+id/placeBidBtnList"
+                    android:background="@drawable/circleredbgbutton"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/cancelBtnPlaceBidDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/placeBidBtnList"
+                    android:layout_alignLeft="@+id/chatBtnPlaceBidDetail"
+                    android:layout_alignEnd="@+id/placeBidBtnList"
+                    android:layout_alignRight="@+id/placeBidBtnList"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/new_boder"
+                    android:text="Cancel Bid"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

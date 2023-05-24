@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#d3d3d3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/roundedwhiteback"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <TextView
+        android:id="@+id/termHeaderTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight=".45"
+        android:background="@drawable/bg_bottomborder"
+        android:text="Accept terms and conditions"
+        android:textColor="#374350"
+        android:textSize="17dp" />
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".1">
+        <WebView
+            android:id="@+id/webViewTermsConditions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_bottomborder"
+            />
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:layout_weight=".45"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/termBtnDecline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_elite_level"
+            android:gravity="center"
+            android:text="Decline"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/termBtnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_worrier_gary"
+            android:gravity="center"
+            android:text="Accept"
+            android:enabled="false"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBar" />
+
+    </RelativeLayout>

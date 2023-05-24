@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/slideListItemLayout"
+    android:background="@color/gunmetal_new" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="29dp"
+        android:src="@drawable/ic_booking_icon" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@id/icon"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:paddingRight="40dp"
+        android:textSize="14dp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/unreadMsgCount"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/unreadmsgbg"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+    
+</RelativeLayout>

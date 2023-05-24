@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color1"
+        android:id="@+id/relativeLayout4">
+
+        <ImageView
+            android:id="@+id/cancelBtnAddBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="0dp"
+            android:text="Add Bio"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+        <TextView
+            android:id="@+id/saveBtnAddBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextAddBio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout4"
+        android:background="@drawable/bglightgray"
+        android:gravity="center|left|top"
+        android:hint="Please enter Bio here"
+        android:lineSpacingExtra="5dp"
+        android:padding="15dp"
+        style="@style/style_12_bold"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp" />
+
+</RelativeLayout>

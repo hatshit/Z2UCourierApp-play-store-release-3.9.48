@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LocationPermissionDialog">
+
+
+    <ImageView
+        android:id="@+id/imgLocationInPermissionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/location_marker" />
+
+    <TextView
+        android:id="@+id/txtUseYourLocationTitlePermissionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Your Location"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/gun_metal"
+        android:textSize="21dp"
+        style="@style/style_15_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLocationInPermissionDialog" />
+
+    <TextView
+        android:id="@+id/txtMsgPermissionDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        style="@style/style_12_bold"
+        android:layout_marginRight="20dp"
+        android:text="@string/locationPermissionDialogMsg"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp"
+        android:lineSpacingExtra="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUseYourLocationTitlePermissionDialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/loginLayoutBottom"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <Button
+        android:id="@+id/btnNotThanksPermissionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="No Thanks"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gotham_rnd_medium"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/gun_metal"
+        android:background="@drawable/roundedlightgray"
+        android:layout_weight=".5" />
+
+        <Button
+            android:id="@+id/btnTurnOnPermissionDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Turn On"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@drawable/textselector"
+            android:fontFamily="@font/gotham_rnd_medium"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_appskyblue"
+            android:layout_weight=".5" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

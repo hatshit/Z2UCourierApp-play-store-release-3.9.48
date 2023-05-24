@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/roundedwhiteback"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/rightIconDeliveryRun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/run_right" />
+
+    <TextView
+        android:id="@+id/titleDeliveryRunConfirmDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rightIconDeliveryRun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Delivery Run
+Confirmed"
+        android:textColor="@color/gun_metal"
+        android:textSize="21dp" />
+
+    <TextView
+        android:id="@+id/txtDeliveryRunConfirmDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleDeliveryRunConfirmDialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/delivery_run_msg_txt"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/okBtnDeliveryRunConfirmAlrt"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/txtDeliveryRunConfirmDialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_dynamo_level"
+        android:gravity="center"
+        android:text="Okay, sure"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

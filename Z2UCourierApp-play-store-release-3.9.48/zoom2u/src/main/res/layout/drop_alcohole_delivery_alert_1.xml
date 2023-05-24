@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="540dp"
+    android:layout_gravity="center"
+    android:background="@drawable/roundedwhiteback">
+
+    <TextView
+        android:id="@+id/alcohol_drop_delivery_alrt_titletxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="RSA Compliance"
+        android:textSize="16dp"
+        style="@style/style_15_name"
+        android:textColor="@color/gun_metal"/>
+
+    <TextView
+        android:id="@+id/alcohol_drop_delivery_alrt_msg1txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alcohol_drop_delivery_alrt_titletxt"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/alcohol_drop_delivery_MsgTxt1"
+        android:textSize="14dp"
+        style="@style/style_12_bold"
+        android:textColor="@color/gun_metal"/>
+
+    <TextView
+        android:id="@+id/alcohol_drop_delivery_alrt_noteTitletxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alcohol_drop_delivery_alrt_msg1txt"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/alcohol_drop_delivery_notetitletxt"
+        android:textSize="14dp"
+        style="@style/style_12_bold"
+        android:textColor="@color/gun_metal"/>
+
+    <TextView
+        android:id="@+id/alcohol_drop_delivery_alrt_notemsgtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alcohol_drop_delivery_alrt_noteTitletxt"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/alcohol_drop_delivery_notemsgtxt"
+        android:textSize="12dp"
+        style="@style/style_12_bold"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/gun_metal"/>
+
+    <Button
+        android:id="@+id/alcohol_drop_delivery_alrt_18plus"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/alcohol_drop_delivery_alrt_notemsgtxt"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/roundedskybluebg"
+        android:text="Person is Over 18"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/alcohol_drop_delivery_alrt_under18"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/alcohol_drop_delivery_alrt_18plus"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/new_boder"
+        android:text="Person is Under 18"
+        android:textColor="@color/gold_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

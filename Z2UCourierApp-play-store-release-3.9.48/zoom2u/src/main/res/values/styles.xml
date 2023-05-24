@@ -1,0 +1,166 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    -->
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:actionModeBackground">@color/skyblue</item>
+        <item name="android:actionModeCloseDrawable">@android:drawable/ic_delete</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="onBoard_theme_blue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/base_color1</item>
+        <item name="colorPrimaryDark">@color/base_color1</item>
+        <item name="colorAccent">@color/base_color1</item>
+    </style>
+
+    <style name="onBoard_theme_gary" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/gunmetal_new</item>
+        <item name="colorPrimaryDark">@color/gunmetal_new</item>
+        <item name="colorAccent">@color/gunmetal_new</item>
+    </style>
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="MyListBackContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="MyListFrontContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="MyListButtonAction">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="MyListImage">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:scaleGravity">fill</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="MyListTitle">
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DiglrTheme" parent="android:Theme">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <!-- Dialog Open animation -->
+    <style name="OpenDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+    <style name="OpenDialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/OpenDialogAnimation</item>
+    </style>
+    
+    <!-- Open network dialog animation -->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidebottom</item>
+	</style>
+	<style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+	        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+	</style>
+
+    <style name="AppThemeAppCompact" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorAccent">@color/gray_dark</item>
+        <item name="colorControlActivated">@color/gray_dark</item>
+        <item name="colorControlNormal">@color/gray_dark</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+
+    <style name="Theme_Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">99%</item>
+        <item name="android:windowMinWidthMinor">99%</item>
+    </style>
+
+
+    <style name="style_12_bold" >
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+
+    <style name="style_12_bold_new" >
+        <item name="android:fontFamily">@font/gotham_rnd_bold</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/gunmetal_new1</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+
+
+    <style name="style_12_regular" >
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+
+    <style name="style_12_regular_gray" >
+        <item name="android:fontFamily">@font/gothamrounded_medium</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="style_15_bold" >
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/base_color_gray</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+
+    <style name="style_15_name" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gun_metal</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+
+    <style name="style_12_name" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/route_sectionheader</item>
+        <item name="android:fontFamily">@font/gotham_rnd_medium</item>
+    </style>
+</resources>

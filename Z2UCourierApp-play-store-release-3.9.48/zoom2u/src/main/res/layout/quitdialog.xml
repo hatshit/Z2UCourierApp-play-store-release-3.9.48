@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="230dp"
+    android:layout_height="150dp"
+    android:background="@drawable/roundedbackground"
+    android:layout_gravity="center" >
+ 
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:background="@drawable/roundedwhiteback"
+    android:layout_gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/quitDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+       <LinearLayout
+            android:id="@+id/quitAlrt"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            
+            <TextView
+                android:id="@+id/quitTvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Quit"
+                android:textColor="#4EE2EC"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                 />
+        </LinearLayout>
+
+         <TextView
+            android:id="@+id/quitMessg"
+             android:layout_below="@+id/quitAlrt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#736F6E"
+            android:layout_marginRight="10dp"
+            android:text="Do you want to quit !"
+            android:textSize="15dp"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/quitBtnNo"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/quitMessg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/quitBtnYes"
+            android:background="@drawable/roundedbackground"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/quitBtnYes"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/quitBtnNo"
+            android:layout_alignBottom="@+id/quitBtnNo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/roundedbackground"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

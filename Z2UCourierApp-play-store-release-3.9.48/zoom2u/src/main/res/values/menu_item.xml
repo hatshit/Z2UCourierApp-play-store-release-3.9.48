@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_drawer_items">
+        <item>Bookings</item>
+        <item>Routes</item>
+        <item>Bid Request</item>
+        <item>Barcode Scanner</item>
+        <item>Delivery Runs</item>
+        <item>Unallocated Runs</item>
+        <item>Leads</item>
+        <item>Account Details</item>
+        <item>Support</item>
+    </string-array>
+
+    <string-array name="nav_drawer_items_team">
+        <item>Bookings</item>
+        <item>Routes</item>
+        <item>Bid Request</item>
+        <item>Barcode Scanner</item>
+        <item>Delivery Runs</item>
+        <item>Unallocated Runs</item>
+        <item>Your Team</item>
+        <item>Leads</item>
+        <item>Account Details</item>
+        <item>Support</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_booking_icon</item>
+        <item>@drawable/ic_routes_icon</item>
+        <item>@drawable/ic_bid_request_icon</item>
+        <item>@drawable/ic_barcode_icon</item>
+        <item>@drawable/ic_delivery_runs_icon</item>
+        <item>@drawable/unallocted_run</item>
+        <item>@drawable/ic_leads_icon</item>
+        <item>@drawable/ic_account_details_icon</item>
+        <item>@drawable/ic_support_icon</item>
+
+    </array>
+
+  <array name="nav_drawer_icons_team">
+        <item>@drawable/ic_booking_icon</item>
+        <item>@drawable/ic_routes_icon</item>
+        <item>@drawable/ic_bid_request_icon</item>
+        <item>@drawable/ic_barcode_icon</item>
+        <item>@drawable/ic_delivery_runs_icon</item>
+        <item>@drawable/unallocted_run</item>
+        <item>@drawable/yourteam_svg</item>
+        <item>@drawable/ic_leads_icon</item>
+        <item>@drawable/ic_account_details_icon</item>
+        <item>@drawable/ic_support_icon</item>
+
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

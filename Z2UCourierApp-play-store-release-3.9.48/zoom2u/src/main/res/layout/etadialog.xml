@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookingGesture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginLeft="35dp"
+    android:layout_marginRight="35dp"
+    android:layout_marginTop="80dp"
+    android:background="@drawable/roundedwhiteback_new1"
+    android:visibility="visible" >
+
+    <TextView
+        android:id="@+id/etaTitleTextBG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Please enter in your arrival time to pickup the goods."
+        android:textColor="@color/gunmetal_new1"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/etaTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etaTitleTextBG"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundedwhiteback_new"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/etaMsgTextBG"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentLeft="true"
+            android:clickable="false"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:paddingRight="0dp"
+            android:text="06-Oct-2014 05:20 PM"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/selectPickUpEta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:paddingBottom="2dp"
+            android:src="@drawable/ic_arrow_down" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/selectPickUpEta"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/arrow_strate" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/etaDoneBtnBG"
+        android:layout_below="@+id/etaTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundedskybluebg"
+        android:gravity="center"
+        android:text="Ok"
+        android:textColor="@drawable/textselector"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/etaCancelBtnBG"
+        android:layout_below="@+id/etaDoneBtnBG"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/new_boder"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Cancel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/gold_dark"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

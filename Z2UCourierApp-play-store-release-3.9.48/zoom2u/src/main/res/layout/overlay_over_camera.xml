@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="left|top"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color"
+        android:id="@+id/titleBarLayoutOverlay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/titleTxtOverlayView"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:gravity="center"
+            style="@style/style_15_name"
+            android:text="Take photo for proof of delivery"
+            />
+
+        <ImageView
+            android:id="@+id/backBtnOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/new_ic_back_white" />
+
+        <ImageView
+            android:id="@+id/flashIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/flash_icon_off" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBarLayoutOverlay"
+        android:background="@color/white"
+        android:id="@+id/msgLayoutOverlay">
+
+        <TextView
+            android:id="@+id/atlTxtOverlayView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            style="@style/style_12_bold"
+            android:text="ATL provided"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/atlTxtOverlayView"
+            android:id="@+id/msgTxtOverlayView"
+            android:textSize="14dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            style="@style/style_12_bold"
+            android:textColor="@color/gun_metal"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Photo should be close up, but must be able to see details of the whole parcel"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/msgLayoutOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:layout_alignParentTop="true"
+            android:id="@+id/CameraView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A1000000"
+            />
+
+        <SurfaceView
+            android:id="@+id/transparentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camerashape"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnCameraCapture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/overlay_camera_selector"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

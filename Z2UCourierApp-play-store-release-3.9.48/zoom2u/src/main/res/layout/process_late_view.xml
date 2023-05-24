@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg" >
+
+        <TextView
+            android:id="@+id/headerTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Running late"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/backFromLateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/nav_back" />
+    </RelativeLayout>
+
+    <!--
+         <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/titleView">
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/saveButtonLate"
+        android:layout_below="@+id/titleView" >
+
+        <TextView
+            android:id="@+id/customerNameHeaderTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/titleView"
+            android:background="#d4d4d4"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="Customer Name"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/customerNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerNameHeaderTxt"
+            android:background="#FFFFFF"
+            android:gravity="center|left"
+            android:hint="Customer Name here"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/customerEmailHeaderLateDetailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerNameTxt"
+            android:background="#d4d4d4"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="Customer Email"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/customerEmailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerEmailHeaderLateDetailTxt"
+            android:background="#FFFFFF"
+            android:gravity="center|left"
+            android:hint="Customer email here"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/customerContactNoHeaderTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerEmailTxt"
+            android:background="#d4d4d4"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="Customer contact number"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/customerContactNoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerContactNoHeaderTxt"
+            android:background="#FFFFFF"
+            android:gravity="center|left"
+            android:hint="Customer contact number here"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/lateInformationHeader"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/customerContactNoTxt"
+            android:background="#d4d4d4"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:text="Late information"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/dropDownBtn"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignLeft="@+id/cancelButtonLate"
+            android:layout_below="@+id/lateInformationHeader"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/location_box"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:paddingRight="43dp"
+            android:textColor="#848482"
+            android:textSize="14dp" />
+
+        <ListView
+            android:id="@+id/dropDownList"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignLeft="@+id/dropDownBtn"
+            android:layout_alignRight="@+id/dropDownBtn"
+            android:layout_below="@+id/dropDownBtn"
+            android:background="#3D2B1F"
+            android:visibility="gone" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/dropdownImg"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/dropDownBtn"
+            android:layout_alignRight="@+id/dropDownBtn"
+            android:layout_alignTop="@+id/dropDownBtn"
+            android:scaleType="fitXY"
+            android:src="@drawable/dropdownimg" />
+    </RelativeLayout>
+    <!-- </ScrollView> -->
+    <!--
+        <TextView
+        android:id="@+id/cancelButtonLate"
+        android:layout_width="142dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Cancel"
+        android:gravity="center"
+        android:background="@drawable/cancel_latedetail"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="17dp" />
+    -->
+
+    <TextView
+        android:id="@+id/saveButtonLate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/save_latedetail"
+        android:gravity="center"
+        android:text="Update"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="17dp" />
+
+</RelativeLayout>

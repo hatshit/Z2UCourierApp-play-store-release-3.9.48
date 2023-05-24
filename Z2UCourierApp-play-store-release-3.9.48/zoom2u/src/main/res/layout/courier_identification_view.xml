@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/courierIdPageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/base_color_gray"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/backFromBookingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleBookingDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="Identification"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bookingDetailChatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatBookingDetail"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <!-- <include
+        android:id="@+id/courierIdPageTitleBar"
+         layout="@layout/new_titlebar_layout" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/courierIdPageTitleBar"
+        android:background="@color/semiwhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/courierIdPageTitleBar"
+            android:background="@color/semiwhite"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/logoImgZ2U"
+                android:layout_width="166dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/courierIdPageTitleBar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/logo_z2u_courier" />
+
+            <com.zoom2u.roundedimage.RoundedImageView
+                android:id="@+id/courierImg"
+                android:layout_width="123dp"
+                android:layout_height="123dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_circle_bg" />
+
+            <TextView
+                android:id="@+id/courierFirstLastName"
+                android:layout_width="123dp"
+                android:layout_height="123dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:textColor="@color/image_first_last_name_color"
+                android:textSize="36dp" />
+
+            <TextView
+                android:id="@+id/nameField"
+                style="@style/style_12_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierImg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Name"
+                android:textColor="@color/sky"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/courierName"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameField"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/vehicleTxt"
+                style="@style/style_12_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierName"
+                android:layout_alignLeft="@+id/car"
+                android:layout_marginTop="40dp"
+                android:text="Vehicle"
+                android:textColor="@color/sky"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/car"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicleTxt"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/idTxt"
+                style="@style/style_12_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierName"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@+id/courierName"
+                android:text="ID"
+                android:textColor="@color/sky"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/courierIDZ"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTxt"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/courierName"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/cityTxt"
+                style="@style/style_12_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/car"
+                android:layout_alignLeft="@+id/car"
+                android:layout_marginTop="20dp"
+                android:text="City"
+                android:textColor="@color/sky"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/city"
+                style="@style/style_12_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cityTxt"
+                android:layout_alignLeft="@+id/car"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/abnTXT"
+                style="@style/style_12_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courierIDZ"
+                android:layout_alignLeft="@+id/courierIDZ"
+                android:layout_marginTop="20dp"
+                android:text="ABN"
+                android:textColor="@color/sky"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/abnNumber"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/abnTXT"
+                android:layout_alignLeft="@+id/courierIDZ"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/gun_metal"
+                android:textSize="15dp" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBarCourierId"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/courierName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

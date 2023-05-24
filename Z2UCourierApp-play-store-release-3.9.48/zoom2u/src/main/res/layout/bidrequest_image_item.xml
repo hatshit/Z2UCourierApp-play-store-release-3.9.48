@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#CC000000" >
+
+    <ImageView
+        android:id="@+id/imageViewBidDetailItem"
+        android:layout_width="180dp"
+        android:layout_height="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bid_largeitems"
+        />
+
+    <TextView
+        android:id="@+id/bidDetail_imageTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewBidDetailItem"
+        android:text="Image type"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp"
+        />
+
+</RelativeLayout>

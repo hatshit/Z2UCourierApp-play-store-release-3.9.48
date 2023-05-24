@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#29000000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/acceptRejectLayout"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" >
+
+            <TextView
+                android:id="@+id/headerTxtRequestAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="Request availability"
+                android:background="@drawable/bg_bottomborder"
+                android:textColor="#00A7E2"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dropLocationTitleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickLocationValueTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="DROPOFF SUBURB"
+                android:textColor="#374350"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/dropLocationValueTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dropLocationTitleTxt"
+                android:layout_marginLeft="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="Dropoff suburb"
+                android:textColor="#374350"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/pickLocationTitleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerTxtRequestAvailability"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="PICKUP SUBURB"
+                android:textColor="#374350"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/pickLocationValueTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickLocationTitleTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="Pickup suburb"
+                android:textColor="#374350"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/requestNotesTitleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dropLocationValueTxt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="AVAILABILITY NOTES"
+                android:textColor="#374350"
+                android:textSize="14dp" />
+
+            <com.zoom2u.utility.VerticalScrollview
+                android:id="@+id/verticalScrollerAvailability"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_above="@+id/courierMsgTxt"
+                android:layout_below="@+id/requestNotesTitleTxt" >
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TextView
+                        android:id="@+id/requestNotesMsgTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Not available"
+                        android:scrollbars="vertical"
+                        android:textColor="#374350"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </com.zoom2u.utility.VerticalScrollview>
+
+            <TextView
+                android:id="@+id/courierMsgTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="If we had a delivery from these suburbs would you be able to complete it?"
+                android:textColor="#00A7E2"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/backFromRequestAvailability"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="7dp"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/nav_back" />
+
+            <ImageView
+                android:src="@drawable/iconchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/availabilityDetailChatIcon" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:text="!"
+                android:id="@+id/countChatAvailabilityDetail"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/circleredbgbutton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/acceptRejectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/acceptRequestAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="#A4C639"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/rejectRequestAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="#E32636"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cancelRequestAvailWindowBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:src="@drawable/closebutton" />
+
+</RelativeLayout>

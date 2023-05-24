@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <!--<com.zoom2u.endlesslist.trainvideo.EndlessListView_OfTrainingVideo-->
+        <!--android:id="@+id/listViewOfAppVideo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!--android:visibility="visible"-->
+        <!--android:divider="@null"-->
+         <!--/>-->
+   
+    <TextView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="No training video's available"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:id="@+id/noTrainingVideoTxt"
+        android:gravity="center"
+        android:textColor="#374350"/>
+    
+
+</LinearLayout>

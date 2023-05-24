@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp"
+    android:layout_height="430dp"
+    android:background="@android:color/transparent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="305dp"
+        android:layout_height="390dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_tlrbborder"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_tlrbborder">
+
+            <TextView
+                android:id="@+id/titleTxtRouteAlert"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/bg_bottomborder"
+                android:gravity="center|left"
+                android:paddingLeft="60dp"
+                android:text="Drop off"
+                android:textColor="@color/gun_metal"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/countImgRouteAlrt"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_alignLeft="@+id/titleTxtRouteAlert"
+                android:layout_alignStart="@+id/titleTxtRouteAlert"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/marker_ontime"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/counterTxtRouteAlrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/countImgRouteAlrt"
+                android:layout_alignLeft="@+id/titleTxtRouteAlert"
+                android:layout_alignRight="@+id/countImgRouteAlrt"
+                android:layout_alignStart="@+id/titleTxtRouteAlert"
+                android:layout_alignTop="@+id/countImgRouteAlrt"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/courierNameRouteAlrt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Jone Doe"
+                android:singleLine="true"
+                android:textColor="@color/gun_metal"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/addressTxtRouteAlrt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:maxLines="3"
+                android:textColor="@color/gun_metal"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/arriveBeforeTxtRouteAlrt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/bglightgray"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:text="Parcel Ready After"
+            android:textColor="@color/gun_metal"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/arriveBeforeTxtValueRouteAlrt"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:textColor="@color/gun_metal"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/eTATxtRouteAlrt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/bglightgray"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:text="Your ETA"
+            android:textColor="@color/gun_metal"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/etaTxtValueRouteAlrt"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:textColor="#7BCE20"
+            android:textSize="28dp" />
+
+        <Button
+            android:id="@+id/viewBookingBtnRouteAlrt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundedskybluebg"
+            android:text="View booking details"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rememberMeLayout"
+            android:textColor="@drawable/textselector"
+            android:textSize="16dp" />
+
+        <!--<Button-->
+            <!--android:id="@+id/loadNxtAddressBtnRouteAlrt"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:background="@drawable/roundedskybluebg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Load next address"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_below="@+id/rememberMeLayout"-->
+            <!--android:textColor="@drawable/textselector"-->
+            <!--android:textSize="16dp" />-->
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_signout"
+        android:background="@drawable/circleredbgbutton"
+        android:id="@+id/cancelBtnRouteAlert"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

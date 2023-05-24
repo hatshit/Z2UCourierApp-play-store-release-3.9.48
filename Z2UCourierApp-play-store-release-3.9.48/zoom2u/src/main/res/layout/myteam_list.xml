@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/headerDLayout"
+        android:background="@color/base_color_gray">
+
+        <ImageView
+            android:id="@+id/backFromTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="New Booking"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/chatIconTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:id="@+id/countChatTeamList"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/headerLayoutMyTeamList"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:elevation="5dp"
+        android:layout_below="@+id/headerDLayout"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:id="@+id/addMemberTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:text="Members"
+            android:textStyle="bold"
+            android:textColor="@color/gun_metal"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/addMemberBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:drawableLeft="@drawable/teamadd_icon"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="17dp"
+            android:paddingBottom="8dp"
+            android:text="Add Member"
+            android:textColor="@color/loginbtn_blue"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshMyTeamList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnOpenTeamMembersBooking"
+        android:layout_below="@id/headerLayoutMyTeamList"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gary">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myTeamList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:background="@color/light_gary"
+                android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/teamsNotAvailTxtMyTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="You have no team members. Click the Add button above to invite your first team member."
+            android:textColor="@color/gun_metal"
+            android:visibility="visible" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_open"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:elevation="5dp"
+        android:background="@color/light_gary"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/btnOpenTeamMembersBooking"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/roundedskybluebg"
+            android:gravity="center"
+            android:text="Open all team members booking"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

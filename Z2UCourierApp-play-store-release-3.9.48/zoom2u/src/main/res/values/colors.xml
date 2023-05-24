@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="trans_black">#1A000000</color>
+    <color name="skyblue">#1C7EBB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="semiwhite">#F5F5F5</color>
+    <color name="black">#000000</color>
+    <color name="symptom_color_selected">#003366</color>
+    <color name="reaction_color_selected">#003366</color>
+    <color name="static_text_color">#003366</color>
+    <color name="journal_entry_listitem_text_color">#003366</color>
+    <color name="note_text_disabled">#333333</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_bottom">#3974FE</color>
+    <color name="navy">#6699FF</color>
+    <color name="sky">#0099CC</color>
+    <color name="gray">#808080</color>
+    <color name="lightgray">#c7c7c7</color>
+    <color name="lightgray02">#bfbfbf</color>
+    <color name="dark">#000015</color>
+    <color name="lightgreen">#336666</color>
+    <color name="orrange">#e33d1b</color>
+    <color name="darkorrange">#cc2303</color>
+    <color name="pinlcolor">#FF476A</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="light_gray">#374350</color>
+    <color name="appskyblue">#00a7e2</color>
+    <color name="bidimg_bgcolor">#E3EEF3</color>
+    <color name="light_gar">#EDF1FC</color>
+    <color name="base_color1">#00A6E2</color>
+</resources>

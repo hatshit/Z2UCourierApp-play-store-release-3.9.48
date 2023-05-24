@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/acceptRejectLayoutShiftDetail"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/demoViewShiftDetail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/gun_metal">
+
+            <TextView
+                android:id="@+id/headerTxtShiftDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Delivery Run Details"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/shiftDetailChatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/new_iconchat" />
+
+            <TextView
+                android:id="@+id/countChatShiftDetail"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/circleredbgbutton"
+                android:gravity="center"
+                android:text="!"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/backFromShiftDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:src="@drawable/new_ic_back_white" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/demoViewShiftDetail">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/dateTxtDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/new_gray_round_up"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/startTimeLayoutDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/dateTxtDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:background="@color/light_gary"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/startTimeTxtDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start time:"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/startTimeValueDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/startTimeTxtDeliveryRunDetail"
+                        android:text="06:30 pm"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/endTimeLayoutDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="35dp"
+                    android:background="@color/light_gary"
+                    android:layout_marginStart="35dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/startTimeLayoutDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/endTimeTxtDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="End time:"
+                        android:textStyle="bold"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/endTimeValueDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/endTimeTxtDeliveryRunDetail"
+                        android:text="09:30 pm"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/dividerPriceDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/endTimeLayoutDeliveryRunDetail"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/counter_text_color" />
+
+                <View
+                    android:id="@+id/dividerPriceValTxtDeliveryRunDetail"
+                    android:layout_width="3dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/dividerPriceDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/counter_text_color" />
+
+                <TextView
+                    android:id="@+id/priceTxtDeliveryRunDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/dividerPriceValTxtDeliveryRunDetail"
+                    android:layout_alignBottom="@+id/dividerPriceValTxtDeliveryRunDetail"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/dividerPriceValTxtDeliveryRunDetail"
+                    android:gravity="center"
+                    android:text="$5"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceTxt1DeliveryRunDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/priceTxtDeliveryRunDetail"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/dividerPriceValTxtDeliveryRunDetail"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="11dp" />
+
+                <View
+                    android:id="@+id/dividerAddressValTxtDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/priceTxtDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/counter_text_color" />
+
+                <TextView
+                    android:id="@+id/addressHeaderTxtDeliveryRunDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dividerAddressValTxtDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Zoom2u smart sorting facility"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/addressTxtTxtDeliveryRunDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addressHeaderTxtDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:text="Pyrmount, NSW"
+                    android:textColor="@color/add_member_label"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/dividerStatusDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/addressTxtTxtDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/counter_text_color" />
+
+                <RelativeLayout
+                    android:id="@+id/statusLayoutDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/dividerStatusDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/gold_light_round"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/statusTxtDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status:"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/statusValueDeliveryRunDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/statusTxtDeliveryRunDetail"
+                        android:text="Accepted"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/msgTxtDeliveryRunDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/statusLayoutDeliveryRunDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/msg_txt_deliveryrun_detail"
+                    android:textColor="@color/gun_metal"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/acceptRejectLayoutShiftDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:elevation="5dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/acceptBtnShiftDetail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/roundedskybluebg"
+            android:gravity="center"
+            android:text="Accept"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/rejectBtnShiftDetail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/new_boder"
+            android:gravity="center"
+            android:text="Decline"
+            android:textColor="@color/gold_dark"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

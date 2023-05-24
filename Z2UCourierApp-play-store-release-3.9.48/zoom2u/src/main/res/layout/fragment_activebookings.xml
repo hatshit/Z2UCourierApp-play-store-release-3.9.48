@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.zoom2you"
+    android:id="@+id/layoutActiveBooking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="1dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+     <View
+        android:id="@+id/demoViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4d4d4" />
+    
+    <LinearLayout android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:id="@+id/activeFragButtonLayout"
+        android:background="@color/white">
+        
+        <TextView android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="1dp"
+            android:text="Today"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:id="@+id/todayBookingBtn"
+            android:textColor="@drawable/textselector"
+            android:background="#374350"/>
+        
+        <TextView android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="1dp"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="Future"
+            android:id="@+id/tomorrowBookingBtn"
+            android:textColor="#374350"
+            android:background="@color/white"
+           />
+        
+    </LinearLayout>
+    
+     <View
+        android:id="@+id/demoViewActiveFragment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4d4d4" />
+    
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#FFFFFF"
+	    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/noActiveBookingText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="Active Bookings not available"
+        android:textSize="17dp"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/listRefreshActiveBooking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:divider="@null"
+        android:visibility="visible" /> 
+    
+   <!--  <com.zoom2u.datamodels.DynamicListView
+        android:id="@+id/listRefreshActiveBooking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:divider="@null"
+        android:visibility="visible" /> -->
+</LinearLayout>
+</LinearLayout>

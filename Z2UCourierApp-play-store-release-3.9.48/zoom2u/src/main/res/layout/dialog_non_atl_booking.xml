@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="290dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:background="@drawable/roundedwhiteback">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Important!"
+        android:gravity="center"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp"
+        android:id="@+id/titleTxtNonATLDialog"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/graphicsNonATLDialog"
+        android:src="@drawable/accept_btn"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/non_atl_dialog_txt"
+        android:gravity="center"
+        android:textColor="@color/gun_metal"
+        android:lineSpacingExtra="3dp"
+        android:textSize="14dp"
+        android:id="@+id/msgTxtNonATLDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:text="I understand"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_worrier_level"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp"
+        android:id="@+id/doneBtnNonATLDialog"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:text="Continue watching"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/rounded_appskyblue"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp"
+        android:id="@+id/continueBtnATLDialog" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:text="Back"
+        android:gravity="center"
+        android:background="@drawable/rounded_elite_level"
+        android:textColor="@drawable/textselector"
+        android:textSize="14dp"
+        android:id="@+id/backBtnNonATLDialog"
+        />
+
+</LinearLayout>

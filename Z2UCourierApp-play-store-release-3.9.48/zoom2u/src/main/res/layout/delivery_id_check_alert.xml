@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/roundedwhiteback"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/closeBtnIdAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        android:layout_gravity="end"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Close"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/roundedwhiteback"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/headingTxtDeliveryIdCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/require_id_ckeck_msg_txt"
+                android:textColor="@color/gun_metal"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/deliveryCheckDialog_Image"
+                android:layout_width="265dp"
+                android:layout_height="188dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignEnd="@+id/textView4"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/textView4"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/licence" />
+
+            <TextView
+                android:id="@+id/msgTxtDeliveryIdCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center|left"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/require_id_ckeck_hint_txt"
+                android:textColor="@color/gun_metal"
+                android:textSize="14dp" />
+
+            <com.zoom2u.utility.PinEntryEditText
+                android:id="@+id/edtEnterPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="15dp"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:inputType="text"
+                android:maxLength="4"
+                android:textIsSelectable="false"
+                android:textSize="24dp"
+                android:visibility="visible"
+                app:pinLineColors="@color/require_id_color"
+                app:pinLineStroke="4dp" />
+
+            <Button
+                android:id="@+id/confirmBtnDeliveryIdCheck"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/txt_pin_entry"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/roundedskybluebg"
+                android:text="Confirm"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

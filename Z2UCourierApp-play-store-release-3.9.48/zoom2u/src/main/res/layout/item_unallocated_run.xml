@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_gar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/white_background"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_company_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_rnd_medium"
+                        android:text="Aplite Info Solution"
+                        android:textColor="@color/gun_metal"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_run_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/gotham_rnd_medium"
+                        android:text="29 jul"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:text="Customer :"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:text="Hupdedra"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="center_horizontal"
+                            android:text="Delivery time :"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_delivery_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="center"
+                            android:text=" 8:00AM - 12:00PM"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="end"
+                            android:text="Number of runs :"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_no_stops"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:text="15Stops"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgLocationMarkBList"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_above="@+id/suburbTextnewBooking"
+                            android:layout_toLeftOf="@+id/locationMarkBList"
+                            android:src="@drawable/location_marker" />
+
+                        <TextView
+                            android:id="@+id/tv_km_away1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:text="Run distance :"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/tv_km_away"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham_rnd_medium"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:text="0.0km"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/RunOrRunBatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/red_background"
+                    android:gravity="center"
+                    android:minWidth="65dp"
+                    android:paddingStart="7dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="5dp"
+                    android:text="Run Batch"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RunOrRunBatch"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:text="$200"
+                    android:textColor="#6dda46"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

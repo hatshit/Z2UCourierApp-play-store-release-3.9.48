@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingBottom="50dp"
+    android:layout_gravity="center"
+    android:elevation="3dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTxtForDriverSafe_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxATL"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/driversafe_information_headetxt1"
+        android:textColor="@color/gun_metal"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/msgTxtDriverSafe_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxtForDriverSafe_Info"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_centerVertical="true"
+        android:gravity="center|left"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/driversafe_information_txt1"
+        android:textColor="@color/gun_metal"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/cancelBtnDriverSafe_Info"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_dynamo_level"
+        android:text="Close"
+        android:textColor="@drawable/textselector"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/closeDialogBtnDriverSafe_Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/titleTxtForWhatIsSafe"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/cross_icon" />
+
+</RelativeLayout>
