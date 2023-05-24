@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zoom2u"
-    android:versionCode="133"
-    android:versionName="3.9.47">
+    android:versionCode="135"
+    android:versionName="3.9.49">
     <!--
     android:versionCode="78"
     android:versionName="3.3.2"
@@ -27,7 +27,7 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="com.zoom2u.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -160,9 +160,9 @@
         <activity
             android:name=".offer_run_batch.SingleRunActivity"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="adjustResize"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".onboardpopup.OnBoardActivity"
@@ -288,16 +288,16 @@
         <activity
             android:name=".BookingDetail_New"
             android:exported="false"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            android:windowSoftInputMode="adjustResize"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ActiveBookingDetail_New"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".BookingHistory"
             android:exported="false"

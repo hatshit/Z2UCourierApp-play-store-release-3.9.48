@@ -336,7 +336,7 @@ public class WebserviceHandler {
 		HttpURLConnection conn = null;
 		try {
 			LoginZoomToU.isLoginSuccess = 0;
-				String data = URLEncoder.encode("grant_type", "UTF-8") + "=" + URLEncoder.encode("password", "UTF-8");
+			String data = URLEncoder.encode("grant_type", "UTF-8") + "=" + URLEncoder.encode("password", "UTF-8");
         	data += "&" + URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(userEmail, "UTF-8");
         	data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(userPass, "UTF-8");
 

@@ -982,23 +982,23 @@ public class BarcodeController implements View.OnTouchListener{
             @Override
             public void onPreExecute() {
                 try {
-                    WebserviceHandler webserviceHandler = new WebserviceHandler();
-                    webPostBarcode[0] = webserviceHandler.getDeliveryInfoByBarcode(scanResult,runID);
-                    webserviceHandler = null;
+                    if (progressForDeliveryHistory == null)
+                        progressForDeliveryHistory = new ProgressDialog(currentBarcodeContext);
+                    Custom_ProgressDialogBar.inItProgressBar(progressForDeliveryHistory);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    webPostBarcode[0] = "";
                 }
             }
 
             @Override
             public void doInBackground() {
                 try {
-                    if (progressForDeliveryHistory == null)
-                        progressForDeliveryHistory = new ProgressDialog(currentBarcodeContext);
-                    Custom_ProgressDialogBar.inItProgressBar(progressForDeliveryHistory);
+                    WebserviceHandler webserviceHandler = new WebserviceHandler();
+                    webPostBarcode[0] = webserviceHandler.getDeliveryInfoByBarcode(scanResult,runID);
+                    webserviceHandler = null;
                 } catch (Exception e) {
                     e.printStackTrace();
+                    webPostBarcode[0] = "";
                 }
             }
 

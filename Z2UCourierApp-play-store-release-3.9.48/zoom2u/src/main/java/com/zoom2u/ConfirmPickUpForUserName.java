@@ -973,12 +973,21 @@ public class ConfirmPickUpForUserName extends Activity implements AdapterView.On
 	}
 
 
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode==200&&resultCode==RESULT_OK){
+			switchToBookingView(2);
+		}
+	}
+
 	private void callForLateReason() {
-		switchToBookingView(2);
 		Intent callDialogReasonLate = new Intent(ConfirmPickUpForUserName.this, DialogReasonForLateDelivery.class);
+		callDialogReasonLate.putExtra("fromReason",true);
 		callDialogReasonLate.putExtra("ReasonLateBookingID", activeJobModelToPickOrDrop.getBookingId());
 		callDialogReasonLate.putExtra("BookingTypeSource", activeJobModelToPickOrDrop.getSource());
-		startActivity(callDialogReasonLate);
+		startActivityForResult(callDialogReasonLate,200);
 		callDialogReasonLate = null;
 	}
 

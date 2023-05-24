@@ -91,12 +91,12 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteX="0dp">
 
-                    <!--<fragment
+                     <fragment
                         android:id="@+id/mapViewBookingDetail"
                         class="com.zoom2u.utility.WorkaroundMapFragment"
                         android:layout_width="match_parent"
                         android:layout_height="320dp" />
--->
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/documentLayoutBD"
                         android:layout_width="125dp"
