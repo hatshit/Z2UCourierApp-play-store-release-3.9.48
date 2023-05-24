@@ -12,6 +12,7 @@ import java.util.HashMap;
 public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface{
 
 	private int BookingId;
+	private int OfferId;
 	private String CustomerId;
 	private boolean isNewCustomer;
 	private String CustomerName;
@@ -339,6 +340,14 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 
 	public void setBookingId(int bookingId) {
 		BookingId = bookingId;
+	}
+
+	public int getOfferId() {
+		return OfferId;
+	}
+
+	public void setOfferId(int offerId) {
+		OfferId = offerId;
 	}
 
 	public String getCreatedDateTime() {

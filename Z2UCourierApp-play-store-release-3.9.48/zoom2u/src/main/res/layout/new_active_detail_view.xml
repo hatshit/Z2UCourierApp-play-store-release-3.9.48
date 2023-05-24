@@ -139,7 +139,7 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <fragment
+                  <fragment
                             android:id="@+id/mapViewABD"
                             class="com.zoom2u.utility.WorkaroundMapFragment"
                             android:layout_width="match_parent"

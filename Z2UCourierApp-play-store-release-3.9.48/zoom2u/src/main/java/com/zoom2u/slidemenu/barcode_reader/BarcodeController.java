@@ -412,8 +412,6 @@ public class BarcodeController implements View.OnTouchListener{
     };
 
     // Mimic continuous auto-focusing
-
-    // temprary coment 1.38 time / 28/04/22
     Camera.AutoFocusCallback autoFocusCB = new Camera.AutoFocusCallback() {
         public void onAutoFocus(boolean success, Camera camera) {
             autoFocusHandler.postDelayed(doAutoFocus, 1500);
@@ -1002,7 +1000,6 @@ public class BarcodeController implements View.OnTouchListener{
                     e.printStackTrace();
                     webPostBarcode[0] = "";
                 }
-
             }
 
             @Override

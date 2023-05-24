@@ -44,6 +44,7 @@
             android:src="@drawable/new_iconchat" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/countChatAddTeam"
             android:layout_width="15dp"
             android:layout_height="15dp"

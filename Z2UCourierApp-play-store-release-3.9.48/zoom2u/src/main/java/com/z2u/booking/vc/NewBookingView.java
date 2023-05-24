@@ -666,7 +666,6 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
 		}
 
 		public void onSwipeItemRight(boolean isLeft, int position) {
-
 			if(isSwipeRight_NewBookingList){
 				isSwipeRight_NewBookingList = false;
 				ADD_POS_NEWBOOKINGLIST = INVALID_POS_NEWBOOKINGLIST;

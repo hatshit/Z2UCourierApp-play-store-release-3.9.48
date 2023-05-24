@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
@@ -124,6 +125,8 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
 
     /*   ***** ATL detail view contents *****  */
     RelativeLayout atlInfoHiddenLayout, atlDetailLayoutABD;
+
+    AssignToOtherCourier_Functionality assignToOtherCourier_functionality;
     TextView txtHeaderATLBtnInATLDetail, atlInfoWhereTxtDetailABD, doorCodeTxtATLDetailABD, customerTxtATLDetailABD,
             notesTxtATLDetailABD, tv_eta_msg;
     ImageView arrowUpDownImgATLImg, img_info_eta;
@@ -253,6 +256,7 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.new_active_detail_view);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         window = ActiveBookingDetail_New.this.getWindow();
@@ -273,6 +277,7 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
         try {
             //************ Ask for location permission ***************//
             BookingDetail_New.askForLocationPermission(ActiveBookingDetail_New.this);
+
             if (savedInstanceState == null) {
                 if (getIntent().getIntExtra("RouteViewCalling", 0) == 181) {
                     routeViewCallingIntent = getIntent().getIntExtra("RouteViewCalling", 0);
@@ -282,7 +287,8 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                     findViewById(R.id.titleBookingDetail);
                     ((TextView) findViewById(R.id.titleBookingDetail)).setText("Active Booking Detail");
                     activeDetailByBookingIdFromRouteView();
-                } else {
+                }
+                else {
                     Intent i = getIntent();
                     if (i.getBooleanExtra("fromOfferRun", false)) {
                         activeBookingModelForSelectedItem = i.getParcelableExtra("model");
@@ -290,7 +296,8 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                         i = null;
                         ConfirmPickUpForUserName.isDropOffSuccessfull = 11;
                         inItABDUIContents();
-                    } else {
+                    }
+                    else {
                         try {
                             itemPositionInActiveDetail = i.getIntExtra("positionActiveBooking", 0);
                             activeBookingModelForSelectedItem = (All_Bookings_DataModels) BookingView.bookingListArray.get(itemPositionInActiveDetail);
@@ -304,7 +311,8 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                         inItABDUIContents();  // Initialize active booking detail view
                     }
                 }
-            } else {
+            }
+            else {
                 try {
                     if (savedInstanceState != null)
                         reStoreActivityItems(savedInstanceState);
@@ -379,15 +387,22 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                 returnToDHLBtnABD.setVisibility(View.VISIBLE);
                 isReturnedToDHL = 2;
             } else {
-                if (activeBookingModelForSelectedItem.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER == true) {
-                    if (activeBookingModelForSelectedItem.getRunType().equals("SMARTSORT")) {
-                        returnToDHLBtnABD.setVisibility(View.GONE);
-                    } else {
+                if ((activeBookingModelForSelectedItem.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER == true)||(activeBookingModelForSelectedItem.getStatus().equals("Accepted") && !LoginZoomToU.IS_TEAM_LEADER)){
+
+                    if (!LoginZoomToU.IS_TEAM_LEADER){
                         returnToDHLBtnABD.setVisibility(View.VISIBLE);
                         setBGColorOrTxtOfBottomButtonInABD(returnToDHLBtnABD, R.drawable.rounded_worrier_level, "Assign to other team member", Color.WHITE);
+                    }else {
+                        if (activeBookingModelForSelectedItem.getRunType().equals("SMARTSORT")) {
+                            returnToDHLBtnABD.setVisibility(View.GONE);
+                        } else {
+                            returnToDHLBtnABD.setVisibility(View.VISIBLE);
+                            setBGColorOrTxtOfBottomButtonInABD(returnToDHLBtnABD, R.drawable.rounded_worrier_level, "Assign to other team member", Color.WHITE);
+                        }
                     }
                 } else
                     returnToDHLBtnABD.setVisibility(View.GONE);
+
 
                 isReturnedToDHL = 0;
             }
@@ -813,7 +828,7 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                         pickDropNotesABD.setMaxLines(500);
                         pickDropReadMoreTxtABD.setVisibility(View.VISIBLE);
                         pickDropReadMoreTxtABD.setText("Show less");
-                        findViewById(R.id.bottomBtnLayoutABD).setVisibility(View.GONE);
+                        findViewById(R.id.bottomBtnLayoutABD).setVisibility(View.VISIBLE);
                     }
                 } else {
                     pickDropNotesABD.setMaxLines(3);
@@ -1485,6 +1500,7 @@ private void shareTheBookingDetailsViaWhatsApp(){
                 .show();
 
 }
+    @SuppressLint("SuspiciousIndentation")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -1595,7 +1611,11 @@ private void shareTheBookingDetailsViaWhatsApp(){
                 }
                 break;
             case R.id.returnToDHLBtnABD:
-                if (activeBookingModelForSelectedItem.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER == true) {
+                if ((activeBookingModelForSelectedItem.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER == true)||(activeBookingModelForSelectedItem.getStatus().equals("Accepted") && !LoginZoomToU.IS_TEAM_LEADER)) {
+                    if (!LoginZoomToU.IS_TEAM_LEADER) {
+                        assignToOtherCourier_functionality=new AssignToOtherCourier_Functionality(this, activeBookingModelForSelectedItem.getBookingId());
+                        assignToOtherCourier_functionality.dialogToShowDriversListToAllocateBooking();
+                    }else
                     new AssignToOtherCourier_Functionality(ActiveBookingDetail_New.this, null, ActiveBookingDetail_New.this, false, activeBookingModelForSelectedItem.getBookingId());
                 } else {
                     isForReturnToPickup = 0;
@@ -1695,7 +1715,7 @@ private void shareTheBookingDetailsViaWhatsApp(){
                     pickDropReadMoreTxtABD.setText("Show less");
                     isReadMoreTxt = !isReadMoreTxt;
                     pickDropNotesABD.setMaxLines(500);
-                    findViewById(R.id.bottomBtnLayoutABD).setVisibility(View.GONE);
+                    findViewById(R.id.bottomBtnLayoutABD).setVisibility(View.VISIBLE);
                 } else {
                     pickDropNotesABD.setMaxLines(1);
                     pickDropReadMoreTxtABD.setText("Read more");
@@ -2973,7 +2993,8 @@ private void shareTheBookingDetailsViaWhatsApp(){
                         Toast.makeText(ActiveBookingDetail_New.this, "Permission Denied", Toast.LENGTH_LONG).show();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(ActiveBookingDetail_New.this, "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
+                    //Log.d("ijhrjhri", "onRequestPermissionsResult: ");
+                   // Toast.makeText(ActiveBookingDetail_New.this, "Error " + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
                 break;
             case 22:

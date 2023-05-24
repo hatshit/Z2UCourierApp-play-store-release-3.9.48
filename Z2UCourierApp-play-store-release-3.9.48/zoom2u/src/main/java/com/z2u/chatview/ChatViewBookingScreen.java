@@ -60,6 +60,7 @@ public class ChatViewBookingScreen extends Activity implements View.OnClickListe
     Window window;
     RelativeLayout heading;
     //****************  Firebase chat Base Url for Production   *******//
+
     //         Account - iosaplitetesting@gmail.com
    public static final String FIREBASE_URL = "https://zoom2u.firebaseio.com/";
 

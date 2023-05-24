@@ -510,7 +510,7 @@ public class ChatDetailActivity extends Activity {
         BOOKING_CHAT_NODE = "";
         isChatBookingScreenOpne = false;
         try {
-             clearChatNotification();
+            clearChatNotification();
             if (modelChatDeliveryItem.getCustomer().equals("Zoom2u-Admin"))
                 mFirebaseRef.child(COURIER_ADMIN_UNREADS+LoginZoomToU.courierID+"/status/admin/unread").setValue(0);
         } catch (Exception e) {
@@ -519,6 +519,7 @@ public class ChatDetailActivity extends Activity {
         finish();
         //overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
+
 
     @Override
     public void onStop() {
@@ -1358,7 +1359,6 @@ public class ChatDetailActivity extends Activity {
             }
         }.execute();
     }
-
 
     public void clearChatNotification(){
         NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
