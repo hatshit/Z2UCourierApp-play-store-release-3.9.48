@@ -19,6 +19,7 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -50,7 +51,11 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+import com.suggestprice_team.courier_team.DrcActivity;
 import com.suggestprice_team.courier_team.TeamMemberList_Activity;
+import com.suggestprice_team.courier_team.community.AddmemberActivity;
+import com.suggestprice_team.courier_team.community.CommunityBookingActivity;
+import com.suggestprice_team.courier_team.community.CommunityListActivity;
 import com.z2u.booking.vc.CompletedView;
 import com.z2u.chat.Firebase_Auth_Provider;
 import com.z2u.chatview.ChatViewBookingScreen;
@@ -418,6 +423,7 @@ public class SlideMenuZoom2u extends FragmentActivity {
 	 }
 
 	 /*************** In-it Slide menu view  ***************/
+	 @SuppressLint("SuspiciousIndentation")
 	 @SuppressWarnings("ResourceType")
 	 void slideMenuView(){
 		 try {
@@ -486,11 +492,13 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
-				 navDrawerItems.add(new Menu_SectionModel("New Customers"));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
-				 navDrawerItems.add(new Menu_SectionModel("My Details"));
+				 navDrawerItems.add(new Menu_SectionModel("New Customers"));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[8], navMenuIcons.getResourceId(8, -1)));
+				 navDrawerItems.add(new Menu_SectionModel("My Details"));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[9], navMenuIcons.getResourceId(9, -1)));
+				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[10], navMenuIcons.getResourceId(10, -1)));
+				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[11], navMenuIcons.getResourceId(11, -1)));
 
 			 }
 			 else
@@ -511,6 +519,7 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				 navDrawerItems.add(new Menu_SectionModel("My Details"));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
 				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[8], navMenuIcons.getResourceId(8, -1)));
+				 navDrawerItems.add(new NavDrawerItem(navMenuTitles[9], navMenuIcons.getResourceId(9, -1)));
 
 			 }
 
@@ -697,18 +706,18 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				break;
 			 case 16:
 				 if (LoginZoomToU.IS_TEAM_LEADER||LoginZoomToU.CARRIER_ID==0)
-					 selectedItemOnSlideList = 9;
+					 selectedItemOnSlideList = 10;
 				 else selectedItemOnSlideList=8;
 				 break;
 			 case 17:
 				 if (LoginZoomToU.IS_TEAM_LEADER||LoginZoomToU.CARRIER_ID==0)
-					 selectedItemOnSlideList = 11;
-				 else selectedItemOnSlideList=10;
+					 selectedItemOnSlideList = 12;
+				 else selectedItemOnSlideList=11;
 				 break;
 			 case 18:
 				 if (LoginZoomToU.IS_TEAM_LEADER||LoginZoomToU.CARRIER_ID==0)
-				selectedItemOnSlideList = 12;
-				 else selectedItemOnSlideList=11;
+				selectedItemOnSlideList = 13;
+				 else selectedItemOnSlideList=10;
 			   break;
 			 case 19:
 				selectedItemOnSlideList = 6;
@@ -911,7 +920,7 @@ public class SlideMenuZoom2u extends FragmentActivity {
 
 				String selectedItem = "";
 				if (LoginZoomToU.IS_TEAM_LEADER||LoginZoomToU.CARRIER_ID==0) {
-					if (position != 0 && position != 8 && position != 10) {
+					if (position != 0 && position != 9 && position != 11) {
 						view.setBackgroundColor(Color.parseColor("#D1D0CE"));
 						selectedItem = ((NavDrawerItem) navDrawerItems.get(position)).getTitle();
 					}
@@ -1023,9 +1032,16 @@ public class SlideMenuZoom2u extends FragmentActivity {
 						Intent intent = new Intent(SlideMenuZoom2u.this, TeamMemberList_Activity.class);
 						startActivity(intent);
 					}
-
 				}
-
+				else if (selectedItem.compareTo("Community")==0){
+					Intent intent = new Intent(SlideMenuZoom2u.this, CommunityListActivity.class);
+					startActivity(intent);
+						}
+				else if (selectedItem.compareTo("Driver Resource Centre")==0){
+					Intent intent = new Intent(SlideMenuZoom2u.this, DrcActivity.class);
+					startActivity(intent);
+						}
+				
 				Model_DeliveriesToChat.showExclamationForUnreadChat(countChatSlideView);
 
 				if (fragment != null) {
@@ -1341,48 +1357,90 @@ public class SlideMenuZoom2u extends FragmentActivity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-		//	if (convertView == null) {
-	            LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+			//	if (convertView == null) {
+			LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+			if (navDrawerItems.get(position).isSection()) {
+				convertView = mInflater.inflate(R.layout.menu_header_txt, null);
+				TextView headerMenuIcon = (TextView) convertView.findViewById(R.id.headerMenuIcon);
+				if (position != 0)
+					headerMenuIcon.setPadding(ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 25),
+							ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 30), 0,
+							ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 10));
+				else
+					headerMenuIcon.setPadding(ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 25),
+							0, 0, ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 10));
+				headerMenuIcon.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
+				headerMenuIcon.setText(((Menu_SectionModel) navDrawerItems.get(position)).getTitle());
+			} else {
 
-	            if (navDrawerItems.get(position).isSection()) {
-					convertView = mInflater.inflate(R.layout.menu_header_txt, null);
-					TextView headerMenuIcon = (TextView) convertView.findViewById(R.id.headerMenuIcon);
-					if (position != 0)
-						headerMenuIcon.setPadding(ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 25),
-								ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 30), 0,
-								ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 10));
-					else
-						headerMenuIcon.setPadding(ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 25),
-								0, 0, ActiveBookingDetail_New.convertDpToPixelInAlert(SlideMenuZoom2u.this, 10));
-					headerMenuIcon.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
-					headerMenuIcon.setText(((Menu_SectionModel)navDrawerItems.get(position)).getTitle());
+				if (((NavDrawerItem) navDrawerItems.get(position)).getTitle().equals("Community")) {
+					convertView = mInflater.inflate(R.layout.itemcommunity, null);
+
+					RelativeLayout rrArrowLeft= (RelativeLayout) convertView.findViewById(R.id.rrArrowLeft);
+					RelativeLayout rrArrowUp= (RelativeLayout) convertView.findViewById(R.id.rrArrowUp);
+					CardView commbooking =(CardView) convertView.findViewById(R.id.commbooking);
+					rrArrowLeft.setOnClickListener(new OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							rrArrowUp.setVisibility(View.VISIBLE);
+							rrArrowLeft.setVisibility(View.GONE);
+							commbooking.setVisibility(View.VISIBLE);
+						}
+					});
+
+					rrArrowUp.setOnClickListener(new OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							rrArrowUp.setVisibility(View.GONE);
+							rrArrowLeft.setVisibility(View.VISIBLE);
+							commbooking.setVisibility(View.GONE);
+						}
+					});
+
+					commbooking.setOnClickListener(new OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							rrArrowUp.setVisibility(View.GONE);
+							rrArrowLeft.setVisibility(View.VISIBLE);
+							commbooking.setVisibility(View.GONE);
+							startActivity(new Intent(SlideMenuZoom2u.this, CommunityBookingActivity.class));
+
+							if (mLayout.isMenuShown())
+								mLayout.toggleMenu();
+
+						}
+					});
+
 				} else {
+
 					convertView = mInflater.inflate(R.layout.drawer_list_item, null);
 					ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
 					TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
 					txtTitle.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
 
-					if(selectedItemOnSlideList == position)
+					if (selectedItemOnSlideList == position)
 						convertView.setBackgroundColor(Color.parseColor("#4b5561"));
 					else
 						convertView.setBackgroundColor(getResources().getColor(R.color.gunmetal_new));
 
 					imgIcon.setImageResource(((NavDrawerItem) navDrawerItems.get(position)).getIcon());
-					txtTitle.setText(((NavDrawerItem)navDrawerItems.get(position)).getTitle());
+					txtTitle.setText(((NavDrawerItem) navDrawerItems.get(position)).getTitle());
 
 					TextView unreadMsgCount = (TextView) convertView.findViewById(R.id.unreadMsgCount);
 					unreadMsgCount.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
 					if (position == 3) {
 						if (RequestView.COUNT_FOR_NOTBIDYET > 0) {
 							unreadMsgCount.setVisibility(View.VISIBLE);
-							unreadMsgCount.setText(""+RequestView.COUNT_FOR_NOTBIDYET);
+							unreadMsgCount.setText("" + RequestView.COUNT_FOR_NOTBIDYET);
 						} else
 							unreadMsgCount.setVisibility(View.GONE);
 					} else
 						unreadMsgCount.setVisibility(View.GONE);
 				}
-	    //    }
-	        return convertView;
+			}
+			//    }
+
+			return convertView;
 		}
 	}
-}  
+}

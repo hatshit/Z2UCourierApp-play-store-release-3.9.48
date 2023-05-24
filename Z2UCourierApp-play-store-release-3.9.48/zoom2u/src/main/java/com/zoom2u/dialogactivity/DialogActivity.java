@@ -38,7 +38,6 @@ public class DialogActivity extends Activity{
 	
 	public static Dialog enterFieldDialog;
 //	public static int notificationDialogCount = 0;
-
 	Intent intent;
 
 	@Override
@@ -201,6 +200,56 @@ public class DialogActivity extends Activity{
 
 				Button enterFieldDialogDoneBtn = (Button) enterFieldDialog.findViewById(R.id.dialogDoneBtn);
 
+				if(alertMsg.equals("Already a Member")) {
+					enterFieldDialogDoneBtn.setText("Ok");
+				}
+				enterFieldDialogDoneBtn.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+						enterFieldDialog.dismiss();
+					}
+				});
+				enterFieldDialog.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+    public static void alertDialogViewNew(Context con, String alertTitle, String alertMsg){
+		try{
+			if(enterFieldDialog != null)
+				if(enterFieldDialog.isShowing())
+					enterFieldDialog.dismiss();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+		try {
+			if(enterFieldDialog != null)
+				enterFieldDialog = null;
+				enterFieldDialog = new Dialog(con);
+				enterFieldDialog.setCancelable(false);
+				enterFieldDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+				enterFieldDialog.setContentView(R.layout.dialogviewboldmessage);
+
+				Window window = enterFieldDialog.getWindow();
+				window.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+				android.view.WindowManager.LayoutParams wlp = window.getAttributes();
+
+				wlp.gravity = Gravity.CENTER;
+				wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+				window.setAttributes(wlp);
+
+				TextView enterFieldDialogHEader = (TextView) enterFieldDialog.findViewById(R.id.titleDialog);
+
+				enterFieldDialogHEader.setText(alertTitle);
+
+				TextView enterFieldDialogMsg = (TextView) enterFieldDialog.findViewById(R.id.dialogMessageText);
+
+				enterFieldDialogMsg.setText(alertMsg);
+
+				Button enterFieldDialogDoneBtn = (Button) enterFieldDialog.findViewById(R.id.dialogDoneBtn);
+
+				enterFieldDialogDoneBtn.setText("Ok");
 				enterFieldDialogDoneBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {

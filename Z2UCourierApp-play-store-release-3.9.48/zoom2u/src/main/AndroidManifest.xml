@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zoom2u"
-    android:versionCode="134"
-    android:versionName="3.9.48">
+    android:versionCode="135"
+    android:versionName="3.9.49">
     <!--
     android:versionCode="78"
     android:versionName="3.3.2"
@@ -25,6 +25,7 @@
     <permission
         android:name="com.zoom2u.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="com.zoom2u.permission.MAPS_RECEIVE" />
@@ -96,15 +97,45 @@
         tools:ignore="LockedOrientationActivity"
         tools:replace="android:label">
         <activity
-            android:name=".slidemenu.invoice_adjustment.InvoiceAdjustmentsDetails"
+            android:name="com.suggestprice_team.courier_team.DrcActivity"
             android:exported="false"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            tools:ignore="LockedOrientationActivity"
             />
+        <activity
+            android:name="com.suggestprice_team.courier_team.community.AddmemberActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.suggestprice_team.courier_team.community.CommunityBookingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.suggestprice_team.courier_team.community.EditTeamMembersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.suggestprice_team.courier_team.community.CommunityListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".slidemenu.invoice_adjustment.InvoiceAdjustmentsDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".slidemenu.invoice_adjustment.InvoiceAdjustments"
             android:exported="false"
-            android:screenOrientation="portrait"
-           />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".build_me_route.SecondBuildRouteActivity"
             android:exported="false" />
@@ -183,6 +214,17 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
             tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".dialogactivity.DialogActivityForBooking"
+            android:clearTaskOnLaunch="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            tools:ignore="LockedOrientationActivity" />
+
+
         <activity
             android:name=".dialogactivity.DepotAlert_For_DHLDrivers"
             android:clearTaskOnLaunch="true"
@@ -255,7 +297,7 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".BookingHistory"
             android:exported="false"
@@ -289,7 +331,7 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name="com.newnotfication.view.Notification_BookingStatusRequest"
             android:clearTaskOnLaunch="true"

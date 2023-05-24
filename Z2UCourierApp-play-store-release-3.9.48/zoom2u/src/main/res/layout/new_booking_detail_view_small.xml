@@ -91,11 +91,12 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteX="0dp">
 
-                      <fragment
+                     <fragment
                         android:id="@+id/mapViewBookingDetail"
                         class="com.zoom2u.utility.WorkaroundMapFragment"
                         android:layout_width="match_parent"
                         android:layout_height="320dp" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/documentLayoutBD"
                         android:layout_width="125dp"
@@ -498,10 +499,8 @@
                         android:textSize="15dp" />
                 </LinearLayout>
 
-
-
-
                 <TextView
+                    android:visibility="gone"
                     android:id="@+id/suggestPriceTxt"
                     style="@style/style_15_name"
                     android:layout_width="match_parent"
@@ -513,9 +512,6 @@
                     android:text="Suggest a price"
                     android:textColor="@drawable/textselector"
                     android:textSize="15dp" />
-
-
-
 
             </LinearLayout>
 

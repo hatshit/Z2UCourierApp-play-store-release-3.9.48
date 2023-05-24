@@ -11,6 +11,7 @@
         <item>Leads</item>
         <item>Account Details</item>
         <item>Support</item>
+        <item>Driver Resource Centre</item>
     </string-array>
 
     <string-array name="nav_drawer_items_team">
@@ -21,9 +22,11 @@
         <item>Delivery Runs</item>
         <item>Unallocated Runs</item>
         <item>Your Team</item>
+        <item>Community</item>
         <item>Leads</item>
         <item>Account Details</item>
         <item>Support</item>
+        <item>Driver Resource Centre</item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -38,6 +41,7 @@
         <item>@drawable/ic_leads_icon</item>
         <item>@drawable/ic_account_details_icon</item>
         <item>@drawable/ic_support_icon</item>
+        <item>@drawable/drc_logo</item>
 
     </array>
 
@@ -49,9 +53,11 @@
         <item>@drawable/ic_delivery_runs_icon</item>
         <item>@drawable/unallocted_run</item>
         <item>@drawable/yourteam_svg</item>
+        <item>@drawable/communityone</item>
         <item>@drawable/ic_leads_icon</item>
         <item>@drawable/ic_account_details_icon</item>
         <item>@drawable/ic_support_icon</item>
+        <item>@drawable/drc_logo</item>
 
     </array>
 
