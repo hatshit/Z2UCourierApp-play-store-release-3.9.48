@@ -51,7 +51,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
-import com.suggestprice_team.courier_team.DrcActivity;
+import com.suggestprice_team.DrcActivity;
 import com.suggestprice_team.courier_team.TeamMemberList_Activity;
 import com.suggestprice_team.courier_team.community.AddmemberActivity;
 import com.suggestprice_team.courier_team.community.CommunityBookingActivity;

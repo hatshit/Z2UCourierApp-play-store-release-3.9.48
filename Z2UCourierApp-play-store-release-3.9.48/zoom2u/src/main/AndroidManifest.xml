@@ -97,11 +97,10 @@
         tools:ignore="LockedOrientationActivity"
         tools:replace="android:label">
         <activity
-            android:name="com.suggestprice_team.courier_team.DrcActivity"
+            android:name="com.suggestprice_team.DrcActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar"
-            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/CustomActionBarTheme"
             />
         <activity
             android:name="com.suggestprice_team.courier_team.community.AddmemberActivity"
@@ -115,7 +114,8 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            />
         <activity
             android:name="com.suggestprice_team.courier_team.community.EditTeamMembersActivity"
             android:exported="false"

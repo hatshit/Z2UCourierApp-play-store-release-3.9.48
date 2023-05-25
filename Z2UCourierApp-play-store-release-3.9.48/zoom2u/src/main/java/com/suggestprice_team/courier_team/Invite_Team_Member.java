@@ -62,7 +62,7 @@ public class Invite_Team_Member extends Activity implements View.OnClickListener
 
 //    JSONObject addressObj;
 
-    private TextView countInviteTeamMamber;
+    private TextView countInviteTeamMember;
     private TextView firstNameAddMember, lastNameAddMember, emailAddMember, phoneNoAddMember,
             addressAddMember;
     private ScrollView scrollViewInviteTeam;
@@ -177,7 +177,7 @@ public class Invite_Team_Member extends Activity implements View.OnClickListener
     protected void onResume() {
         super.onResume();
         SlideMenuZoom2u.setCourierToOnlineForChat();
-        Model_DeliveriesToChat.showExclamationForUnreadChat(countInviteTeamMamber);
+        Model_DeliveriesToChat.showExclamationForUnreadChat(countInviteTeamMember);
     }
 
     private void initInviteTeamUIContent() {
@@ -189,10 +189,10 @@ public class Invite_Team_Member extends Activity implements View.OnClickListener
         findViewById(R.id.backFromAddTeam).setOnClickListener(this);
         findViewById(R.id.titleAddTeam);
         findViewById(R.id.chatIconAddTeam).setOnClickListener(this);
-        countInviteTeamMamber = (TextView)  findViewById(R.id.countChatAddTeam);
+        countInviteTeamMember = (TextView)  findViewById(R.id.countChatAddTeam);
 
-        countInviteTeamMamber.setVisibility(View.GONE);
-        SlideMenuZoom2u.countChatBookingView = countInviteTeamMamber;
+        countInviteTeamMember.setVisibility(View.GONE);
+        SlideMenuZoom2u.countChatBookingView = countInviteTeamMember;
 
         scrollViewInviteTeam = (ScrollView) findViewById(R.id.scrollViewInviteTeam);
 

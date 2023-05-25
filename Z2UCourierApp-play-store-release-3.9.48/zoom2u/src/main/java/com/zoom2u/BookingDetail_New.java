@@ -175,10 +175,14 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         try {
-            outState.putBoolean("SetRoutific", WebserviceHandler.isRoutific);
-            outState.putInt("SlideMenuItemCount", ConfirmPickUpForUserName.isDropOffSuccessfull);
-            outState.putParcelable("NewBookingDetailModel", newBookingDetailModel);
-            outState.putInt("bookingViewSelection", BookingView.bookingViewSelection);
+            if(!isshow)
+            {
+                outState.putBoolean("SetRoutific", WebserviceHandler.isRoutific);
+                outState.putInt("SlideMenuItemCount", ConfirmPickUpForUserName.isDropOffSuccessfull);
+                outState.putParcelable("NewBookingDetailModel", newBookingDetailModel);
+                outState.putInt("bookingViewSelection", BookingView.bookingViewSelection);
+            }
+
         //    outState.putParcelableArrayList("NewBookingArray", BookingView.bookingListArray);
         } catch (Exception e) {
             e.printStackTrace();
@@ -223,8 +227,15 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
     private void inItNewBookingDetailViewContents(Bundle savedInstanceState) {
         try {
             if (savedInstanceState == null) {
-                int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("position", 0);
-                newBookingDetailModel = (All_Bookings_DataModels) BookingView.bookingListArray.get(itemPositionNewBooking);
+                if (isshow)
+                {
+                    int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("position", 0);
+                    newBookingDetailModel = CommunityBookingActivity.list.get(itemPositionNewBooking);
+                }else {
+                    int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("position", 0);
+                    newBookingDetailModel = (All_Bookings_DataModels) BookingView.bookingListArray.get(itemPositionNewBooking);
+                }
+
             } else {
                 try {
                     WebserviceHandler.isRoutific = savedInstanceState.getBoolean("SetRoutific");

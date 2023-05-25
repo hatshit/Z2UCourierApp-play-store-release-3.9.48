@@ -54,10 +54,6 @@ public class BookingDetail_TeamMember extends Activity implements View.OnClickLi
     RelativeLayout customerDetailLayoutABD_Team;
     TextView bookingRefNoTxtABD_Team;
     ImageView arrowUpDownImgCustmerLayoutABD_Team;
-
-
-
-
     LinearLayout pickUpHeaderLayoutABD_Team;
     TextView pickHeaderLayoutPickTxtABD_Team;
     TextView pickHeaderLayoutPickTimeTxtABD_Team;

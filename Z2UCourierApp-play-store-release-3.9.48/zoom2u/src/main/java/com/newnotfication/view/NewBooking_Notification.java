@@ -138,8 +138,8 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 	synchronized protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		finish();
-		Intent intent1=new Intent(this,NewBooking_Notification.class);
-		startActivity(intent1);
+		/*Intent intent1=new Intent(this,NewBooking_Notification.class);
+		startActivity(intent1);*/
 	}
 
 

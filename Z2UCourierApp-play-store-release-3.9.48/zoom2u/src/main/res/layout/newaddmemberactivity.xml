@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/light_gary"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/headerDLayout"
+        android:background="@color/base_color_gray">
+
+        <ImageView
+            android:id="@+id/backtBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleTeamList"
+            style="@style/style_15_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Add Member"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/chatIconTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/countChatTeamList"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/inviteuser"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/base_color1"
+            android:text="Search via email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+            </EditText>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/cleartext"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/closeedittext"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+
+            </ImageView>
+
+            <ImageView
+                android:layout_marginHorizontal="2dp"
+                android:id="@+id/searchbtn"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:src="@drawable/searchmem"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/light_gary"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></View>
+
+        <RelativeLayout
+            android:id="@+id/relativeinvalidemail"
+            android:visibility="gone"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/invalidemail"
+                android:layout_marginRight="20dp"
+                android:textColor="#F44336"
+                android:text="invalid email Address"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/foundemail"
+            android:layout_marginVertical="3dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/gray"
+            android:text="@string/notifyForSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <com.zoom2u.utility.MaxHeightNestedScrollView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        </com.zoom2u.utility.MaxHeightNestedScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/addmember"
+                    android:gravity="center"
+                    android:background="@drawable/acceptbacground"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        style="@style/style_15_name"
+                        android:textColor="@color/white"
+                        android:text="Add Member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/backbtn"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/searchmember"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        style="@style/style_15_name"
+                        android:text="Back"
+                        android:textColor="#D32B1E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp" >
+
+    <LinearLayout
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <View
+            android:background="@color/light_gary"
+            android:layout_width="5dp"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="#0DD315"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/discardBtn_RouteList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Accept"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reject"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="#CF1406"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/discardBtn_RouteList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Reject" />
+
+
+        </LinearLayout>
+        <View
+            android:background="@color/light_gary"
+            android:layout_width="5dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:id="@+id/relative"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/inviteuser"
+        android:layout_weight="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.zoom2u.roundedimage.RoundedImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/unknowperson"
+                android:id="@+id/teamMemberImg"
+                android:background="@drawable/round_circle_bg"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="5dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abhi">
+
+            </TextView>
+
+            <TextView
+                style="@style/style_12_bold"
+                android:id="@+id/number"
+                android:text="123456789"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                style="@style/style_12_bold"
+                android:id="@+id/email"
+                android:text="Abhi@gmail.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>

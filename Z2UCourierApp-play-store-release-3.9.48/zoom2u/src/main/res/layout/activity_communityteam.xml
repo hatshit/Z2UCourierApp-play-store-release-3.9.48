@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gary"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/headerDLayout"
+        android:background="@color/base_color_gray">
+
+        <ImageView
+            android:id="@+id/backFromTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="11dp"
+            android:src="@drawable/new_ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            style="@style/style_15_name"
+            android:paddingLeft="0dp"
+            android:text="My Community"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/chatIconTeamList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/new_iconchat" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/countChatTeamList"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/circleredbgbutton"
+            android:gravity="center"
+            android:text="!"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/headerLayoutMyTeamList"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/headerDLayout"
+        android:background="@color/base_color1" >
+
+
+        <LinearLayout
+            android:id="@+id/linearmember"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtMemberTxt"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selected_background"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:minHeight="30dp"
+                android:text="@string/members"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearinvation"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/txtInvitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/base_color1"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:minHeight="30dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/invitation"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                style="@style/style_15_name" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="2dp"
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>
