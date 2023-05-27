@@ -11,6 +11,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:visibility="gone"
         android:orientation="vertical"
         android:id="@+id/dialoglinear"
         android:weightSum="1"
@@ -52,12 +53,14 @@
         android:paddingRight="20dp"
         android:textStyle="bold"
         android:textSize="14dp"
+        android:visibility="gone"
         android:lineSpacingExtra="3dp"
         android:textColor="@color/gun_metal"
         android:gravity="center" />
 
 
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/teammcommunitumlinear"
         android:weightSum="2"
         android:orientation="horizontal"
@@ -182,7 +185,10 @@
     </RelativeLayout>
 </com.zoom2u.utility.MaxHeightNestedScrollView>
 
-    <LinearLayout android:layout_height="52dp"
+        <LinearLayout
+            android:visibility="gone"
+        android:id="@+id/llSend"
+        android:layout_height="52dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_marginTop="20dp"
@@ -216,6 +222,21 @@
             android:textSize="14dp" />
 
     </LinearLayout>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/doneBtn"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_weight="0.5"
+            android:text="ok"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/roundedskybluebg"
+            android:textColor="@drawable/textselector"
+            android:textSize="14dp" />
 
     </LinearLayout>
 

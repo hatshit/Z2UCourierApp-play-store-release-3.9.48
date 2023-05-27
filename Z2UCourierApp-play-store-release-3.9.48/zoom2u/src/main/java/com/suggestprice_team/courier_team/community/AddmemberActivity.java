@@ -211,6 +211,7 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
                 try {
                     JSONObject jsonObject = new JSONObject(responseCommunitysearchcourier);
                     if (jsonObject.has("Message") && !jsonObject.isNull("Message")) {
+                        courierid ="";
                         cleartext.setVisibility(View.VISIBLE);
                         relativeinvalidemail.setVisibility(View.VISIBLE);
                         recycle.setVisibility(View.GONE);
@@ -250,8 +251,8 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
                                     emailclick(list.get(position));
                                 }
                             });
-
                         }else {
+                            courierid ="";
                             cleartext.setVisibility(View.VISIBLE);
                             relativeinvalidemail.setVisibility(View.VISIBLE);
                             recycle.setVisibility(View.GONE);
@@ -260,6 +261,7 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
                         }
                     }
                 }catch (Exception e){
+                    courierid ="";
                     cleartext.setVisibility(View.VISIBLE);
                     relativeinvalidemail.setVisibility(View.VISIBLE);
                     recycle.setVisibility(View.GONE);
@@ -361,10 +363,21 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
                 if (TextUtils.isEmpty(editEmail.getText().toString())){
                     Toast.makeText(AddmemberActivity.this,"Please input a valid email to search.", Toast.LENGTH_SHORT).show();
                 }else if(emailValidation(editEmail.getText().toString())) {
-                    cleartext.setVisibility(View.GONE);
-                    relativeinvalidemail.setVisibility(View.GONE);
-                    addmember.setEnabled(false);
-                    apiCallToGetcommunityaddnewmember();
+                    if(courierid.equals("") && courierid!=null)
+                    {
+                        invalidemail.setText("Email address not valid.");
+                        invalidemail.setTextColor(Color.RED);
+                        cleartext.setVisibility(View.VISIBLE);
+                        recycle.setVisibility(View.GONE);
+                        foundemail.setVisibility(View.GONE);
+                        relativeinvalidemail.setVisibility(View.VISIBLE);
+
+                    }else {
+                        cleartext.setVisibility(View.GONE);
+                        relativeinvalidemail.setVisibility(View.GONE);
+                        addmember.setEnabled(false);
+                        apiCallToGetcommunityaddnewmember();
+                    }
                 }else {
                     invalidemail.setText("Email address not valid.");
                     invalidemail.setTextColor(Color.RED);

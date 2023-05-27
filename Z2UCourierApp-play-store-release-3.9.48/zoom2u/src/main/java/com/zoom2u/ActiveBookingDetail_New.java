@@ -387,22 +387,12 @@ public class ActiveBookingDetail_New extends Activity implements View.OnClickLis
                 returnToDHLBtnABD.setVisibility(View.VISIBLE);
                 isReturnedToDHL = 2;
             } else {
-                if ((activeBookingModelForSelectedItem.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER == true)||(activeBookingModelForSelectedItem.getStatus().equals("Accepted") && !LoginZoomToU.IS_TEAM_LEADER)){
-
-                    if (!LoginZoomToU.IS_TEAM_LEADER){
-                        returnToDHLBtnABD.setVisibility(View.VISIBLE);
-                        setBGColorOrTxtOfBottomButtonInABD(returnToDHLBtnABD, R.drawable.rounded_worrier_level, "Assign to other team member", Color.WHITE);
-                    }else {
-                        if (activeBookingModelForSelectedItem.getRunType().equals("SMARTSORT")) {
-                            returnToDHLBtnABD.setVisibility(View.GONE);
-                        } else {
-                            returnToDHLBtnABD.setVisibility(View.VISIBLE);
-                            setBGColorOrTxtOfBottomButtonInABD(returnToDHLBtnABD, R.drawable.rounded_worrier_level, "Assign to other team member", Color.WHITE);
-                        }
-                    }
-                } else
+                if(activeBookingModelForSelectedItem.getStatus().equals("Accepted") && (LoginZoomToU.IS_TEAM_LEADER || LoginZoomToU.CARRIER_ID == 0)) {
+                    returnToDHLBtnABD.setVisibility(View.VISIBLE);
+                    setBGColorOrTxtOfBottomButtonInABD(returnToDHLBtnABD, R.drawable.rounded_worrier_level, "Assign to other team member", Color.WHITE);
+                }else {
                     returnToDHLBtnABD.setVisibility(View.GONE);
-
+                }
 
                 isReturnedToDHL = 0;
             }

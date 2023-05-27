@@ -1500,12 +1500,26 @@ public class ActiveBookingView implements ActiveBooking_EndlessListview.EndLessL
                                 attemptdeliveryBtnInActiveBooking.setClickable(false);
                                 attemptdeliveryBtnInActiveBooking.setVisibility(View.GONE);
                                 reassignBtnInActiveBooking.setClickable(true);
-                                reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
-                                slideRightForAttemptDelivery(110, frontTagActiveBooking);
+                                if(activeBookingModel.getStatus().equals("Accepted") && (LoginZoomToU.IS_TEAM_LEADER || LoginZoomToU.CARRIER_ID == 0)) {
+                                    reassignBtnInActiveBooking.setClickable(true);
+                                    reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
+                                    slideRightForAttemptDelivery(220, frontTagActiveBooking);
+                                }else {
+                                    reassignBtnInActiveBooking.setClickable(true);
+                                    reassignBtnInActiveBooking.setVisibility(View.GONE);
+                                    slideRightForAttemptDelivery(110, frontTagActiveBooking);
+                                }
                             } else {
                                 reassignBtnInActiveBooking.setClickable(true);
-                                reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
-                                slideRightForAttemptDelivery(220, frontTagActiveBooking);
+                                if(activeBookingModel.getStatus().equals("Accepted") && (LoginZoomToU.IS_TEAM_LEADER || LoginZoomToU.CARRIER_ID == 0)) {
+                                    reassignBtnInActiveBooking.setClickable(true);
+                                    reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
+                                    slideRightForAttemptDelivery(220, frontTagActiveBooking);
+                                }else {
+                                    reassignBtnInActiveBooking.setClickable(true);
+                                    reassignBtnInActiveBooking.setVisibility(View.GONE);
+                                    slideRightForAttemptDelivery(110, frontTagActiveBooking);
+                                }
                             }
                         } else {
                             reassignBtnInActiveBooking.setVisibility(View.GONE);
@@ -1527,9 +1541,17 @@ public class ActiveBookingView implements ActiveBooking_EndlessListview.EndLessL
                         }
                     } else {
                         if (activeBookingModel.getStatus().equals("Accepted") && LoginZoomToU.IS_TEAM_LEADER) {
-                            slideRightForAttemptDelivery(110, frontTagActiveBooking);
-                            reassignBtnInActiveBooking.setClickable(true);
-                            reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
+                            if(activeBookingModel.getStatus().equals("Accepted") && (LoginZoomToU.IS_TEAM_LEADER || LoginZoomToU.CARRIER_ID == 0)) {
+                                reassignBtnInActiveBooking.setClickable(true);
+                                reassignBtnInActiveBooking.setVisibility(View.VISIBLE);
+                                slideRightForAttemptDelivery(220, frontTagActiveBooking);
+                            }else {
+                                reassignBtnInActiveBooking.setClickable(true);
+                                reassignBtnInActiveBooking.setVisibility(View.GONE);
+                                slideRightForAttemptDelivery(110, frontTagActiveBooking);
+                            }
+
+
                         } else if (activeBookingModel.getStatus().equals("On Route to Dropoff")
                                 || activeBookingModel.getStatus().equals("Tried to deliver")) {
                             if (activeBookingModel.isTTDReasonForAlcoholDelivery()) {

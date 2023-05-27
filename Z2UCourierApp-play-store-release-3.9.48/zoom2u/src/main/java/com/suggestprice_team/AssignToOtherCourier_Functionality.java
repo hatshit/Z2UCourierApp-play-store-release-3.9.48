@@ -152,8 +152,14 @@ public class AssignToOtherCourier_Functionality {
         RecyclerView recycler = (RecyclerView) dialogDriverAllocate.findViewById(R.id.recycler);
         LinearLayout communitynodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitynodata);
         LinearLayout teamnodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.teamnodata);
+        LinearLayout llSend=(LinearLayout)dialogDriverAllocate.findViewById(R.id.llSend);
+        LinearLayout dialoglinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.dialoglinear);
 
         if (LoginZoomToU.IS_TEAM_LEADER) {
+            llSend.setVisibility(View.VISIBLE);
+            dialoglinear.setVisibility(View.VISIBLE);
+            teammcommunitumlinear.setVisibility(View.VISIBLE);
+            titleAllocateDriverAlert.setVisibility(View.VISIBLE);
             titleAllocateDriverAlert.setText("Which courier you want to \nre-assign this booking?");
 
             isDialog = "double";
@@ -267,13 +273,14 @@ public class AssignToOtherCourier_Functionality {
             });
 
 
-        } else {
+        }
+        else {
             titleAllocateDriverAlert.setText("Which courier you want to offer this booking?");
-
             isDialog = "single";
             teammcommunitumlinear.setVisibility(View.GONE);
             recycler.setVisibility(View.VISIBLE);
             listAllocateDriverAlert.setVisibility(View.GONE);
+
             CallApiCommunitymember();
         }
 
@@ -315,6 +322,7 @@ public class AssignToOtherCourier_Functionality {
         });
 
         Button cancelBtnDriverAllocate = (Button) dialogDriverAllocate.findViewById(R.id.cancelBtnDriverAllocate);
+        Button doneBtn = (Button) dialogDriverAllocate.findViewById(R.id.doneBtn);
         cancelBtnDriverAllocate.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
         cancelBtnDriverAllocate.setTransformationMethod(null);
         cancelBtnDriverAllocate.setOnClickListener(new View.OnClickListener() {
@@ -324,6 +332,16 @@ public class AssignToOtherCourier_Functionality {
 
             }
         });
+
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogDriverAllocate.dismiss();
+
+            }
+        });
+
+
         dialogDriverAllocate.show();
     }
 
@@ -489,8 +507,13 @@ public class AssignToOtherCourier_Functionality {
                     try {
                         JSONObject jsonObject = new JSONObject(responseCommunitymemberlist);
                         JSONArray jsonArray = jsonObject.getJSONArray("list");
-
+                        TextView titleAllocateDriverAlert=(TextView)dialogDriverAllocate.findViewById(R.id.titleAllocateDriverAlert);
+                        LinearLayout llSend=(LinearLayout)dialogDriverAllocate.findViewById(R.id.llSend);
+                        LinearLayout dialoglinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.dialoglinear);
                         if (jsonArray.length()>0) {
+                            llSend.setVisibility(View.VISIBLE);
+                            dialoglinear.setVisibility(View.VISIBLE);
+                            titleAllocateDriverAlert.setVisibility(View.VISIBLE);
                             list.clear();
                             LinearLayout communitynodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitynodata);
                             communitynodata.setVisibility(View.GONE);
@@ -530,15 +553,18 @@ public class AssignToOtherCourier_Functionality {
                             });
 
                         }else {
-                            LinearLayout communitynodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitynodata);
-                            communitynodata.setVisibility(View.VISIBLE);
+                            Button doneBtn=(Button)dialogDriverAllocate.findViewById(R.id.doneBtn);
+                            llSend.setVisibility(View.GONE);
+                            titleAllocateDriverAlert.setVisibility(View.VISIBLE);
+                            doneBtn.setVisibility(View.VISIBLE);
+                            dialoglinear.setVisibility(View.VISIBLE);
+                            titleAllocateDriverAlert.setText("No Community members available to assing booking. Please add community members and try agin.");
                             Custom_ProgressDialogBar.dismissProgressBar(progressDialogSRView);
                         }
 
                     }catch (Exception e){
 
                     }
-
                 }
             }.execute();
         }
