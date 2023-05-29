@@ -65,9 +65,9 @@ public class WebserviceHandler {
 	//static String serverURL = "https://api.zoom2u.com";          				// Pointing to Live DB
 	public static String TERMS_CONDITIONS="https://courier.zoom2u.com/courier-terms-conditions.html"; //live
 
-	public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
+//	public static String serverURL = "https://zoom2uapi-test-2.azurewebsites.net";
 	//public static String serverURL = "https://api-test.zoom2u.com";						// Pointing to Test DB
-	//public static String serverURL = "https://zoom2uapi-staging.azurewebsites.net";		// Staging slot of api-staging (Staging API)
+	public static String serverURL = "https://zoom2uapi-staging.azurewebsites.net";		// Staging slot of api-staging (Staging API)
 
 
 // 	public static String TERMS_CONDITIONS="https://courier-staging.zoom2u.com/courier-terms-conditions.html";//staging
