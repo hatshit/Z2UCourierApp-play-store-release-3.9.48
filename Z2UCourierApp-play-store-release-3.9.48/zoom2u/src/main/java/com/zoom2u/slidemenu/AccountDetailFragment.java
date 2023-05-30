@@ -567,7 +567,11 @@ public class AccountDetailFragment extends Fragment implements View.OnClickListe
 
     private void setVictoriaOwnerDriverInfo() {
         try {
-            JSONObject address = courierProfileMainResponseJOBJ.getJSONObject("courier").getJSONObject("Address");
+
+			JSONObject address =null;
+			if(courierProfileMainResponseJOBJ!=null) {
+				address = courierProfileMainResponseJOBJ.getJSONObject("courier").getJSONObject("Address");
+			}
 
             if (address != null) {
                 if (address.has("Province")) {

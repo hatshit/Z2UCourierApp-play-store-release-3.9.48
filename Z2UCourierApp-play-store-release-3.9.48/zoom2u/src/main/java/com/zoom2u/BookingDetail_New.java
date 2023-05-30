@@ -229,7 +229,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
             if (savedInstanceState == null) {
                 if (isshow)
                 {
-                    int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("position", 0);
+                    int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("listPosition", 0);
                     newBookingDetailModel = CommunityBookingActivity.list.get(itemPositionNewBooking);
                 }else {
                     int itemPositionNewBooking = getIntent().getBundleExtra("NewBookingBundle").getInt("position", 0);
