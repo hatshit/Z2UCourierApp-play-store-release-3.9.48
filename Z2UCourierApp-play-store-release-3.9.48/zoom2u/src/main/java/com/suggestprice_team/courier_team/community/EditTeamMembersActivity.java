@@ -26,10 +26,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.z2u.chatview.ChatViewBookingScreen;
+import com.z2u.chatview.Model_DeliveriesToChat;
 import com.zoom2u.LoginZoomToU;
 import com.zoom2u.MainActivity;
 import com.zoom2u.MyAsyncTask.MyAsyncTasks;
 import com.zoom2u.R;
+import com.zoom2u.SlideMenuZoom2u;
 import com.zoom2u.dialogactivity.Custom_ProgressDialogBar;
 import com.zoom2u.dialogactivity.DialogActivity;
 import com.zoom2u.webservice.WebserviceHandler;
@@ -53,7 +55,7 @@ public class EditTeamMembersActivity extends Activity implements View.OnClickLis
     String nikname = "";
     String userid="";
     private TextView bikeTxtAddMember, carTxtAddMember, vanTxtAddMember;
-
+    TextView chatCountInviteTeamMamber;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +97,12 @@ public class EditTeamMembersActivity extends Activity implements View.OnClickLis
         rbForCar = (RadioButton) rgInviteTeamMember.findViewById(R.id.rbForCar);
         rbForVan = (RadioButton) rgInviteTeamMember.findViewById(R.id.rbForVan);
 
+
+        chatCountInviteTeamMamber = (TextView)  findViewById(R.id.chatCountInviteTeamMamber);
+        chatCountInviteTeamMamber.setVisibility(View.GONE);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
+
+
         cancelBtn.setOnClickListener(this);
         chatIconAddTeam.setOnClickListener(this);
         backImg.setOnClickListener(this);
@@ -123,6 +131,15 @@ public class EditTeamMembersActivity extends Activity implements View.OnClickLis
         }
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SlideMenuZoom2u.setCourierToOnlineForChat();
+        Model_DeliveriesToChat.showExclamationForUnreadChat(chatCountInviteTeamMamber);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
+    }
+
 
     private void setVehicle(String type) {
         if(type.equals("Van")) {

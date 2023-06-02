@@ -46,8 +46,7 @@
             android:src="@drawable/new_iconchat" />
 
         <TextView
-            android:visibility="gone"
-            android:id="@+id/countChatAddTeam"
+            android:id="@+id/chatCountInviteTeamMamber"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_alignParentTop="true"

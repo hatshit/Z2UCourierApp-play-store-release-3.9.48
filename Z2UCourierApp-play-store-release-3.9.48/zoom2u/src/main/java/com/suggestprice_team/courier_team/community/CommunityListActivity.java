@@ -31,7 +31,7 @@ public class CommunityListActivity extends Activity implements View.OnClickListe
     TextView txtMemberTxt;
     FrameLayout frame;
     LinearLayout linearmember,linearinvation;
-
+    TextView chatCountInviteTeamMamber;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -59,6 +59,8 @@ public class CommunityListActivity extends Activity implements View.OnClickListe
 
     }
 
+
+
     private void setUp() {
         backFromTeamList=findViewById(R.id.backFromTeamList);
         chatIconTeamList=findViewById(R.id.chatIconTeamList);
@@ -68,6 +70,10 @@ public class CommunityListActivity extends Activity implements View.OnClickListe
         frame=findViewById(R.id.frame);
         linearinvation=findViewById(R.id.linearinvation);
         linearmember=findViewById(R.id.linearmember);
+
+        chatCountInviteTeamMamber = (TextView)  findViewById(R.id.chatCountInviteTeamMamber);
+        chatCountInviteTeamMamber.setVisibility(View.GONE);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
 
         backFromTeamList.setOnClickListener(this);
         txtMemberTxt.setOnClickListener(this);
@@ -86,6 +92,9 @@ public class CommunityListActivity extends Activity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
+        SlideMenuZoom2u.setCourierToOnlineForChat();
+        Model_DeliveriesToChat.showExclamationForUnreadChat(chatCountInviteTeamMamber);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
     }
 
     @Override

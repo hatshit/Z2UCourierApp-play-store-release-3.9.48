@@ -34,6 +34,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.jinatonic.confetti.Utils;
 import com.z2u.chatview.ChatViewBookingScreen;
+import com.z2u.chatview.Model_DeliveriesToChat;
 import com.zoom2u.ActiveBookingDetail_New;
 import com.zoom2u.BookingDetail_New;
 import com.zoom2u.LoginZoomToU;
@@ -75,6 +76,7 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
     List<SearchCourierslist.Result> list = new ArrayList<>();
 
     boolean searchEnable=true;
+    TextView chatCountInviteTeamMamber;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -94,6 +96,11 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
         cleartext=findViewById(R.id.cleartext);
         foundemail=findViewById(R.id.foundemail);
         chatIconTeamList=findViewById(R.id.chatIconTeamList);
+
+        chatCountInviteTeamMamber = (TextView)  findViewById(R.id.countChatTeamList);
+        chatCountInviteTeamMamber.setVisibility(View.GONE);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
+
 
         Window window = AddmemberActivity.this.getWindow();
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP){
@@ -161,6 +168,14 @@ public class AddmemberActivity extends Activity implements View.OnClickListener{
 
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SlideMenuZoom2u.setCourierToOnlineForChat();
+        Model_DeliveriesToChat.showExclamationForUnreadChat(chatCountInviteTeamMamber);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
     }
 
     private void performSearch() {

@@ -135,7 +135,7 @@ public class AssignToOtherCourier_Functionality {
 
         Window window = dialogDriverAllocate.getWindow();
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        android.view.WindowManager.LayoutParams wlp = window.getAttributes();
+        WindowManager.LayoutParams wlp = window.getAttributes();
 
         wlp.gravity = Gravity.CENTER ;
         wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
@@ -154,9 +154,13 @@ public class AssignToOtherCourier_Functionality {
         LinearLayout teamnodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.teamnodata);
         LinearLayout llSend=(LinearLayout)dialogDriverAllocate.findViewById(R.id.llSend);
         LinearLayout dialoglinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.dialoglinear);
+        TextView txtTransFerJOb=(TextView)dialogDriverAllocate.findViewById(R.id.txtTransFerJOb);
+        Button doneBtn = (Button) dialogDriverAllocate.findViewById(R.id.doneBtn);
 
         if (LoginZoomToU.IS_TEAM_LEADER) {
+            txtTransFerJOb.setText("Transfer Job");
             llSend.setVisibility(View.VISIBLE);
+            doneBtn.setVisibility(View.GONE);
             dialoglinear.setVisibility(View.VISIBLE);
             teammcommunitumlinear.setVisibility(View.VISIBLE);
             titleAllocateDriverAlert.setVisibility(View.VISIBLE);
@@ -212,6 +216,9 @@ public class AssignToOtherCourier_Functionality {
                     if(TeamMemberList_Activity.arrayOfMyTeamList.size()<=0)
                         teamnodata.setVisibility(View.VISIBLE);
                     isTabDialog = "team_member";
+                    txtTransFerJOb.setText("Transfer Job");
+                    llSend.setVisibility(View.VISIBLE);
+                    doneBtn.setVisibility(View.GONE);
                     communitynodata.setVisibility(View.GONE);
                     recycler.setVisibility(View.GONE);
                     listAllocateDriverAlert.setVisibility(View.VISIBLE);
@@ -257,8 +264,9 @@ public class AssignToOtherCourier_Functionality {
             communitymemberlinear.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    titleAllocateDriverAlert.setVisibility(View.VISIBLE);
                     titleAllocateDriverAlert.setText("Which courier you want to offer this booking?");
-
+                    txtTransFerJOb.setText("Transfer Job");
                     teamnodata.setVisibility(View.GONE);
                     isTabDialog = "community_member";
                     listAllocateDriverAlert.setVisibility(View.GONE);
@@ -275,6 +283,8 @@ public class AssignToOtherCourier_Functionality {
 
         }
         else {
+            titleAllocateDriverAlert.setVisibility(View.VISIBLE);
+            txtTransFerJOb.setText("Transfer Job");
             titleAllocateDriverAlert.setText("Which courier you want to offer this booking?");
             isDialog = "single";
             teammcommunitumlinear.setVisibility(View.GONE);
@@ -302,15 +312,15 @@ public class AssignToOtherCourier_Functionality {
                     if (isTabDialog.equalsIgnoreCase("team_member")){
                         if (courierId.equals("")) {
                             DialogActivity.alertDialogViewNew(context, "Alert!", "Please select a member to assign the booking..");
-                           // Toast.makeText(context, "Please select a member to assign the booking.", Toast.LENGTH_SHORT).show();
+                            // Toast.makeText(context, "Please select a member to assign the booking.", Toast.LENGTH_SHORT).show();
                         } else {
                             dialogDriverAllocate.dismiss();
                             apiCallToAllocateBooking();
                         }
                     }else {
                         if (communitycourierid.equals("")) {
-                             DialogActivity.alertDialogViewNew(context, "Alert!", "Please select a member to assign the booking..");
-                          //  Toast.makeText(context, "Please select a member to assign the booking.", Toast.LENGTH_SHORT).show();
+                            DialogActivity.alertDialogViewNew(context, "Alert!", "Please select a member to assign the booking..");
+                            //  Toast.makeText(context, "Please select a member to assign the booking.", Toast.LENGTH_SHORT).show();
                         } else {
                             dialogDriverAllocate.dismiss();
                             SendBookingOfferToCommunityMember();
@@ -322,7 +332,6 @@ public class AssignToOtherCourier_Functionality {
         });
 
         Button cancelBtnDriverAllocate = (Button) dialogDriverAllocate.findViewById(R.id.cancelBtnDriverAllocate);
-        Button doneBtn = (Button) dialogDriverAllocate.findViewById(R.id.doneBtn);
         cancelBtnDriverAllocate.setTypeface(LoginZoomToU.NOVA_SEMIBOLD);
         cancelBtnDriverAllocate.setTransformationMethod(null);
         cancelBtnDriverAllocate.setOnClickListener(new View.OnClickListener() {
@@ -510,12 +519,15 @@ public class AssignToOtherCourier_Functionality {
                         TextView titleAllocateDriverAlert=(TextView)dialogDriverAllocate.findViewById(R.id.titleAllocateDriverAlert);
                         LinearLayout llSend=(LinearLayout)dialogDriverAllocate.findViewById(R.id.llSend);
                         LinearLayout dialoglinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.dialoglinear);
+                        TextView txtTransFerJOb=(TextView) dialogDriverAllocate.findViewById(R.id.txtTransFerJOb);
+                        LinearLayout communitynodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitynodata);
+
                         if (jsonArray.length()>0) {
+                            txtTransFerJOb.setText("Transfer Job");
                             llSend.setVisibility(View.VISIBLE);
                             dialoglinear.setVisibility(View.VISIBLE);
                             titleAllocateDriverAlert.setVisibility(View.VISIBLE);
                             list.clear();
-                            LinearLayout communitynodata=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitynodata);
                             communitynodata.setVisibility(View.GONE);
                             for (int i=0; i<jsonArray.length(); i++){
 
@@ -554,16 +566,24 @@ public class AssignToOtherCourier_Functionality {
 
                         }else {
                             Button doneBtn=(Button)dialogDriverAllocate.findViewById(R.id.doneBtn);
+                            TextView textCommunity=(TextView) dialogDriverAllocate.findViewById(R.id.textCommunity);
                             llSend.setVisibility(View.GONE);
-                            titleAllocateDriverAlert.setVisibility(View.VISIBLE);
                             doneBtn.setVisibility(View.VISIBLE);
                             dialoglinear.setVisibility(View.VISIBLE);
-                            titleAllocateDriverAlert.setText("No Community members available to assing booking. Please add community members and try agin.");
+                            communitynodata.setVisibility(View.VISIBLE);
+                            txtTransFerJOb.setText("Message");
                             Custom_ProgressDialogBar.dismissProgressBar(progressDialogSRView);
+                            if(LoginZoomToU.IS_TEAM_LEADER) {
+                                textCommunity.setText(R.string.you_have_no_community_members);
+                                titleAllocateDriverAlert.setVisibility(View.VISIBLE);
+                            }else {
+                                textCommunity.setText("No Community members available to assing booking. Please add community members and try agin.");
+                                titleAllocateDriverAlert.setVisibility(View.GONE);
+                            }
                         }
 
                     }catch (Exception e){
-
+                        e.printStackTrace();
                     }
                 }
             }.execute();

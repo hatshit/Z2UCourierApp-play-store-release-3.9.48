@@ -21,6 +21,7 @@
 
 
     <TextView
+        android:id="@+id/txtTransFerJOb"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Transfer Job"
@@ -122,6 +123,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/textCommunity"
                 android:gravity="center"
                 android:text="@string/you_have_no_community_members"
                 android:layout_marginVertical="5dp"

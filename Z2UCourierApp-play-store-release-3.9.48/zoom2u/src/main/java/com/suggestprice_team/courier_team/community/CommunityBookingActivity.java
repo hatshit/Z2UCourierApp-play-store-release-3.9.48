@@ -27,6 +27,7 @@ import com.z2u.booking.vc.CompletedView;
 import com.z2u.booking.vc.NewBookingView;
 import com.z2u.booking.vc.dhlgroupingmodel.DHL_SectionInterface;
 import com.z2u.chatview.ChatViewBookingScreen;
+import com.z2u.chatview.Model_DeliveriesToChat;
 import com.zoom2u.BookingDetail_New;
 import com.zoom2u.ConfirmPickUpForUserName;
 import com.zoom2u.LoginZoomToU;
@@ -73,7 +74,7 @@ public class CommunityBookingActivity extends Activity implements View.OnClickLi
 
     public static ArrayList<All_Bookings_DataModels> list = new ArrayList<>();
 
-
+    TextView chatCountInviteTeamMamber;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -86,6 +87,11 @@ public class CommunityBookingActivity extends Activity implements View.OnClickLi
         chatIconTeamList = findViewById(R.id.chatIconTeamList);
         refreshlist = findViewById(R.id.refreshlist);
         nobookingoffer = findViewById(R.id.nobookingoffer);
+
+        chatCountInviteTeamMamber = (TextView)  findViewById(R.id.chatCountInviteTeamMamber);
+        chatCountInviteTeamMamber.setVisibility(View.GONE);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
+
 
         Window window = CommunityBookingActivity.this.getWindow();
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
@@ -119,6 +125,9 @@ public class CommunityBookingActivity extends Activity implements View.OnClickLi
     @Override
     protected void onResume() {
         super.onResume();
+        SlideMenuZoom2u.setCourierToOnlineForChat();
+        Model_DeliveriesToChat.showExclamationForUnreadChat(chatCountInviteTeamMamber);
+        SlideMenuZoom2u.countChatBookingView = chatCountInviteTeamMamber;
     }
 
     // offerBookinglist Api
