@@ -89,13 +89,20 @@ public class PushReceiver extends BroadcastReceiver {
 		if (intent.getStringExtra("message") != null){
 			try{
 				if(!IsOtherScreenOpen && !IsSignatureScreenOpen) {
-					isPushySilentNotification = intent.getBooleanExtra("isSilentNotification", false);
-					if (prefrenceForPushy == null)
-						prefrenceForPushy = context.getSharedPreferences("bookingId", 0);
-					if (loginEditorForPushy == null)
-						loginEditorForPushy = prefrenceForPushy.edit();
+					Boolean isCommunityNotification=communityNotification(intent.getStringExtra("message"));
+                    if(isCommunityNotification) {
 
-					validateTimeStamp(context, intent);            // check time stamp for duplicate notification
+						popupNotificationOfferBookingOnly(context,intent.getStringExtra("message"),0);
+
+					}else {
+						isPushySilentNotification = intent.getBooleanExtra("isSilentNotification", false);
+						if (prefrenceForPushy == null)
+							prefrenceForPushy = context.getSharedPreferences("bookingId", 0);
+						if (loginEditorForPushy == null)
+							loginEditorForPushy = prefrenceForPushy.edit();
+
+						validateTimeStamp(context, intent);            // check time stamp for duplicate notification
+					}
 				}
 				else if(IsSignatureScreenOpen){
 					saveNotificationItemToSystemPreference(intent);
@@ -1164,6 +1171,7 @@ public class PushReceiver extends BroadcastReceiver {
 		if(pendingIntent != null)
 			pendingIntent = null;
 		Intent newIntent = new Intent();
+		newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		pendingIntent = PendingIntent.getActivity(context, 0, newIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
 		//************** Notification change for Android O (8.0) target and lower ************
@@ -1237,4 +1245,86 @@ public class PushReceiver extends BroadcastReceiver {
 		mNotificationManager = null;
 		notification = null;
 	}
+
+	//************* Default notification ********
+	private void popupNotificationOfferBookingOnly(final Context context, String message, final int notificationCount){
+		try
+		{
+			// Create the intent for the activity you want to start
+			Intent intent = new Intent(context, DialogActivityForBooking.class);
+			intent.putExtra("NotificationMessageStr", message); // Optional: Add extra data if needed
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+			// Create a PendingIntent with the intent
+			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+			// Set the PendingIntent to the notification builder
+			//************** Notification change for Android O (8.0) target and lower ************
+			Uri soundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+			notificationWithChannelFor_8_N_Lower1_OfferBookingOnly(pendingIntent,context, "Zoom2u", message, soundUri, notificationCount);
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+	//************** Notification change for Android O (8.0) target and lower ************
+	private void notificationWithChannelFor_8_N_Lower1_OfferBookingOnly(PendingIntent pendingIntent1,Context context, String titleStr, String message, Uri soundURI, int notificationId) {
+		try
+		{
+			NotificationManager mNotificationManager =
+					(NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+			NotificationCompat.Builder builder;
+
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+				String id = "Z2U Channel";
+				int importance = NotificationManager.IMPORTANCE_HIGH;
+				NotificationChannel mChannel = new NotificationChannel(id, context.getString(R.string.app_name), importance);
+				mChannel.enableVibration(true);
+				mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+				mNotificationManager.createNotificationChannel(mChannel);
+
+				builder = new NotificationCompat.Builder(context, id)
+						.setContentTitle(titleStr)                            // required
+						.setSmallIcon(Model_DeliveriesToChat.getNotificationIcon())   // required
+						.setContentText(message) // required
+						.setDefaults(Notification.DEFAULT_ALL)
+						.setAutoCancel(true)
+						.setContentIntent(pendingIntent1)
+						.setSound(soundURI)
+						.setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
+						.setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+			} else {
+				builder = new NotificationCompat.Builder(context)
+						.setSound(soundURI)
+						.setContentTitle(titleStr)
+						.setContentText(message)
+						.setContentIntent(pendingIntent1)
+						.setSmallIcon(Model_DeliveriesToChat.getNotificationIcon())
+						.setPriority(androidx.core.app.NotificationCompat.PRIORITY_HIGH)
+						.setAutoCancel(true)
+						.setOngoing(true)
+						.setChannelId("Z2U Channel")
+						.setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
+
+				if (android.os.Build.VERSION.SDK_INT >= 21) {
+					builder.setColor(context.getResources().getColor(R.color.colorAccent))
+							.setVisibility(NotificationCompat.VISIBILITY_PRIVATE);
+				}
+			}
+
+			Notification notification = builder.build();
+			mNotificationManager.notify(notificationId, notification);
+
+			mNotificationManager = null;
+			notification = null;
+		}catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+
 }

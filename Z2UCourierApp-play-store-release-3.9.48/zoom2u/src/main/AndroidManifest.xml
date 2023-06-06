@@ -581,11 +581,13 @@
         <service
             android:name="me.pushy.sdk.services.PushySocketService"
             android:exported="true"
+            android:enabled="true"
             android:stopWithTask="false" /> <!-- End Pushy Declarations -->
         <!-- Pushy Job Service (added in Pushy SDK 1.0.35) -->
         <service
             android:name="me.pushy.sdk.services.PushyJobService"
             android:exported="true"
+            android:enabled="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:stopWithTask="false" /> <!-- ******************************* -->
         <meta-data

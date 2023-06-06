@@ -14,6 +14,7 @@ import com.zoom2u.ConfirmPickUpForUserName;
 import com.zoom2u.LoginZoomToU;
 import com.zoom2u.PushReceiver;
 import com.zoom2u.R;
+import com.zoom2u.SlideMenuZoom2u;
 import com.zoom2u.services.ServiceToGetCourierLevel;
 import com.zoom2u.slidemenu.BookingView;
 import com.zoom2u.webservice.WebserviceHandler;
@@ -101,6 +102,8 @@ public class DialogActivityForBooking extends Activity{
 			dialogNoBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Intent intent = new Intent(DialogActivityForBooking.this, SlideMenuZoom2u.class);
+				startActivity(intent);
 				finish();
 				}
 			});

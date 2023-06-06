@@ -39,6 +39,7 @@ import com.zoom2u.SlideMenuZoom2u;
 import com.zoom2u.datamodels.All_Bookings_DataModels;
 import com.zoom2u.dialogactivity.Custom_ProgressDialogBar;
 import com.zoom2u.dialogactivity.DialogActivity;
+import com.zoom2u.dialogactivity.DialogActivityForBooking;
 import com.zoom2u.slidemenu.BookingView;
 import com.zoom2u.slidemenu.offerrequesthandlr.RequestView_DetailPojo;
 import com.zoom2u.utility.Functional_Utility;
@@ -473,6 +474,8 @@ public class CommunityBookingActivity extends Activity implements View.OnClickLi
                   startActivity(intent);
                   break;
               case R.id.backFromImg:
+                  Intent intent1 = new Intent(CommunityBookingActivity.this, SlideMenuZoom2u.class);
+                  startActivity(intent1);
                   finish();
                   break;
           }
