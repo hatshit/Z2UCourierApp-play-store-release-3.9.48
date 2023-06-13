@@ -149,8 +149,141 @@
             android:paddingStart="5dp"
             android:text="No Delivery Notes" />
 
+      <!--new Desing By Harshit autoreturn -->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/orderNumberNBL"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingStart="5dp">
+
+            <ImageView
+                android:layout_marginBottom="5dp"
+                android:id="@+id/dot_car"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_above="@id/line"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/car_new" />
+
+            <TextView
+                android:id="@+id/textPickupBList"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Hoogly"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textDropoffBList"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="Mascoto"
+
+                android:textSize="13dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/textSignBList"
+                android:layout_toEndOf="@+id/textPickupBList"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dot_start"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dot_start" />
 
 
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/textDropoffBList"
+                android:layout_toEndOf="@+id/textSignBList"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/dot_end"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dot_end" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textSignBList"
+                style="@style/style_15_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Mascoto"
+                android:textSize="13dp" />
+
+
+
+            <TextView
+                android:id="@+id/distanceBList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDropoffBList"
+                android:layout_alignLeft="@+id/textDropoffBList"
+                android:layout_marginTop="3dp"
+                android:gravity="center|left"
+                android:text="Distance -: 0.0 km"
+                android:textColor="#374350"
+                android:textSize="13dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/location"

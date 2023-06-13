@@ -17,6 +17,7 @@ import android.os.StrictMode;
 import androidx.fragment.app.Fragment;
 
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.InflateException;
 import android.view.LayoutInflater;
@@ -72,6 +73,7 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
     public static boolean isRouteForDHLRun = false;
 
     private int markerCounter = 0;
+    private int pos = 0;
     ProgressDialog progressForCourierRoute;
     public CourierRouteDetail() {
         try {
@@ -283,9 +285,12 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
             dhlRunBtn.setBackgroundResource(R.color.base_color_gray);
             standardBtn.setBackgroundResource(R.drawable.selected_background_gray);
         }else{
+            isRouteForDHLRun=false;
             mapListBtnLayout.setBackgroundResource(R.color.base_color1);
             dhlRunBtn.setBackgroundResource(R.color.base_color1);
             standardBtn.setBackgroundResource(R.drawable.selected_background);
+            markerCounter=0;
+            callRouteAPIForDHLOrDeliveries();
         }
        /* if (isRouteForDHLRun) {
             setSelectedColorAndTxtOfBtnHeader(R.id.dhlRunBtn, "#FFFFFF", R.drawable.roundedskybluebg);
@@ -356,6 +361,7 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
                         standardBtn.setBackgroundResource(R.color.base_color1);
                         dhlRunBtn.setBackgroundResource(R.drawable.selected_background);
                     }
+                    markerCounter = 0;
                     callRouteAPIForDHLOrDeliveries();
                 }
                 break;
@@ -414,6 +420,7 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
                         JSONArray jsonArrayOfCourierRoute = new JSONArray(responseCourierRouteStr[0]);
                         if (jsonArrayOfCourierRoute.length() > 0){
                             markerCounter = 0;
+                            pos = 0;
                             if (isRouteForDHLRun) {
                                 for (int i = 0; i < jsonArrayOfCourierRoute.length(); i++) {
                                     addRouteDataToArray(jsonArrayOfCourierRoute, i, true);
@@ -444,8 +451,13 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
         try {
             Model_GetCourierRoute modelGetCourierRoute;
             if (isRouteForDHLRun) {
-                modelGetCourierRoute = new Model_GetCourierRoute(jsonArrayOfCourierRoute.getJSONObject(i), (i + 1));
-                arrayOfGetCourierRoute.add(modelGetCourierRoute);
+                String status = jsonArrayOfCourierRoute.getJSONObject(i).getString("status");
+                    boolean isStatusValid = status.equals("Dropped Off") || status.equals("Returned");
+                    if(!isStatusValid) {
+                        pos++;
+                        modelGetCourierRoute = new Model_GetCourierRoute(jsonArrayOfCourierRoute.getJSONObject(i), (pos));
+                        arrayOfGetCourierRoute.add(modelGetCourierRoute);
+                    }
             } else {
                 if (!jsonArrayOfCourierRoute.getJSONObject(i).getString("Status").equals("Dropped Off") && !jsonArrayOfCourierRoute.getJSONObject(i).getString("Status").equals("Returned")) {
                     markerCounter++;
@@ -458,8 +470,6 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
             e.printStackTrace();
         }
     }
-
-
 
     Dialog alertDialogRoute;
     private void openMarkerDialog(final Marker marker, final Hashtable<String, Model_GetCourierRoute> markers){

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zoom2u"
-    android:versionCode="135"
-    android:versionName="3.9.49">
+    android:versionCode="136"
+    android:versionName="3.9.50">
     <!--
     android:versionCode="78"
     android:versionName="3.3.2"

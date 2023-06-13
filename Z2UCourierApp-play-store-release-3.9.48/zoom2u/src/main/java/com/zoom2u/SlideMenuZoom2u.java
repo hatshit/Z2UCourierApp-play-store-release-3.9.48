@@ -753,7 +753,7 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				ShiftFragment fragment = new ShiftFragment();
 				fragment.setSlideMenuChatCounterTxt(countChatSlideView);
 				ft.replace(R.id.activity_main_content_fragment, fragment);
-				setSlideMenuFragmentItems("Delivery Runs", 15, View.INVISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);
+				setSlideMenuFragmentItems("Run Schedules", 15, View.INVISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);
 				refreshBtn.setImageResource(R.drawable.refresh_list);
 				setHeaderAndTitleBackground();
 				fragment = null;
@@ -982,11 +982,11 @@ public class SlideMenuZoom2u extends FragmentActivity {
 					  setHeaderAndTitleBackground();
 					  //headerWithGreenStatusBar();
 					  //headerWithNormalStatusBar();
-				}else if (selectedItem.compareTo("Delivery Runs") == 0) {
+				}else if (selectedItem.compareTo("Run Schedules") == 0) {
 					fragment = new ShiftFragment();
 					((ShiftFragment) fragment).setSlideMenuChatCounterTxt(countChatSlideView);
 					BookingView.bookingViewSelection = 0;
-					setSlideMenuFragmentItems("Delivery Runs", 15, View.INVISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);
+					setSlideMenuFragmentItems("Run Schedules", 15, View.INVISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);
 					refreshBtn.setImageResource(R.drawable.refresh_list);
 					setHeaderAndTitleBackground();
 					//headerWithGreenStatusBar();

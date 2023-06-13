@@ -69,7 +69,7 @@ public class NewBidRequest_NotificationView extends Activity implements View.OnC
     private ScrollView scrollViewNewBD;
 
     private TextView secondHeaderTxtBD, vehicelValueTxtBD, distanceValueTxtBD, priceValueTxtBD, pickUpTimeValueTxtBD, deliveryTimeValueTxtBD,
-            pickUpContactNameTxtBD, pickUpSuburbTxtBD, dropOffContactNameTxtBD, dropOffSuburbTxtBD, documentTxtBD;
+            pickUpContactNameTxtBD, pickUpSuburbTxtBD, dropOffContactNameTxtBD, dropOffSuburbTxtBD, documentTxtBD,delivryNotesBookingList;
 
     private int offerId;
     private String pickUpTime, dropOffTime, pickUpDateTime;
@@ -229,6 +229,9 @@ public class NewBidRequest_NotificationView extends Activity implements View.OnC
         if (documentTxtBD == null)
             documentTxtBD = (TextView) findViewById(R.id.documentTxtBD);
 
+         if (delivryNotesBookingList == null)
+             delivryNotesBookingList = (TextView) findViewById(R.id.delivryNotesBookingList);
+
 
 
 
@@ -337,8 +340,13 @@ public class NewBidRequest_NotificationView extends Activity implements View.OnC
         try {
             inItNewNotificationViewMapFragment();          //******** Initialize new booking detail view map
 
-            //   ***********  Change color for next day booking  **************
+            //add notes Dlc change
+            if (requestView_detailPojo.getNotes().equals(""))
+                delivryNotesBookingList.setText("No delivery notes");
+            else
+                delivryNotesBookingList.setText(requestView_detailPojo.getNotes());
 
+            //   ***********  Change color for next day booking  **************
 
             try {
                 if (Functional_Utility.checkDateIsToday(pickUpDateTime)==false) {

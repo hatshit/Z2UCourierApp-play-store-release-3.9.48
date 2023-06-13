@@ -74,7 +74,7 @@
                         android:layout_height="130dp"
                         android:layout_below="@+id/priceTxtABD"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginRight="10dp">
 
 
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="5dp"
                         android:background="@drawable/rounded_worrier_level"
                         android:padding="5dp"
@@ -139,6 +139,22 @@
                         android:textColor="@color/white"
                         android:textSize="11dp"
                         android:visibility="visible" />
+
+                   <!--add baner By Harshit-->
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/txtBanner"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="This booking has a return trip."
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:background="@color/green_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    </TextView>
 
                 </RelativeLayout>
 

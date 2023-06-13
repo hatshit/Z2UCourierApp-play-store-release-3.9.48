@@ -1,10 +1,14 @@
 package com.zoom2u.slidemenu;
 
+import static android.provider.Settings.System.DATE_FORMAT;
+
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +44,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.TimeZone;
 
 import me.pushy.sdk.lib.jackson.core.type.TypeReference;
 import me.pushy.sdk.lib.jackson.databind.ObjectMapper;
@@ -438,6 +446,20 @@ public class AccountDetailFragment extends Fragment implements View.OnClickListe
 						tempHashMapCourierProfileMainOBJ = null;
 
 						mapper = null;
+
+						//policy check last update
+						if (courierProfileMainResponseJOBJ.has("lastApprovedPoliceCheckDate") && !courierProfileMainResponseJOBJ.isNull("lastApprovedPoliceCheckDate")) {
+							String dateLastUpdated = courierProfileMainResponseJOBJ.getString("lastApprovedPoliceCheckDate");
+							Calendar c = Calendar.getInstance();
+							java.text.SimpleDateFormat sdf1 = new java.text.SimpleDateFormat("HH:mm:ss.SSS");
+							dateLastUpdated = dateLastUpdated+"T"+sdf1.format(c.getTime());
+							dateLastUpdated = getDate(dateLastUpdated);
+							policeCheckMyProfile.setText("Police Check\nLast updated: "+dateLastUpdated);
+
+						}else {
+							policeCheckMyProfile.setText("Police Check");
+						}
+
 					} catch (JSONException e) {
 						e.printStackTrace();
 					}
@@ -611,4 +633,30 @@ public class AccountDetailFragment extends Fragment implements View.OnClickListe
 			victoriaOwnerDriverRateScheduleBtnSettings.setVisibility(View.GONE);
         }
 	}
+
+	@SuppressLint("SimpleDateFormat")
+	public String getDate(String serverDateTimeValue) {
+		String dateTimeReturn = null;
+
+		try {
+			if(!serverDateTimeValue.equals("")){
+				SimpleDateFormat converter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+				//getting GMT timezone, you can get any timezone e.g. UTC
+				converter.setTimeZone(TimeZone.getTimeZone("IST"));
+				Date convertedDate = new Date();
+				try {
+					convertedDate = converter.parse(serverDateTimeValue);
+					SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MMM-yyyy");
+
+					return dateFormatter.format(convertedDate);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dateTimeReturn;
+	}
+
 }

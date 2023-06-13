@@ -222,8 +222,8 @@
 
             <TextView
                 android:id="@+id/yourTeamMyProfile"
-                android:layout_width="95dp"
-                android:layout_height="100dp"
+                android:layout_width="125dp"
+                android:layout_height="110dp"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
                 android:layout_toLeftOf="@+id/alcoholDeliveryMyProfile"
@@ -233,13 +233,13 @@
                 android:paddingTop="20dp"
                 android:text="Your Team"
                 android:textColor="@color/gun_metal"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alcoholDeliveryMyProfile"
-                android:layout_width="95dp"
-                android:layout_height="100dp"
+                android:layout_width="125dp"
+                android:layout_height="110dp"
                 android:paddingTop="20dp"
                 android:drawableTop="@drawable/alcohol_deliverytraining"
                 android:layout_centerVertical="true"
@@ -247,14 +247,14 @@
                 android:background="@drawable/roundedwhiteback"
                 android:text="Alcohol Delivery Training"
                 android:gravity="center"
-                android:textSize="10dp"
+                android:textSize="8dp"
                 android:visibility="gone"
                 android:textColor="@color/gun_metal" />
 
             <TextView
                 android:id="@+id/policeCheckMyProfile"
-                android:layout_width="95dp"
-                android:layout_height="100dp"
+                android:layout_width="125dp"
+                android:layout_height="110dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
                 android:layout_toRightOf="@+id/yourTeamMyProfile"
@@ -265,7 +265,7 @@
                 android:paddingTop="20dp"
                 android:text="Police Check"
                 android:textColor="@color/gun_metal"
-                android:textSize="10dp" />
+                android:textSize="8dp" />
 
             <ImageView
                 android:id="@+id/alcoholeSignatureUploaded"
