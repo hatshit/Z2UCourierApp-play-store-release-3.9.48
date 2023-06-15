@@ -149,10 +149,10 @@
             android:paddingStart="5dp"
             android:text="No Delivery Notes" />
 
-      <!--new Desing By Harshit autoreturn -->
+      <!--new Desing By Harshit autoreturn-->
         <RelativeLayout
             android:visibility="gone"
-            android:id="@+id/location"
+            android:id="@+id/locationRR_one"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/orderNumberNBL"
@@ -162,7 +162,7 @@
 
             <ImageView
                 android:layout_marginBottom="5dp"
-                android:id="@+id/dot_car"
+                android:id="@+id/dot_car_one"
                 android:layout_width="30dp"
                 android:layout_height="20dp"
                 android:layout_above="@id/line"
@@ -170,7 +170,7 @@
                 android:src="@drawable/car_new" />
 
             <TextView
-                android:id="@+id/textPickupBList"
+                android:id="@+id/textPickupBList_one"
                 style="@style/style_15_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -179,7 +179,7 @@
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/textDropoffBList"
+                android:id="@+id/textPickupBList_two"
                 style="@style/style_15_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -194,9 +194,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@+id/textSignBList"
-                android:layout_toEndOf="@+id/textPickupBList"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/textDropoffBList_one"
+                android:layout_toEndOf="@+id/textPickupBList_one"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -227,10 +227,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@+id/textDropoffBList"
-                android:layout_toEndOf="@+id/textSignBList"
+                android:layout_toStartOf="@+id/textPickupBList_two"
+                android:layout_toEndOf="@+id/textDropoffBList_one"
                 android:orientation="horizontal">
 
 
@@ -260,7 +260,7 @@
 
 
             <TextView
-                android:id="@+id/textSignBList"
+                android:id="@+id/textDropoffBList_one"
                 style="@style/style_15_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -274,8 +274,8 @@
                 android:id="@+id/distanceBList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textDropoffBList"
-                android:layout_alignLeft="@+id/textDropoffBList"
+                android:layout_below="@+id/textDropoffBList_one"
+                android:layout_alignLeft="@+id/textDropoffBList_one"
                 android:layout_marginTop="3dp"
                 android:gravity="center|left"
                 android:text="Distance -: 0.0 km"
@@ -286,13 +286,14 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/location"
+            android:id="@+id/locationRR"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/orderNumberNBL"
+            android:layout_below="@+id/locationRR_one"
             android:layout_marginTop="5dp"
             android:orientation="horizontal"
-            android:paddingStart="5dp">
+            android:paddingStart="5dp"
+            >
 
             <TextView
                 android:id="@+id/textPickupBList"
@@ -300,7 +301,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-
                 android:text="Sydney"
                 android:textSize="13dp" />
 

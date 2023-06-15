@@ -125,7 +125,21 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
                 }
             }
             ActiveBookingView.getCurrentLocation(getActivity());
-            inItCourierRouteDetailView();
+
+            //auto refresh time only api not tab chage By harshit
+            Bundle arguments = getArguments();
+            if (arguments != null && arguments.containsKey("isRefresh")) {
+                boolean isRefresh = arguments.getBoolean("isRefresh");
+                 if(isRefresh) {
+                     callRouteAPIForDHLOrDeliveries();
+                 }else{
+                     inItCourierRouteDetailView();
+                 }
+            } else {
+                inItCourierRouteDetailView();
+            }
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

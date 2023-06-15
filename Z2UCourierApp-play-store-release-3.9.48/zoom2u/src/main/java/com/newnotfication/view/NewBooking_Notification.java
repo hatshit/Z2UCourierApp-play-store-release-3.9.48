@@ -85,7 +85,7 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 
 	private ScrollView scrollViewNewBD;
 
-	private TextView secondHeaderTxtBD, vehicelValueTxtBD, distanceValueTxtBD, priceValueTxtBD, pickUpTimeValueTxtBD, deliveryTimeValueTxtBD,
+	private TextView secondHeaderTxtBD, vehicelValueTxtBD, distanceValueTxtBD, priceValueTxtBD, pickUpTimeValueTxtBD, deliveryTimeValueTxtBD,txtBanner,
 			pickUpContactNameTxtBD, pickUpSuburbTxtBD, dropOffContactNameTxtBD, dropOffSuburbTxtBD, documentTxtBD;
 	private TextView  dimentionDetailsTxtBD;
 	private boolean isBookingRejected;
@@ -138,8 +138,8 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 	synchronized protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		finish();
-		/*Intent intent1=new Intent(this,NewBooking_Notification.class);
-		startActivity(intent1);*/
+		Intent intent1=new Intent(this,NewBooking_Notification.class);
+		startActivity(intent1);
 	}
 
 
@@ -218,6 +218,10 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 
 		if (secondHeaderTxtBD == null)
 			secondHeaderTxtBD = (TextView) findViewById(R.id.secondHeaderTxtBD);
+
+
+		if (txtBanner == null)
+			txtBanner = (TextView) findViewById(R.id.txtBanner);
 
  		if (ll_booking_due_day==null)
 			ll_booking_due_day=findViewById(R.id.ll_booking_due_day);
@@ -491,6 +495,11 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
                 findViewById(R.id.newCustomerTxtInBD).setVisibility(View.VISIBLE);
             else
                 findViewById(R.id.newCustomerTxtInBD).setVisibility(View.GONE);
+
+			if(newBookingNotificationModel.IsAutoReturn())
+                findViewById(R.id.txtBanner).setVisibility(View.VISIBLE);
+            else
+                findViewById(R.id.txtBanner).setVisibility(View.GONE);
 
 			distanceValueTxtBD.setText(newBookingNotificationModel.getDistance()+"");
 
@@ -1117,6 +1126,20 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 						try {
 							newBookingNotificationModel.setRoutePolyline(jObjOfGetBookingDetail.getString("RoutePolyline"));
 						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+
+						//autoreturn case for banner
+						try {
+							if(jObjOfGetBookingDetail.has("IsAutoReturn")) {
+								Boolean isAutoreturn= jObjOfGetBookingDetail.getBoolean("IsAutoReturn");
+								if(isAutoreturn!=null) {
+									newBookingNotificationModel.setAutoReturn(jObjOfGetBookingDetail.getBoolean("IsAutoReturn"));
+								}else {
+									newBookingNotificationModel.setAutoReturn(false);
+								}
+							}
+						}catch (Exception e) {
 							e.printStackTrace();
 						}
 
