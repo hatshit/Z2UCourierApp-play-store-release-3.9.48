@@ -90,6 +90,7 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 	private TextView  dimentionDetailsTxtBD;
 	private boolean isBookingRejected;
 
+	TextView txtBanner;
 	private ProgressDialog progressForBookingAction;
 
 	private double dropoffLatitude, dropoffLongitude, pickUpLatitude, pickUpLongitude;
@@ -219,7 +220,10 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 		if (secondHeaderTxtBD == null)
 			secondHeaderTxtBD = (TextView) findViewById(R.id.secondHeaderTxtBD);
 
- 		if (ll_booking_due_day==null)
+		if (txtBanner == null)
+			txtBanner = (TextView) findViewById(R.id.txtBanner);
+
+		if (ll_booking_due_day==null)
 			ll_booking_due_day=findViewById(R.id.ll_booking_due_day);
 
 		if (priceValueTxtBD == null)
@@ -492,6 +496,20 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
             else
                 findViewById(R.id.newCustomerTxtInBD).setVisibility(View.GONE);
 
+			try
+			{
+				if(newBookingNotificationModel.IsAutoReturn()) {
+					txtBanner =findViewById(R.id.txtBanner);
+					txtBanner.setVisibility(View.VISIBLE);
+				} else {
+					txtBanner =findViewById(R.id.txtBanner);
+					txtBanner.setVisibility(View.GONE);
+				}
+
+			}catch (Exception e)
+			{
+				e.printStackTrace();
+			}
 			distanceValueTxtBD.setText(newBookingNotificationModel.getDistance()+"");
 
 		//	int priceInt = LoginZoomToU.checkInternetwithfunctionality.round((Double)newBookingNotificationModel.getPrice());
@@ -1117,6 +1135,19 @@ public class NewBooking_Notification extends Activity implements View.OnClickLis
 						try {
 							newBookingNotificationModel.setRoutePolyline(jObjOfGetBookingDetail.getString("RoutePolyline"));
 						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+						//autoreturn case for banner
+						try {
+							if(jObjOfGetBookingDetail.has("IsAutoReturn")) {
+								Boolean isAutoreturn= jObjOfGetBookingDetail.getBoolean("IsAutoReturn");
+								if(isAutoreturn!=null) {
+									newBookingNotificationModel.setAutoReturn(jObjOfGetBookingDetail.getBoolean("IsAutoReturn"));
+								}else {
+									newBookingNotificationModel.setAutoReturn(false);
+								}
+							}
+						}catch (Exception e) {
 							e.printStackTrace();
 						}
 
