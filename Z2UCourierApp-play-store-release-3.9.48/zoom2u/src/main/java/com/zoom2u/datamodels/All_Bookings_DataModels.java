@@ -15,7 +15,6 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 	private int OfferId;
 	private String CustomerId;
 	private boolean isNewCustomer;
-	private boolean IsAutoReturn;
 	private String CustomerName;
 	private String CustomerCompany;
 	private String CustomerContact;
@@ -518,15 +517,9 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 	public boolean isNewCustomer() {
 		return isNewCustomer;
 	}
-	public boolean IsAutoReturn() {
-		return IsAutoReturn;
-	}
 
 	public void setNewCustomer(boolean newCustomer) {
 		isNewCustomer = newCustomer;
-	}
-	public void setAutoReturn(boolean autoReturn) {
-		IsAutoReturn = autoReturn;
 	}
 
 	public String getPickupCompanyName() {
@@ -824,7 +817,6 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 		dest.writeString(DistanceFromCurrentLocation);
 		dest.writeString(OrderNumber);
 		dest.writeByte((byte) (isNewCustomer ? 1 : 0));
-		dest.writeByte((byte) (IsAutoReturn ? 1 : 0));
 		dest.writeByte((byte) (IsATL ? 1 : 0));
 		dest.writeString(ATLLeaveAt);
 		dest.writeString(ATLReceiverName);
@@ -923,7 +915,6 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 		DistanceFromCurrentLocation = in.readString();
 		OrderNumber = in.readString();
 		isNewCustomer = in.readByte() != 0;
-		IsAutoReturn = in.readByte() != 0;
 		IsATL = in.readByte() != 0;
 		ATLLeaveAt = in.readString();
 		ATLReceiverName = in.readString();
@@ -984,7 +975,6 @@ public class All_Bookings_DataModels implements Parcelable, DHL_SectionInterface
 				"BookingId=" + BookingId +
 				", CustomerId='" + CustomerId + '\'' +
 				", isNewCustomer='" + isNewCustomer + '\'' +
-				", IsAutoReturn='" + IsAutoReturn + '\'' +
 				", CustomerName='" + CustomerName + '\'' +
 				", CustomerCompany='" + CustomerCompany + '\'' +
 				", CustomerContact='" + CustomerContact + '\'' +

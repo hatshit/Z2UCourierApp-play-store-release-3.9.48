@@ -743,9 +743,6 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				refreshNewAndActiveBookingCount();
 			}else if(ConfirmPickUpForUserName.isDropOffSuccessfull == 12){
 				CourierRouteDetail fragment = new CourierRouteDetail();
-				Bundle bundle = new Bundle();
-				bundle.putBoolean("isRefresh", true);
-				fragment.setArguments(bundle);
 				fragment.setSlideMenuChatCounterTxt(countChatSlideView);
 				ft.add(R.id.activity_main_content_fragment, fragment);
 				setSlideMenuFragmentItems("Routes", 12, View.VISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);
@@ -962,9 +959,6 @@ public class SlideMenuZoom2u extends FragmentActivity {
 				//	refreshNewAndActiveBookingCount();	//************ Refresh New and Active booking count
 				}else if(selectedItem.compareTo("Routes") == 0){
 					fragment = new CourierRouteDetail();
-					Bundle bundle = new Bundle();
-					bundle.putBoolean("isRefresh", false);
-					fragment.setArguments(bundle);
 					((CourierRouteDetail) fragment).setSlideMenuChatCounterTxt(countChatSlideView);
 					BookingView.bookingViewSelection = 0;
 					setSlideMenuFragmentItems("Routes", 12, View.VISIBLE, R.drawable.nav_menu_white, Color.parseColor("#FFFFFF"), R.drawable.new_iconchat);

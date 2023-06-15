@@ -353,19 +353,7 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
                         e.printStackTrace();
                     }
 
-                     //autoreturn case
-					try {
-						if(responseDataObject.has("IsAutoReturn")) {
-							Boolean isAutoreturn= responseDataObject.getBoolean("IsAutoReturn");
-							if(isAutoreturn!=null) {
-								dataModel_AllBookingList.setAutoReturn(responseDataObject.getBoolean("IsAutoReturn"));
-							}else {
-								dataModel_AllBookingList.setAutoReturn(false);
-							}
-						}
-					}catch (Exception e) {
-						e.printStackTrace();
-					}
+
 					ArrayList<HashMap<String, Object>> arrayOfShipments = new ArrayList<HashMap<String, Object>>();
 					for (int k = 0; k < responseDataObject.getJSONArray("Shipments").length(); k++) {
 						HashMap<String, Object> objOFShipments = new HashMap<String, Object>();
@@ -783,16 +771,7 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
 					}
 				});
 
-				RelativeLayout locationRR = ViewHolderPattern.get(convertView, R.id.locationRR);
-				RelativeLayout locationRR_one = ViewHolderPattern.get(convertView, R.id.locationRR_one);
-				if (((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).IsAutoReturn())
-				{
-					locationRR.setVisibility(View.GONE);
-					locationRR_one.setVisibility(View.VISIBLE);
-				}else {
-					locationRR.setVisibility(View.VISIBLE);
-					locationRR_one.setVisibility(View.GONE);
-				}
+
 
 				TextView newCustomerTxtInNBL = ViewHolderPattern.get(convertView, R.id.newCustomerTxtInNBL);
 				if (((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).isNewCustomer())
@@ -804,10 +783,7 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
 				TextView bookingChrges = ViewHolderPattern.get(convertView, R.id.chargesBList);
 				TextView weight = ViewHolderPattern.get(convertView, R.id.weight);
 				TextView textPickupBList = ViewHolderPattern.get(convertView, R.id.textPickupBList);
-				TextView textPickupBList_one = ViewHolderPattern.get(convertView, R.id.textPickupBList_one);
-				TextView textPickupBList_two = ViewHolderPattern.get(convertView, R.id.textPickupBList_two);
 				TextView textDropoffBList = ViewHolderPattern.get(convertView, R.id.textDropoffBList);
-				TextView textDropoffBList_one = ViewHolderPattern.get(convertView, R.id.textDropoffBList_one);
 
 
 				TextView orderNumberNBL = ViewHolderPattern.get(convertView, R.id.orderNumberNBL);
@@ -845,16 +821,12 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
 			   textArrivalTime.setText(""+((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDeliverySpeed());
 
 			  				ImageView vehical=ViewHolderPattern.get(convertView,R.id.dot_car);
-			  				ImageView vehical_one=ViewHolderPattern.get(convertView,R.id.dot_car_one);
-				if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Car")) {
+				if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Car"))
 					vehical.setImageResource(R.drawable.ic_from_to_car_icon);
-					vehical_one.setImageResource(R.drawable.ic_from_to_car_icon);}
-				else if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Bike")){
+				else if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Bike"))
 					vehical.setImageResource(R.drawable.ic_bike_normal_new);
-					vehical_one.setImageResource(R.drawable.ic_bike_normal_new);}
-				else	if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Van")){
+				else	if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getVehicle().equals("Van"))
 					vehical.setImageResource(R.drawable.ic_van_normal_new);
-					vehical_one.setImageResource(R.drawable.ic_van_normal_new);}
 
 			   TextView locationMarkBList = ViewHolderPattern.get(convertView, R.id.locationMarkBList);
 
@@ -908,45 +880,30 @@ public class NewBookingView implements NewBooking_EndlessListView.EndLessListene
 
 				if(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getSource().equals("Temando")){
 
-			   	if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address().equals("")) {
-					textPickupBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address());
-					textPickupBList_two.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address());
-					textPickupBList_one.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address());}
-					else {
-					textPickupBList.setText("No Address");
-					textPickupBList_two.setText("No Address");
-					textPickupBList_one.setText("No Address");}
+			   	if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address().equals(""))
+
+			   		textPickupBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Address());
+					else
+					   textPickupBList.setText("No Address");
 
 
-
-				  if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Address().equals("")) {
-					  textDropoffBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Address());
-					  textDropoffBList_one.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Address());
-				  } else {
-					  textDropoffBList.setText("No Address");
-					  textDropoffBList_one.setText("No Address");
-				  }
+				  if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Address().equals(""))
+					textDropoffBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Address());
+				  else
+					textDropoffBList.setText("No Address");
 
 
 				}else{
 
-					if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb().equals("")) {
-						textPickupBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb());
-						textPickupBList_two.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb());
-						textPickupBList_one.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb());
-					 } else {
-						textPickupBList.setText("No suburb");
-						textPickupBList_two.setText("No suburb");
-						textPickupBList_one.setText("No suburb");}
+					if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb().equals(""))
+					   textPickupBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getPick_Suburb());
+					else
+					   textPickupBList.setText("No suburb");
 
-
-					if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Suburb().equals("")) {
+					if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Suburb().equals(""))
 						textDropoffBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Suburb());
-						textDropoffBList_one.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDrop_Suburb());}
-					else {
-						textDropoffBList.setText("No suburb");
-						textDropoffBList_one.setText("No suburb");
-					}
+					else
+					   textDropoffBList.setText("No suburb");
 
 					if(!((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDistance().equals(""))
 						locationMarkBList.setText(((All_Bookings_DataModels)BookingView.bookingListArray.get(position)).getDistance());
