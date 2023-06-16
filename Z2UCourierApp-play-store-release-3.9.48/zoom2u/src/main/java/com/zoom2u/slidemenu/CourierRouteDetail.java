@@ -75,6 +75,7 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
     private int markerCounter = 0;
     private int pos = 0;
     ProgressDialog progressForCourierRoute;
+
     public CourierRouteDetail() {
         try {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().build();
@@ -125,18 +126,8 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
                 }
             }
             ActiveBookingView.getCurrentLocation(getActivity());
-            //auto refresh time only api not tab chage By harshit
-            Bundle arguments = getArguments();
-            if (arguments != null && arguments.containsKey("isRefresh")) {
-                boolean isRefresh = arguments.getBoolean("isRefresh");
-                if(isRefresh) {
-                    callRouteAPIForDHLOrDeliveries();
-                }else{
-                    inItCourierRouteDetailView();
-                }
-            } else {
-                inItCourierRouteDetailView();
-            }
+            inItCourierRouteDetailView();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -292,6 +283,7 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
         standardBtn=courierRouteView.findViewById(R.id.standardBtn);
         standardBtn.setOnClickListener(this);
         if(MainActivity.isIsBackGroundGray()) {
+
             mapListBtnLayout.setBackgroundResource(R.color.base_color_gray);
             dhlRunBtn.setBackgroundResource(R.color.base_color_gray);
             standardBtn.setBackgroundResource(R.drawable.selected_background_gray);
