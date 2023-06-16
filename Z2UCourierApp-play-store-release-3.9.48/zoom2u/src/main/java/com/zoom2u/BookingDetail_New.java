@@ -145,7 +145,7 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
     ImageView backBtnHeader;
     Spinner bidActivePeriodSpinnerToPlaceBid;
     private int bidActivePeriodInterval = 15;
-
+    TextView txtBanner;
     private LinearLayout ll_booking_due_day;
 
     @Override
@@ -337,6 +337,21 @@ public class BookingDetail_New extends Activity implements View.OnClickListener,
                 findViewById(R.id.newCustomerTxtInBD).setVisibility(View.VISIBLE);
             else
                 findViewById(R.id.newCustomerTxtInBD).setVisibility(View.GONE);
+
+            try
+            {
+                if(newBookingDetailModel.IsAutoReturn()) {
+                    txtBanner =findViewById(R.id.txtBanner);
+                    txtBanner.setVisibility(View.VISIBLE);
+                } else {
+                    txtBanner =findViewById(R.id.txtBanner);
+                    txtBanner.setVisibility(View.GONE);
+                }
+
+            }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
 
             View newBDDistanceView = findViewById(R.id.newBDDistanceView);
             newBDDistanceView.findViewById(R.id.verticleTxt1BD);

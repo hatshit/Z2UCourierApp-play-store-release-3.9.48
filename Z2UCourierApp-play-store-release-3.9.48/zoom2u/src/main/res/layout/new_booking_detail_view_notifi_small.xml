@@ -72,9 +72,9 @@
                         android:id="@+id/documentLayoutBD"
                         android:layout_width="125dp"
                         android:layout_height="130dp"
-                        android:layout_below="@+id/priceTxtABD"
+                        android:layout_below="@+id/txtBanner"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp">
 
 
@@ -130,8 +130,9 @@
                         android:id="@+id/newCustomerTxtInBD"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtBanner"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginEnd="5dp"
                         android:background="@drawable/rounded_worrier_level"
                         android:padding="5dp"
@@ -140,19 +141,18 @@
                         android:textSize="11dp"
                         android:visibility="visible" />
 
-                   <!--add baner By Harshit-->
+
+                    <!--add baner By Harshit-->
                     <TextView
-                        android:visibility="gone"
                         android:id="@+id/txtBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green_bg"
                         android:gravity="center"
                         android:padding="3dp"
                         android:text="This booking has a return trip."
                         android:textColor="@color/white"
-                        android:textSize="14dp"
-                        android:background="@color/green_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        >
+                        android:textSize="14dp">
 
                     </TextView>
 
@@ -164,7 +164,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="180dp"
                     android:background="@drawable/new_white_round_up"
-                    android:elevation="3dp"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent">
 
