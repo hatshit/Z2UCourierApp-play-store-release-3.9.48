@@ -141,7 +141,7 @@ public class AssignToOtherCourier_Functionality {
         wlp.flags &= ~WindowManager.LayoutParams.FLAG_DIM_BEHIND;
         window.setAttributes(wlp);
 
-        CustomRecyclerViewToShowDriver listAllocateDriverAlert = (CustomRecyclerViewToShowDriver) dialogDriverAllocate.findViewById(R.id.listAllocateDriverAlert);
+        RecyclerView listAllocateDriverAlert = (RecyclerView) dialogDriverAllocate.findViewById(R.id.listAllocateDriverAlert);
         LinearLayout teammemberlinerar=(LinearLayout)dialogDriverAllocate.findViewById(R.id.teammemberlinerar);
         LinearLayout communitymemberlinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.communitymemberlinear);
         LinearLayout teammcommunitumlinear=(LinearLayout)dialogDriverAllocate.findViewById(R.id.teammcommunitumlinear);
