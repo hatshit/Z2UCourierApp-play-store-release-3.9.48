@@ -51,6 +51,7 @@ import com.zoom2u.SlideMenuZoom2u;
 import com.zoom2u.datamodels.Model_GetCourierRoute;
 import com.zoom2u.dialogactivity.Custom_ProgressDialogBar;
 import com.zoom2u.dialogactivity.DialogActivity;
+import com.zoom2u.dialogactivity.DropOffDoneDialog;
 import com.zoom2u.utility.WorkaroundMapFragment;
 import com.zoom2u.webservice.WebserviceHandler;
 import com.zoom2u.R;
@@ -437,6 +438,14 @@ public class CourierRouteDetail extends Fragment implements View.OnClickListener
                     } catch (Exception e) {
                         e.printStackTrace();
                         DialogActivity.alertDialogView(getActivity(), "Error!", "Something went wrong, Please try again later.");
+                    } finally {
+                        if (SlideMenuZoom2u.isDropOffCompleted) {
+                            DropOffDoneDialog.alertDialogToFinishView(getActivity(), "Drop off Completed");
+                            SlideMenuZoom2u.isDropOffCompleted = false;
+                        } else if (SlideMenuZoom2u.isPickupOffCompleted) {
+                            DropOffDoneDialog.alertDialogToFinishView(getActivity(), "Pick up Completed");
+                            SlideMenuZoom2u.isPickupOffCompleted = false;
+                        }
                     }
                     showMarkersOnMap();
                     Custom_ProgressDialogBar.dismissProgressBar(progressForCourierRoute);
